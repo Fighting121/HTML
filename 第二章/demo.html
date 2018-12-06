@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>基本结构</title>
+    <script type="text/javascript" src="demo.js"></script>
+</head>
+<body>
+    <a href="http://www.baidu.com" target="_blank">百度</a>
+</body>
+<script type="text/javascript">
+
+</script>
+</html>
+<!--
+本文主要先从HTML5的文档结构谈起。这些基础元素确定了HTML文档的轮廓以及浏览器的初始环境。几乎所有页面都必须首先键入这些元素。
+一、HTML5文档结构
+1、第一步：打开Sublime Text 3，打开指定文件夹。
+2、第二步：保存index.html文件到磁盘中，.html是网页后缀。
+3、第三步：开始编写HTML5的基本格式
+<!DOCTYPE html> //文档类型声明
+<html lang="zh-cn"> //表示HTML文档开始
+<head>  //包含文档元数据开始
+    <meta charset="utf-8">  //声明字符编码
+    <title>基本结构</title>  //设置文档标题
+</head> //包含文档元数据结束
+<body>  //表示HTML文档内容开始
+    <a href="http://www.baidu.com">百度</a>   //一个超链接元素(标签)
+</body> //表示HTML文档内容结束
+</html> //表示HTML文档结束
+二、文档结构解析
+1、Doctype
+文档类型声明(Document Type Declaration, 也称作Doctype)。它主要是告诉浏览器所查看的文件类型。在以往的HTML4.01和XHTML1.0中，
+它表示具体的HTML版本和风格。而如今HTML5不需要表示版本和风格了。
+<!DOCTYPE html> //文档类型声明，不区分大小写
+2、html元素
+首先元素就是标签的意思，html元素即html标签。html元素是文档开始和结束的元素。它是一个双标签，头尾呼应，包含内容。这个元素有一个属性和值：
+lang= "zh-cn"，表示文档采用语言为：简体中文。
+<html lang="zh-cn"> //如果是英文则为en
+3、head元素
+用来包含元数据内容，元数据包括：<link>、<meta>、<noscript>、<script>、<style>、<title>。这些内容用来给浏览器提供信息，比如link提供
+CSS信息，script提供JavaScript信息，title提供页面标题等。
+<head>...</head>    //这些信息在页面不可见
+4、meta元素
+这个元素用来提供关于文档的信息，起始结构有一个属性为：charset="utf-8"。表示告诉浏览器页面采用的什么编码，一般来说我们就用utf-8。
+当然，文件保存的时候也是utf-8，而浏览器也设置utf-8即可正确显示中文。
+5、title元素
+设置浏览器左上角标题
+<title>节本结构</title>
+6、body元素
+用来包含文档内容的元素，也就是浏览器可见区域部分。所有的可见内容，都应该在这个元素内部进行添加。
+<body>...</body>
+7、a元素
+一个超链接
+<a href="http://www.baidu.com" target="_blank">百度</a>
+三、元素标签探索
+HTML是一种标记语言，刚才的结构我们已经详细探讨过。这里，我们再剖析一下这些"标记"或"标签"，书面上经常称为"元素"的东西是怎么构成的。
+1、元素
+元素就是一组告诉浏览器如何处理一些内容的标签。每个元素都有一个关键字，比如<body>、<title>、<meta>都是元素。不同的标签名称代表不同的意义，
+后面会涉及到段落标签、文本标签、链接标签、图片标签等。
+元素一般分为两种：单标签(空元素)和双标签。
+单标签一般用于声明或者插入某个元素。比如声明字符编码就用<meta>，插入图片就用<img>。
+双标签一般用于设置一段区域的内容，将其包含起来，比如段落<p>...</p>
+2、属性和值
+元素除了单双之分，元素的内部还可以设置属性和值。这些属性值用来改变元素某些方面的行为。比如超链接：<a>中的href属性，里面替换网址即可链接到
+不同的网站。当然一个元素里面可以设置多个属性，甚至自定义属性。
+-->
