@@ -8,3 +8,52 @@
 
 </body>
 </html>
+<!--
+本章主要探讨HTML5中嵌入元素，嵌入元素主要功能是把外部的一些资源插入到HTML中。
+一、嵌入元素汇总
+这里所列出的元素，并非本节课全部涉及到，比如音频audio、视频video、以及动态图像canvas和媒体资源source、track等会在后面章节或季度讲解。
+                元素名称                        说明
+                img                    插入图片
+                map                    定义客户端分区响应图
+                area                   表示一个用户客户端分区响应图的区域
+                audio                  表示一个音频资源
+                video                  表示一个视频资源
+                iframe                 嵌入一个文档
+                embed                  用插件在HTML中嵌入内容
+                canvas                 生成一个动态的图形画布
+                meter                  嵌入数值在许可范围背景中的图形表示
+                object                 在HTML文档中嵌入内容
+                param                  表示将通过object元素传递给插件的参数
+                progress               嵌入目标进展或任务完成情况的图形表示
+                source                 表示媒体资源
+                svg                    表示结构化矢量内容
+                track                  表示媒体的附加轨道(例如字幕)
+二、嵌入元素解析
+1、<img>嵌入图像
+<img src="img.png">
+解释：<img>元素主要是插入一张外部的图片，那么图片的路径问题和超链接一致。
+                            img的私有属性
+             属性名称                           说明
+             src                        嵌入图像的URL
+             alt                        当图片不加载时显示的备用内容
+             width                      定义图片的长度(单位是像素)
+             height                     定义图片的高度(单位是像素)
+             ismap                      创建服务器端分区响应图
+             usemap                     关联<map>元素
+<a href="index.html">
+    <img src="img.png" width="339" height="229" alt="风景图" ismap>
+</a>
+2、<map>创建分区响应图
+3、<iframe>嵌入另一个文档
+4、<embed>嵌入插件内容
+5、<object>和<param>元素
+解释：<object>元素和<embed>一样，只不过object是html4的标准，而embed是html5的标准。而object不但可以嵌入flash，还可以嵌入图片
+等其他内容。由于图片、音频、视频、插件都有相应标签元素代替，我们这里暂时不对其详细讲解。
+6、<progress>显示进度
+<progress value="30" max="100"></progress>
+解释：<progress>元素可以显示一个进度条，一般通过JS控制内部的值。IE9以及更低版本不支持此元素。
+7、<meter>显示范围里的值
+<meter value="90" min="10" max="100" low="40" high="80" optimun="60"></meter>
+解释：<meter>元素显示某个范围内的值。其下的属性包含：min和max表示范围边界，low表示小于它的值过低，high表示大于它的值过高，
+optimum表示最佳值，但不出现效果。IE浏览器不支持此元素。
+-->
