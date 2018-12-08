@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单元素(下)</title>
+    <script type="text/javascript" src="demo3.js"></script>
+</head>
+<body>
+
+</body>
+</html>
+<!--
+本章主要探讨HTML5中表单剩余的其他元素，然后重点了解一下表单的输入验证功能。
+一、其他元素
+表单元素还剩下几个元素没有讲解，包括下拉框列表select、多行文本框textarea、和output计算结果元素。
+        元素名称                        说明
+        select              生成一个下拉列表进行选择
+        optgroup            对select元素进行编组
+        option              select元素中的项目
+        textarea            生成一个多行文本
+        output              表示计算结果
+1、生成下拉列表
+<select name="fruit">
+    <option value="1">苹果</option>
+    <option value="2">橘子</option>
+    <option value="3">香蕉</option>
+</select>
+解释：<select>下拉列表元素至少包含一个<option>子元素，才能形成有效的选项列表。<select>元素包含两个子元素<option>和<optgroup>
+分组元素，还包含了一些额外元素。
+        属性名称                        说明
+        name                设定提交时的名称
+        disabled            将下拉列表禁用
+        form                将表单外的下拉列表与某个表单挂钩
+        size                设置下拉列表的高度
+        multiple            设置是否可以多选
+        autofocus           选取焦点
+        required            选取验证，设置后必须选择才能通过
+//设置高度并实现多选
+<select name="fruit" size="30" multiple>
+//默认首选
+<option value="2" selected>橘子</option>
+//使用optgroup进行分组，label为分组名称，disabled可以禁用分组
+<optgroup label="水果类">
+    <option value="1">苹果</option>
+    <option value="2" selected>橘子</option>
+    <option value="3" label="香蕉">香蕉</option>
+</optgroup>
+2、多行文本框
+<textarea name="content">请留下您的建议！</textarea>
+解释：生成一个可变更大小的多行文本框。属性如下：
+         属性名称                        说明
+         name                 设定提交时的名称
+         form                 将表单外的多行文本框与某个表单挂钩
+         readonly             设置多行文本框只读
+         disabled             将多行文本框禁用
+         maxlength            设置最大可输入的字符长度
+         autofocus            获取焦点
+         placeholder          设置输入时的提示信息
+         rows                 设置行数
+         cols                 设置列数
+         wrap                 设置是否插入换行符，有soft和hard两种
+         required             设置必须输入值，否则无法通过验证
+//设置行高和列宽，设置插入换行符
+<textarea name="content" rows="20" cols="30" wrap="hard"></textarea>
+3、计算结果
+<form oninput="res.value = num1.valueAsNumber * num2.valueAsNumber">
+    <input type="number" id="num1"> x <input type="number" id="num2">
+    <output for="num1 num2" name="res">
+</form>
+解释：output就是计算两个文本框之间额值，其实就是内嵌了JavaScript
+二、输入验证
+HTML5对表单提供了输入验证检查方式，但这种验证还是比较简陋的，并且不同的浏览器支持的成熟度不同。在大部分情况下，可能还是要借助jQuery
+等前端库来实现丰富的验证功能和显示效果。
+//必须填写一个值
+<input type="text" required>
+//限定在某一个范围内
+<input type="number" min="10" max="100">
+//使用正则表达式
+<input type="text" placeholder="请输入区号+座机" required pattern="^[\d]{2,4}\-[\d]{6,8}$">
+//禁止表单验证
+<form action="http://li.cc" novalidate>
+-->

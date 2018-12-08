@@ -15,7 +15,7 @@
                 元素名称                        说明
                 img                    插入图片
                 map                    定义客户端分区响应图
-                area                   表示一个用户客户端分区响应图的区域
+                area                   表示一个客户端分区响应图的区域
                 audio                  表示一个音频资源
                 video                  表示一个视频资源
                 iframe                 嵌入一个文档
@@ -44,8 +44,25 @@
     <img src="img.png" width="339" height="229" alt="风景图" ismap>
 </a>
 2、<map>创建分区响应图
+<img src="img.png" alt="风景图" width="339" height="229" usemap="#Map">
+<map name="Map">
+<area shape="rect" coords="31,28,112,100" href="http://www.baidu.com" target="_blank" alt="方形">
+<area shape="circle" coords="187,142,47" href="http://www.google.com" target="_blank" alert="圆形">
+<area shape="poly" coords="287,26,240,66,308,112" href="http://www.soso.com" target="_blank" alt="多边形">
+</map>
+解释：通过图片中的热点进行超链接，这里我们采用Dreamweaver进行操作生成的。
 3、<iframe>嵌入另一个文档
+<a href="index.html" target="in">index</a>
+<a href="http://www.baidu.com" target="in">百度</a>
+<iframe src="http://www.ycku.com" width="600" height="500" name="in"></iframe>
+解释：<iframe>表示内嵌一个HTML文档。其下的src属性表示初始化时显示的页面，width和height表示内嵌文档的长度和高度，name表示用于target的名称。
 4、<embed>嵌入插件内容
+<embed>
+src="http://www.tudou.com/v/i4ZZvFwfluI/&bid=05&rpid=50797543&resourceI d=50797543_05_05_99/v.swf"
+type="application/x-shockwave-flash" width="480" height="400"
+</embed>
+解释：<embed>元素是扩展浏览器的功能，大部分用于添加对插件的支持。这里添加了一个土豆网的flash视频。type类型表示被插入内容的类型，这里不列出所有，
+后面如果其他类型的文件，再继续探讨；width和height表示宽高；src表示文件路径。
 5、<object>和<param>元素
 解释：<object>元素和<embed>一样，只不过object是html4的标准，而embed是html5的标准。而object不但可以嵌入flash，还可以嵌入图片
 等其他内容。由于图片、音频、视频、插件都有相应标签元素代替，我们这里暂时不对其详细讲解。

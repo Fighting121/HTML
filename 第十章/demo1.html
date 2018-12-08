@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单元素(上)</title>
+    <script type="text/javascript" src="demo1.js"></script>
+</head>
+<body>
+    <form method="post" action="http://www.haosou.com/">
+        <button>提交</button>
+    </form>
+</body>
+</html>
+<!--
+本章主要探讨HTML5中表单元素，表单元素用于获取用户的输入数据。
+一、表单元素总汇
+在HTML5的表单中，提供了各种可供用户输入的表单控件。
+         元素名称                       说明
+         form                     表示HTML表单
+         input                    表示用来收集用户输入数据的控件
+         textarea                 表示可以输入多行文本的控件
+         select                   表示用来提供一组固定的选项
+         option                   表示提供一个选项
+         optgroup                 表示一组相关的option元素
+         button                   表示可用来提交或重置的表单按钮(或一般按钮)
+         datalist                 定义一组提供给用户的建议值
+         fieldset                 表示一组表单元素
+         legend                   表示fieldset元素的说明性标签
+         label                    表示表单元素的说明标签
+         output                   表示计算结果
+二、表单元素解析
+1、<form>定义表单
+<form method="post" action="http://www.haosou.com/">
+    <button>提交</button>
+</form>
+解释：<form>元素主要是定义本身是一组表单。
+            元素名称                        说明
+            action                  表示表单提交的页面
+            method                  表示表单的请求方式：POST和GET两种，默认GET
+            enctype                 表示浏览器对发送给服务器的数据采用的编码格式。有三种：
+                                    application/x-www-form-urlencoded(默认编码，不能将文件上传到服务器)、
+                                    multipart/form-data(用于上传文件到服务器)、
+                                    text/plain(未规范的编码，不建议使用，不同浏览器理解不同)
+            name                    设置表单名称，以便程序调用
+            target                  设置提交时的目标位置：_blank、_parent、_self、_top
+            autocomplete            设置浏览器记住用户输入的数据，实现自动完成表单。
+                                    默认为on自动完成，如果不想自动完成则设置off。
+            novalidate              设置是否执行客户端数据有效性检查，后面课程讲解
+//使用get提交数据
+method="get"
+//丧失自动提示功能
+autocomplete="off"
+//使用_blank新建目标
+target="_blank"
+2、<input>表示用户输入数据
+<input name="user">
+解释：<input>元素默认情况会出现一个单行文本框，有五个属性。
+            属性名称                           说明
+            autofocus               让光标聚焦在某个input元素上，让用户直接输入
+            disabled                禁用input元素
+            autocomplete            单独设置input元素的自动完成功能
+            form                    让表单外的元素和指定的表单挂钩提交
+            type                    input元素的类型，内容较多，将在下节课展开讲解
+            name                    定义input元素的名称，以便接收到相应的值
+//聚集光标
+<input name="user" autofocus>
+//禁用input
+<input name="user" disabled>
+//禁止自动完成功能
+<input name="user" autocomplete="off">
+//表单外的input
+<form method="get" id="register">
+...
+</form>
+<input name="email" form="register">
+3、<label>添加说明标签
+<p><label for="user">用户名:<input id="user" name="user"></label></p>
+解释：<label>元素可以关联input，让用户体验更好，且更加容易设置CSS样式。
+4、<fieldset>对表单进行编组
+<fieldset>...</fieldset>
+解释：<fieldset>元素可以将一些表单元素组织在一起，形成一个整体。
+            属性名称                            说明
+            name                        给分组定义一个名称
+            form                        让表单外的分组与表单挂钩
+            disabled                    禁用分组内的表单
+5、<legend>添加分组说明标签
+<fieldset>
+    <legend>注册表单</legend>
+</fieldset>
+解释：<legend>元素给分组加上一个标题。
+6、<button>添加按钮
+<button type="submit"></button>
+解释：<button>元素添加一个按钮，type属性有如下几个值：
+            值名称                             说明
+            submit                       表示按钮的作用是提交表单，默认
+            reset                        表示按钮的作用是重置表单
+            button                       表示按钮为一般性按钮，没有任何作用
+//提交表单
+<button type="submit">提交</button>
+//重置表单
+<button type="reset">重置</button>
+//普通按钮
+<button type="button">按钮</button>
+对于type属性为submit时，按钮还会提供额外的属性。
+            属性名称                             说明
+            form                          指定按钮关联的表单
+            formaction                    覆盖form元素的action属性
+            formenctype                   覆盖form元素的enctype属性
+            formmethod                    覆盖form元素的method属性
+            formtarget                    覆盖form元素的target属性
+            formnovalidate                覆盖form元素的novalidate属性
+//表单外关联提交
+<button type="submit" form="register">提交</button>
+-->
