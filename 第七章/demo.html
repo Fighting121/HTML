@@ -6,13 +6,40 @@
     <script type="text/javascript" src="demo.js"></script>
 </head>
 <body>
+<header>
+    <hgroup>
+        <h1>这里是一个大标题</h1>
+        <h4>这里是一个副标题</h4>
+    </hgroup>
+    <nav>这里是一个导航</nav>
+    这里存放网页的标头部分：logo、标题、导航等
+</header>
+
+<section>
+    这里是文档的主题部分。
+</section>
+
+<article>
+    <header>...</header>
+    <section>...</section>
+    <footer>...</footer>
+</article>
+
+<aside>
+
+</aside>
+
+<footer>
+    <h4>这里是尾部的副标题</h4>
+    这里存放页面的尾部：版权声明、友情链接等
+    <address>这里是联系信息</address>
+</footer><hr>
 <h1>标题部分</h1>
 <h2>标题部分</h2>
 <h3>标题部分</h3>
 <h4>标题部分</h4>
 <h5>标题部分</h5>
 <h6>标题部分</h6><hr>
-<section>这里一般是存放文档主题内容</section>
 </body>
 </html>
 <!--
@@ -33,7 +60,7 @@
             summary                 用在details元素中，表示该元素内容的标题或说明
 二、文档元素解析
 文档元素的大部分标签，是没有任何效果的，完全是为了配合语义使用，以强调它的结构性。只有在后面的章节学习CSS，配合使用才能起到布局和样式的效果。
-1、<head>表示首部
+1、<header>表示首部
 <header>
     这里部分一般是页面头部，包括：logo、标题、导航等内容。
 </header>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>全局属性和其他</title>
+    <script type="text/javascript" src="demo.js"></script>
+</head>
+<body>
+
+</body>
+</html>
+<!--
+本章主要探讨HTML5中的HTML实体、以及HTML核心构成的元数据，最后了解一下HTML中的全局属性。
+一、实体
+HTML实体就是将有特殊意义的字符通过实体代码显示出来。
+        显示结果        实体名称        实体编号        描述
+                       &nbsp;        &#160;         空格
+        <              &lt;          &#60;          小于号
+        >              &gt;          &#62;          大于号
+        &              &amp;         &#38;          和号
+        "              &quot;        &#34;          引号
+        '              &apos;        &#39;          撇号
+        ¢              &cent;        &#162;         分
+        £              &pound;       &#163;         镑
+        ¥              &yen;         &#165;         日圆
+        €              &euro;        &#8364;        欧元
+        §              &sect;        &#167;         小节
+        ©              &copy;        &#169;         版权
+        ®              &reg;         &#174;         注册商标
+        TM             &trade;       &#8482;        商标
+        ×              &times;       &#215;         乘号
+        ÷              &divide;      &#247;         除号
+二、元数据
+<meta>元素可以定义文档中的各种元数据，而且一个HTML页面可以包含多个<meta>元素。
+1、指定名/值元数据对
+<meta name="author" content="boss">
+<meta name="description" content="这是一个HTML5页面">
+<meta name="keywords" content="HTML5，CSS，响应式">
+<meta name="generator" content="sublime text3">
+       元数据名称                说明
+       author               当前页面的作者
+       description          当前页面的描述
+       keywords             当前页面的关键字
+       generator            当前页面的编码工具
+2、声明字符编码
+<meta charset="utf-8">
+3、模拟HTTP标头字段
+//5秒跳转到指定URL
+<meta http-equiv="refresh" content="5;http:li.cc">
+//另一种声明字符编码
+<meta http-equiv="content-type" content="text/html charset=utf-8">
+       属性值                     说明
+       refresh               重新载入当前页面，或指定一个URL。单位秒。
+       content-type          另一种声明字符编码的方式
+三、全局属性
+在此之前，我们涉及到的元素都讲解了它的局部数据，当然也知道一些全局属性，比如id。全局属性是所有元素共有的行为，
+HTML5还提供了一些其他的全局属性。
+1、id属性
+<p id="abc">段落</p>
+解释：id属性给元素分配一个唯一标识符。这种标识符通常用来给CSS和JavaScript调用选择元素。一个页面只能出现一次同一个id名称。
+2、class属性
+<p class="abc">段落</p>
+<p class="abc">段落</p>
+<p class="abc">段落</p>
+解释：class属性用来给元素归类。通过是文档中某一个或多个元素同时设置CSS样式。
+3、accesskey属性
+<input type="text" name="user" accesskey="n">
+解释：快捷操作，windows下alt+指定键，前提是浏览器alt并不冲突。
+
+-->

@@ -1,11 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="">
 <head>
     <meta charset="UTF-8">
     <title>嵌入元素</title>
+    <script type="text/javascript" src="demo.js"></script>
 </head>
 <body>
-
+<a href="http://www.baidu.com" target="in">百度</a> | <a href="http://www.haosou.com" target="in">好搜</a><br>
+<iframe src="http://www.ycku.com" width="800px" height="600px" name="in"></iframe><hr>
+<embed src="http://www.tudou.com/v/i4ZZvFwfluI/&bid=05&rpid=50797543&resourceId=50797543_05_05_99/v.swf" type="application/x-shockwave-flash" width="800px" height="400px"><hr>
+<progress value="30" max="100"></progress>
+<meter value="55" min="10" max="100" low="30" high="80" optimum="55"></meter>
 </body>
 </html>
 <!--
@@ -50,17 +55,15 @@
 <area shape="circle" coords="187,142,47" href="http://www.google.com" target="_blank" alert="圆形">
 <area shape="poly" coords="287,26,240,66,308,112" href="http://www.soso.com" target="_blank" alt="多边形">
 </map>
-解释：通过图片中的热点进行超链接，这里我们采用Dreamweaver进行操作生成的。
+解释：通过图片中的热点进行超链接，这里是我们采用Dreamweaver进行操作生成的。
 3、<iframe>嵌入另一个文档
 <a href="index.html" target="in">index</a>
 <a href="http://www.baidu.com" target="in">百度</a>
 <iframe src="http://www.ycku.com" width="600" height="500" name="in"></iframe>
 解释：<iframe>表示内嵌一个HTML文档。其下的src属性表示初始化时显示的页面，width和height表示内嵌文档的长度和高度，name表示用于target的名称。
 4、<embed>嵌入插件内容
-<embed>
-src="http://www.tudou.com/v/i4ZZvFwfluI/&bid=05&rpid=50797543&resourceI d=50797543_05_05_99/v.swf"
-type="application/x-shockwave-flash" width="480" height="400"
-</embed>
+<embed src="http://www.tudou.com/v/i4ZZvFwfluI/&bid=05&rpid=50797543&resourceId=50797543_05_05_99/v.swf"
+type="application/x-shockwave-flash" width="480" height="400">
 解释：<embed>元素是扩展浏览器的功能，大部分用于添加对插件的支持。这里添加了一个土豆网的flash视频。type类型表示被插入内容的类型，这里不列出所有，
 后面如果其他类型的文件，再继续探讨；width和height表示宽高；src表示文件路径。
 5、<object>和<param>元素
