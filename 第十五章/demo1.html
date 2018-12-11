@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS文本样式(上)</title>
+    <script type="text/javascript" src="demo1.js"></script>
+    <link rel="stylesheet" type="text/css" href="demo1.css">
+</head>
+<body>
+    <p>这是一个html5</p>
+</body>
+</html>
+<!--
+本章主要探讨HTML5中CSS文本样式，通过文本样式的设置，更改字体的大小、样式以及文本的方位。
+一、字体总汇
+本节课，我们重点了解一下CSS文本样式中字体的一些设置方法，样式表如下：
+font-size, 设置字体的大小，CSS版本1
+font-variant，设置英文字体是否转换为小型大写，CSS版本1
+font-style，设置字体是否倾斜，CSS版本1
+font-weight，设置字体是否加粗，CSS版本1
+font-family，设置font字体，CSS版本1
+font，设置字体样式复合写法，CSS版本1~2
+@font-face，设置Web字体，CSS版本3
+二、字体设置
+我们可以通过CSS文本样式来修改字体的大小、样式以及形态。
+1、font-size
+p {
+    font-size:50px;
+}
+解释：设置文本的大小。属性值如下表：
+xx-small、x-small、small、medium、large、x-large、xx-large，设置字体大小。每个人值从小到大的固定值。
+smaller、larger，设置字体相对于父元素字体的大小。
+数字+px，使用CSS像素长度设置字体大小
+数字+%，使用相对于父类元素字体的百分比大小
+//先设置父元素字体大小
+body {
+    font-size:50px;
+}
+//再设置相对小一些
+p {
+    font-size:smaller;
+}
+2、font-variant
+p {
+    font-variant:small-caps;
+}
+解释：设置字体是否以小型大写字母显示。
+normal：表示如果以小型大写状态，让它恢复小写状态。
+small-caps：让小写字母以小型大写字母显示。
+//先让父元素设置小型大写
+body {
+    font-variant:small-caps;
+}
+//让子元素设置恢复小写
+p {
+    font-size:50px;
+    font-variant:normal;
+}
+3、font-style
+p {
+    font-style:italic;
+}
+解释：设置字体是否倾斜。
+normal：表示让倾斜状态恢复到正常状态。
+italic：表示使用斜体。
+oblique：表示让文字倾斜。区别在没有斜体时使用。
+4、font-weight
+p {
+    font-weight:bold;
+}
+解释：设置字体是否加粗。
+normal：表示让加粗的字体恢复正常。
+bold：粗体。
+bolder：更粗的字体。
+lighter：轻细的字体。
+100~900之间的数字：600及之后是加粗，之前不加粗。
+在目前计算机和浏览器显示器中，只有bold加粗，其他更细和更粗，目前体现不出来。
+5、font-family
+p {
+    font-family:微软雅黑;
+}
+解释：使用指定字体名称。这里使用的字体是浏览器系统的字体。有时为了兼容很多浏览器系统的字体，可以做几个后备字体。
+//备用字体
+p {
+    font-family:楷体,微软雅黑,宋体;
+}
+6、font
+p {
+    font:50px 楷体;
+}
+解释：字体设置简写组合方式。格式如下：[是否倾斜| 是否加粗 | 是否转小型大写] 字体大小 字体名称。
+三、Web字体
+虽说可以通过备用字体来解决用户端字体缺失问题，但终究用户体验不好，且不一定备用字体所有用户都安装了。所以，现在CSS提供了Web字体，
+也就是服务器端字体。
+//服务器提供字体
+@font-face {
+    font-family:abc;
+    src:url('BrushScriptStd.otf');
+}
+
+p {
+    font-size:50px;
+    font-family:abc;
+}
+英文字体文件比较小，而中文则很大。所以，中文如果想用特殊字体可以使用图片。大面积使用特殊中文字体，就不太建议了。
+-->

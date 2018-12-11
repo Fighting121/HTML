@@ -1,12 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-cn">
 <head>
     <meta charset="UTF-8">
+    <meta name="author" content="MrCodeZB">
+    <meta name="keywords" content="HTML，CSS，响应式">
+    <meta name="description" content="上海，闵行">
+    <meta name="generator" content="WebStorm">
+    <!--<meta http-equiv="content-type" content="text/html charset=utf-8">-->
+    <!--<meta http-equiv="refresh" content="3;http://www.baidu.com">-->
     <title>全局属性和其他</title>
     <script type="text/javascript" src="demo.js"></script>
+    <style type="text/css">
+        #abc{
+            color: red;
+        }
+        .paragraph{
+            color: blue;
+            font-size: 30px;
+        }
+    </style>
 </head>
 <body>
-
+    &lt;div&gt;
+    &lt;music&gt;
+    上海&nbsp;&nbsp;&nbsp;&nbsp;小鬼
+    <p style="font-size: 50px">&copy</p>
+    <p id="abc">这是ID</p>
+    <p class="paragraph">这是一个段落</p>
+    <p class="paragraph">这是另一个段落</p>
+    <p class="paragraph">这也是一个段落</p>
+    <p class="paragraph" contenteditable="true">我可以修改吗</p>
+    <p class="paragraph" dir="rtl">文字方向从右到左</p>
+    <p class="paragraph" hidden>我可以隐藏</p>
+    <p class="paragraph" lang="en" style="color: darkred">HTML5</p><hr>
+    <input type="text" name="mobile" placeholder="请输入手机号" tabindex="2"><br>
+    <input type="text" name="code"   placeholder="请输入验证码" tabindex="1">
 </body>
 </html>
 <!--
@@ -62,9 +90,30 @@ HTML5还提供了一些其他的全局属性。
 <p class="abc">段落</p>
 <p class="abc">段落</p>
 <p class="abc">段落</p>
-解释：class属性用来给元素归类。通过是文档中某一个或多个元素同时设置CSS样式。
+解释：class属性用来给元素归类。通过给文档中某一个或多个元素同时设置CSS样式。
 3、accesskey属性
 <input type="text" name="user" accesskey="n">
 解释：快捷操作，windows下alt+指定键，前提是浏览器alt并不冲突。
-
+4、contenteditable属性
+<p contenteditable="true">我可以修改吗</p>
+解释：让文本处于可编辑状态，设置true则可以编辑，false则不可编辑。或者直接设置属性。
+5、dir属性
+<p dir="rtl">文字到右边了</p>
+解释：让文本从左到右(ltr)，还是从右到左(rtl)。
+6、hidden属性
+<p hidden>文字隐藏了</p>
+解释：隐藏元素
+7、lang属性
+<p lang="en">HTML5</p>
+解释：可以局部设置语言。
+8、title属性
+<p title="这是HTML5教程">HTML</p>
+解释：对元素的内容进行额外的提示。
+9、tabindex属性
+<input type="text" name="user" tabindex="2">
+<input type="text" name="user" tabindex="1">
+解释：表单中按下tab键，实现获取焦点的顺序。如果是-1，则不会被选中。
+10、style属性
+<p style="color:red">CSS样式</p>
+解释：设置元素行内CSS样式
 -->

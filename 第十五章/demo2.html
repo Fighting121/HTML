@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS文本样式(下)</title>
+    <script type="text/javascript" src="demo2.js"></script>
+    <link rel="stylesheet" type="text/css" href="demo2.css">
+</head>
+<body>
+    <p>我是html5</p>
+    <div>
+        <a href="http://www.baidu.com" target="_blank">百度</a>
+    </div>
+</body>
+</html>
+<!--
+本章主要探讨HTML5中CSS文本样式，通过文本样式的设置，更改字体的大小、样式以及文本的方位。
+一、文本总汇
+本节课，我们重点了解一下CSS文本样式中文本内容的一些设置方法，样式表如下：
+text-decoration：装饰文本出现各种划线。CSS版本1
+text-transform：将英文文本转换大小写。CSS版本1
+text-shadow：给文本添加阴影。CSS版本3
+text-align：设置文本对齐方式。CSS版本1,3
+white-space：排版中的空白处理方式。CSS版本1
+letter-space：设置字母之间的间距。CSS版本1
+word-space：设置单词之间的间距。CSS版本1
+line-height：设置行高。CSS版本1
+word-wrap：控制断词。CSS版本3
+text-indent：设置文本首行的缩进。CSS版本1
+二、文本样式
+CSS文本样式有三种：文本装饰、英文大小写转换和文本阴影。
+1、text-decoration
+p {
+    text-decoration:underline;
+}
+解释：设置文本出现下划线。属性值如下表：
+none：让本身有划线装饰的文本取消掉。
+underline：让文本的底部出现一条下划线。
+overline：让文本的头部出现一条上划线。
+line-through：让文本的中部出现一条删除划线。
+blink：让文本进行闪烁，基本不支持了。
+//让本来有下划线的超链接取消掉
+a {
+    text-decoration:none;
+}
+2、text-transform
+p {
+    text-transform:uppercase;
+}
+解释：设置英文文本转换为大小写。
+none：将已被转换大小写的值恢复到默认状态。
+capitalize：将英文单词首字母大写。
+uppercase：将英文转换为大写字母。
+lowercase：将英文转换为小写字母。
+3、text-shadow
+p {
+    text-shadow:5px 5px 3px black;
+}
+解释：给文本添加阴影。其中四个值，第一个值：水平偏移；第二个值：垂直偏移；第三个值：阴影模糊度(可选)；第四个值：阴影颜色(可选)。
+三、文本控制
+CSS文本样式中还有一组对文本进行访问、形态进行控制的样式。
+1、text-align
+p {
+    text-align:center;
+}
+解释：指定文本的对齐方式。
+left：靠左对齐，默认。
+right：靠右对齐。
+center：居中对齐。
+justify：内容两端对齐。
+start：让文本处于开始的边界。
+end：让文本处于结束的边界。
+start和end属于CSS3新增的功能，但目前IE和Opera尚未支持。
+2、white-space
+p {
+    white-space:nowrap;
+}
+解释：处理空白排版样式。
+normal：默认值，空白字符被压缩，文本自动换行。
+nowrap：空白符被压缩，文本不换行。
+pre：空白符被保留，遇到换行符则换行。
+pre-line：空白符被压缩，文本会在排满或遇换行符换行。
+pre-wrap：空白符被保留，文本会在排满或遇换行符换行。
+3、letter-spacing
+p {
+    letter-spacing:4px;
+}
+解释：设置字母之间的间距。
+normal：设置默认间距。
+长度值：比如"数字"+px.
+4、word-spacing
+p {
+    word-spacing:14px;
+}
+解释：设置单词之间的间距。
+normal：设置默认间距。
+长度值：比如"数字"+px。
+5、line-height
+p {
+    line-height:200%;
+}
+normal：设置默认间距。
+长度值：比如"数字"+px。
+数值：比如1，2，3
+%：比如200%。
+6、word-wrap
+p {
+    word-wrap:break-word;
+}
+解释：让过长的英文单词断开。
+normal：单词不断开。break-word：断开单词。
+7、text-indent
+p {
+    text-indent:20px;
+}
+解释：设置文本首行的缩进。
+normal：设置默认间距。
+长度值：比如"数字"+px。
+-->

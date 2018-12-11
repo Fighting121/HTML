@@ -1,0 +1,149 @@
+@charset "utf-8";
+/*通用选择器*/
+/** {
+    border: 1px solid red;
+}*/
+/*通用选择器还匹配到了html和body元素*/
+
+/*元素选择器*/
+/*
+p {
+    border: 1px solid blue;
+    color: gold;
+}
+*/
+
+/*id选择器*/
+/*
+#abc {
+    border: 1px solid blue;
+    color: brown;
+    font-size: 24px;
+}
+*/
+
+/*class选择器*/
+/*
+.abc {
+    color: green;
+    font-size: 24px;
+}
+*/
+
+/*
+span.abc {
+    color: orangered;
+    font-size: 24px;
+}
+*/
+
+/*
+.abc {
+    color: blueviolet;
+}
+
+.def {
+    border: 1px solid green;
+}
+*/
+
+/*属性选择器*/
+/*
+[href] {
+    color: dodgerblue;
+}
+
+[type="password"] {
+    border: 1px solid blue;
+}
+
+[href^="http"] {
+    color: green;
+}
+
+[href$=".cn"] {
+    color: red;
+}
+
+[href*="baidu"] {
+    color: dodgerblue;
+}
+
+[class~="def"] {
+    color: green;
+}
+
+[lang|="en"] {
+    color: green;
+}
+*/
+
+/*复合选择器*/
+/*
+p, b, i, span {
+    color:green;
+}
+
+#abc, .abc, i, span {
+    color: blue;
+}
+
+p b {
+    color: green;
+}
+
+p > b {
+    color: green;
+}
+
+ul > li {
+    border: 1px solid blue;
+}
+
+p + b {
+    color: red;
+}
+
+p ~ b {
+    color: red;
+}
+*/
+
+/*伪元素选择器*/
+/*
+::first-line {
+    color: green;
+}
+
+::first-letter {
+    color: blue;
+}
+ */
+
+a::before {
+    content: "点击";
+}
+
+a::after {
+    content:"-搜索";
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

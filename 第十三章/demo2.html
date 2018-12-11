@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS选择器(下)</title>
+</head>
+<body>
+
+</body>
+</html>
+<!--
+本章主要探讨HTML5中CSS选择器中的伪类选择器，和伪元素选择器一样，面向某种共同特征来选择元素。
+一、伪类选择器总汇
+伪类选择器分为四种类型：结构性伪类、UI伪类、动态伪类和其他伪类选择器，具体如下：
+    选择器                       名称                      说明                        CSS版本
+    :root                   根元素选择器              选择文档中的根元素                     3
+    :first-child            子元素选择器              选择元素中第一个子元素                  2
+    :last-child             子元素选择器              选择元素中最后一个子元素                3
+    :only-child             子元素选择器              选择元素中唯一一个子元素                3
+    :only-of-type           子元素选择器              选择指定类型的唯一子元素                3
+    :nth-child(n)           子元素选择器              选择指定N个子元素                      3
+    :enabled                UI选择器                 选择启用状态的元素                     3
+    :disabled               UI选择器                 选择禁用状态的元素                     3
+    :checked                UI选择器                 选择被选中input勾选元素                3
+    :default                UI选择器                 选择默认元素                          3
+    :valid                  UI选择器                 验证有效选择input元素                  3
+    :invalid                UI选择器                 验证无效选择input元素                  3
+    :required               UI选择器                 有required属性选择元素                 3
+    :optional               UI选择器                 无required属性选择元素                 3
+    :link                   动态选择器                未访问的超链接元素                     1
+    :visited                动态选择器                已访问的超链接元素                     1
+    :hover                  动态选择器                悬停在超链接上的元素                   2
+    :active                 动态选择器                激活超链接上的元素                     2
+    :focus                  动态选择器                获取焦点的元素                         2
+    :not                    其他选择器                否定选择的元素                         3
+    :empty                  其他选择器                选择没有任何内容的元素                  3
+    :lang                   其他选择器                选择包含lang属性的元素                 2
+    :target                 其他选择器                选取URL片段标识指向元素                3
+二、结构性伪类构造器
+结构性伪类构造器能够根据元素在文档中的位置选择元素。这类元素都有一个前缀(:)。
+1、根元素选择器
+:root {
+    border:1px solid red;
+}
+解释：匹配文档中的根元素，基本不怎么用，因为总是返回<html>元素。
+2、子元素选择器
+ul > li:first-child {
+    color:red;
+}
+解释：选择第一个子元素。
+
+ul > li:last-child {
+    color:red;
+}
+解释：选择最后一个子元素。
+
+ul > li:only-child {
+    color:red;
+}
+解释：选择只有一个子元素的那个子元素。
+
+div > p:only-of-type {
+    color:red;
+}
+解释：选择只有一个指定类型的子元素的那个子元素。
+3、:nth-child(n)系列
+ul > li:nth-child(2) {
+    color:red;
+}
+解释：选择子元素的第二个元素。
+
+ul > li:nth-last-child(2) {
+    color:red;
+}
+解释：选择子元素倒数第二个元素。
+
+div > p:nth-of-type(2) {
+    color:red;
+}
+解释：选择特定子元素的第二个元素。
+
+div > p:nth-last-of-type(2) {
+    color:red;
+}
+解释：选择特定子元素的倒数第二个元素。
+
+三、UI伪类选择器
+UI伪类选择器是根据元素的状态匹配元素。
+1、:enabled
+:enabled {
+    border:1px solid red;
+}
+解释：选择启用状态的元素。
+2、:disabled
+:disabled {
+    border:1px solid red;
+}
+解释：选择禁用状态的元素。
+3、:checked
+:checked {
+    display:none;
+}
+解释：选择勾选的input元素。
+4、:default
+：default {
+    display:none;
+}
+解释：从一组类似的元素中选择默认元素。比如input被勾选的即默认的。
+5、:valid和invalid
+input:valid {
+    border:1px solid blue;
+}
+
+input:invalid {
+    border:1px solid green;
+}
+解释：输入验证合法与不合法显示时选择的元素。
+6、:required和:optional
+input:required {
+    border:1px solid blue;
+}
+
+input:optional {
+    border:1px solid green;
+}
+解释：根据是否具有required属性选择元素。
+四、动态伪类选择器
+动态伪类选择器根据条件的改变匹配元素。
+1、:link和visited
+a:link {
+    color:red;
+}
+a:visited {
+    color:orange;
+}
+解释：:link表示未访问过的超链接，:visited表示已访问过的超链接。
+2、:hover
+a:hover {
+    color:blue;
+}
+解释：表示鼠标悬停在超链接上。
+3、:active
+a:active {
+    color:green;
+}
+解释：表示鼠标按下激活超链接时。
+4、:focus
+input:focus {
+    border:1px solid red;
+}
+解释：表示获得焦点时。
+五、其他伪类选择器
+1、:not
+a:not(href*="baidu") {
+    color:red;
+}
+解释：否定选择器，反选
+2、:empty
+:empty {
+    display:none;
+}
+解释：匹配没有任何内容的元素。
+3、:lang
+:lang(en) {
+    color:red;
+}
+解释：选择包含lang属性，属性值前缀为en的元素。和属性选择器匹配结果一致。
+4、:target
+:target {
+    color:red;
+}
+解释：定位到锚点时，选择此元素。
+5、::selection
+::selection {
+    color:red;
+}
+解释：这是一个伪元素选择器，当选择文字时触发选择。CSS3版本下的选择器。
+-->

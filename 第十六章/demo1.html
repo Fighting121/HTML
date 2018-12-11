@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS盒模型(上)</title>
+    <script type="text/javascript" src="demo1.js"></script>
+    <link rel="stylesheet" type="text/css" href="demo1.css">
+</head>
+<body>
+    <div>
+
+    </div>
+</body>
+</html>
+<!--
+本章主要探讨HTML5中CSS盒模型，学习怎样了解元素的外观配置以及文档的整体布局。
+一、元素尺寸
+CSS盒模型中最基础的就是设置一个元素的尺寸大小。有三组样式来配置一个元素的尺寸大小，样式表如下：
+width：auto、长度值或百分比，设置元素的宽度，CSS版本1。
+height：auto、长度值或百分比，设置元素的高度，CSS版本1。
+min-width：auto、长度值或百分比，设置元素的最小宽度，CSS版本2。
+min-height：auto、长度值或百分比，设置元素的最小高度，CSS版本2。
+max-width：auto、长度值或百分比，设置元素的最大宽度，CSS版本2。
+max-height：auto、长度值或百分比，设置元素的最大高度，CSS版本2。
+//设置元素尺寸
+div {
+    width:200px;
+    height:200px;
+}
+解释：设置元素的固定尺寸。
+
+//限制元素尺寸
+div {
+    min-width:100px;
+    min-height:100px;
+    max-width:300px;
+    max-height:300px;
+}
+解释：这一组主要是应对可能动态产生元素尺寸变大变小的问题，从而限制它最大和最小的值。
+
+//auto自适应
+div {
+    width:auto;
+    height:auto;
+}
+解释：auto是默认值，width在auto下是100%的值，而height在auto下是自适应。
+
+//百分比方式
+#a {
+    background-color:blue;
+    width:200px;
+    height:200px;
+}
+#b {
+    background-color:silver;
+    width:80%;
+    height:80%;
+}
+
+<div id="a">
+    <div id="b">我是HTML5</div>
+</div>
+解释：百分比就是相对于父元素长度来衡定的。
+二、元素内边距
+三、元素外边距
+四、处理溢出
+-->

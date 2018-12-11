@@ -1,0 +1,27 @@
+@charset "utf-8";
+body {
+    font-size: 50px;
+    font-variant: small-caps;
+}
+
+@font-face {
+    font-family: HYQiHei;
+    src:url("HYQiHei-25JF.otf");
+}
+
+p {
+    /*font-size: x-small;*/
+    /*font-size: xx-small;*/
+    /*font-size: small;*/
+    /*font-size: medium;*/
+    /*font-size: large;*/
+    /*font-size: x-large;*/
+    /*font-size: xx-large;*/
+    /*font-size: 50px;*/
+    /*font-size: smaller;*/
+    /*font-size: larger;*/
+    /*font-size: 60%;*/
+    /*font-variant: normal;*/
+    /*font-weight: bold;*/
+    font: normal bold small-caps 100% HYQiHei;
+}
