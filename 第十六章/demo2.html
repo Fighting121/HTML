@@ -10,3 +10,105 @@
 
 </body>
 </html>
+<!--
+本章主要探讨HTML5中CSS盒模型，学习怎样了解元素的外观配置以及文档的整体布局。
+一、元素可见性
+使用visibility属性可以实现元素的可见性，这种样式一般可以配合JavaScript来实现效果。样式表如下：
+visibility属性值visible：默认值，元素在页面上可见。CSS版本2。
+visibility属性值hidden：元素不可见，但会占据空间。CSS版本2。
+visibility属性值collapse：元素不可见，隐藏表格的行与列，如果不是表格，则和hidden一样。CSS版本2。
+//设置元素隐藏，但占位
+div {
+    visibility:hidden;
+}
+
+//隐藏表格的行或列，但不占位，Chrome和Opera不支持。
+table tr:first-child {
+    visibility:collapse;
+}
+二、元素盒模型
+CSS盒模型中的display属性，可以更改元素本身盒类型。那么元素有哪些盒类型呢？主要有：块级元素(区块)、行内元素(内联)、
+行内-块级元素(内联块)、隐藏元素。
+1、块级元素
+所谓块级元素，就是能够设置元素尺寸、隔离其他元素功能的元素。比如：<div>、<p>等文档元素。
+2、行内元素
+所谓行内元素，不能够设置元素尺寸，它只能自适应内容、无法隔离其他元素，其它元素会紧跟其后。比如：<span>、<b>等文本元素。
+3、行内-块元素
+所谓行内-块元素，可以设置元素尺寸，但无法隔离其他元素的元素。比如<img>。
+display属性值block：盒子为块级元素，CSS版本1。
+display属性值inline：盒子为行内元素，CSS版本1。
+display属性值：inline-block：盒子为行内-块元素，CSS版本2。
+display属性值：none，盒子不可见，不占位，CSS版本1。
+//将行内元素转成块级元素
+span {
+    background:silver;
+    width:200px;
+    height:200px;
+    display:block;
+}
+
+//将块级元素转换成行内元素
+div {
+    background:silver;
+    width:200px;
+    height:200px;
+    display:inline;
+}
+
+//将块级元素转化成行内-块元素
+div {
+    background:silver;
+    width:200px;
+    height:200px;
+    display:inline-block;
+}
+
+//将元素隐藏且不占位
+div {
+    display:none;
+}
+display属性还有非常多的值，有些后面部分讲解，而有些支持度不好或者尚不支持，从而省略。有兴趣的，可以参考CSS3手册。
+三、元素的浮动
+CSS盒模型有一种叫浮动盒，就是通过float属性建立盒子的浮动方向，样式表如下：
+float属性值left：浮动元素靠左，CSS版本1。
+float属性值right：浮动元素靠右，CSS版本1。
+float属性值none：禁用浮动，CSS版本1。
+//实现联排效果
+#a {
+    background:gray;
+    float:left;
+}
+
+#b {
+    background:maroon;
+    float:left;
+}
+
+#c {
+    background:navy;
+    float:left;
+}
+
+//实现元素右浮动
+#c {
+    background:navy;
+    float:right;
+}
+
+//取消元素的浮动
+#c {
+    background:navy;
+    float:none;
+}
+刚才的浮动有一个问题：当一个元素盒子被浮动后，下面的元素会自动堆叠处理，导致元素不可见或部分不可见。我们可以使用
+clear属性来处理。
+clear属性值none：允许两边均可浮动，CSS版本1。
+clear属性值left：左边界不得浮动，CSS版本1。
+clear属性值right：右边界不得浮动，CSS版本1。
+clear属性值both：两边都不得浮动，CSS版本1。
+//两边均不可浮动
+#c {
+    background:navy;
+    clear:both;
+}
+-->
