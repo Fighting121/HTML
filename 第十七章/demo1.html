@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS边框和背景(上)</title>
+    <script type="text/javascript" src="demo1.js"></script>
+    <link rel="stylesheet" type="text/css" href="demo1.css">
+</head>
+<body>
+
+</body>
+</html>
+<!--
+本章主要探讨HTML5中CSS边框和背景，通过边框和背景的样式设置，给元素增加更丰富的外观。
+一、声明边框
+边框的声明有三个属性设置，样式表如下：
+border-width：长度值，设置边框的宽度(可选)，CSS版本1。
+border-style：样式名称，设置边框的样式(必选)，CSS版本1。
+border-color：颜色值，设置边框的颜色(必选)，CSS版本1。
+这三个属性值，只有border-style是必须声明，才可以出现边框。而其他两个属性会出现默认值。
+//最简单的边框
+div {
+    border-style:solid;
+}
+//配置完整的边框
+div {
+    border-width:1px;
+    border-style:solid;
+    border-color:red;
+}
+如果元素长和高均为200px，四个边框均为2px时，元素的长高总尺寸均为202px。
+二、边框样式
+边框的样式主要有三种，分别是边框长度取值、边框的颜色和边框的线条类型。颜色是通用的颜色代码，和其他所有颜色取值一样。
+而长度和线条类型，边框有自己独到的部分。
+边框宽度取值表如下：
+1、长度值：CSS长度值，比如px、em等等
+2、百分数：直接设置百分数，比如1、2、3等
+3、thin、medium、thick：使用长度名称的预设宽度。这三个值的具体意义由浏览器来定义，从小到大依次增大。
+一般来说，边框为了更加精确，还要计算元素盒子的总尺寸，使用长度值的比较多。而定义边框线条的样式如下表：
+1、none：没有边框
+2、dashed：破折线边框
+3、dotted：圆点线边框
+4、double：双线边框
+5、groove：槽线边框
+6、inset：使元素内容具有内嵌效果的边框
+7、outset：使元素内容具有外凸效果的边框
+8、ridge：脊线边框
+9、solid：实线边框
+//solid实现使用频率最高
+div {
+    border-width:medium;
+    border-style:solid;
+    border-color:red;
+}
+//如果想对四条边中某一条边单独进行设置，可以使用如下样式表：
+1、定义顶端：border-top-width、border-top-style、border-top-color，CSS版本1。
+2、定义底部：border-bottom-width、border-bottom-style、border-bottom-color，CSS版本1。
+3、定义左侧：border-left-width、border-left-style、border-left-color，CSS版本1。
+4、定义右侧：border-right-width、border-right-style、border-right-color，CSS版本1。
+//只设置顶端
+div {
+    border-top-width:10px;
+    border-top-style:solid;
+    border-top-color:yellow;
+}
+如果四条边都一致，那么没必要分写成三句样式，直接通过简写即可：
+1、border：宽度、样式、颜色，设置四条边的边框，CSS版本1。
+2、border-top：宽度、样式、颜色，只设置上边框，CSS版本1。
+3、border-bottom：宽度、样式、颜色，只设置下边框，CSS版本1。
+4、border-left：宽度、样式、颜色，只设置左边框，CSS版本1。
+5、border-right：宽度、样式、颜色，只设置右边框，CSS版本1。
+//简写形式四条边设置
+div {
+    border:1px solid red;
+}
+三、圆角边框
+CSS3提供了一个非常实用的圆角边框的设置。使用border-radius属性，就可以达到这种效果，样式表如下：
+1、border-radius：长度值或百分数，设置四条边角，CSS版本3。
+2、border-top-left-radius：长度值或百分数，只设置左上边角，CSS版本3。
+3、border-top-right-radius：长度值或百分数，只设置右上边角，CSS版本3。
+4、border-bottom-left-radius：长度值或百分数，只设置左下边角，CSS版本3。
+5、border-bottom-right-radius：长度值或百分数，只设置右下边角，CSS版本3。
+//设置圆角矩形
+div {
+    border:10px solid red;
+    border-radius:10px;
+}
+
+//四条边分别设置
+div {
+    border:10px solid red;
+    border-radius:10px 20px 20px 10px;
+}
+-->

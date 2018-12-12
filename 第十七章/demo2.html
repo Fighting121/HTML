@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS边框和背景(下)</title>
+    <script type="text/javascript" src="demo2.js"></script>
+    <link rel="stylesheet" type="text/css" href="demo2.css">
+</head>
+<body>
+
+</body>
+</html>
+<!--
+本章主要探讨HTML5中CSS边框和背景，通过边框和背景的样式设置，给元素增加更丰富的外观。
+一、设置背景
+盒模型的尺寸可以通过两种方式实现可见性，一种就是之前的边框，还有一种就是背景。CSS背景设置的样式表如下：
+background-color：颜色，设置背景的颜色，CSS版本1。
+background-image：none或url，设置背景的图片，CSS版本1/3。
+background-repeat：样式名称，设置背景图片的样式，CSS版本1/3。
+background-size：长度值或其它，设置背景图片的尺寸，CSS版本3。
+background-position：位置坐标，设置背景图片的位置，CSS版本1。
+background-attachment：滚动方式，设置背景图片的滚动，CSS版本1/3。
+background-clip：裁剪方式，设置背景图片的裁剪，CSS版本3。
+background-origin：位置坐标，设置背图片的起始点，CSS版本3。
+background：复合值，背景图片简写方式，CSS版本1。
+1、background-color
+颜色：设置背景颜色为指定色，CSS版本1。
+transparent：设置背景颜色为透明色。CSS版本1。
+div {
+    background-color:silver;
+}
+解释：设置元素的背景颜色。属性值是颜色值。
+div {
+    background-color:transparent;
+}
+解释：默认值为transparent，为透明的意思。这样<div>内部的元素就会继承<div>的背景色。一般来说这个属性使用频率很低，原因是
+不需要改变色彩时就默认，需要改变色彩时又是颜色值。
+body {
+    background-color:silver;
+}
+解释：在<body>元素下可以设置整个页面的背景色。
+2、background-image
+none：取消背景图片的设置，CSS版本1。
+url：通过url设置背景图片，CSS版本1。
+body {
+    background-image:url(loading.gif);
+}
+解释：url里面是图片的路径，设置整个页面以这个图片为背景，如果图片不足以覆盖，则复制扩展。
+div {
+    background-image:none;
+}
+解释：如果多个div批量设置了背景，而其中某一个不需要背景，可以单独设置none值取消背景。
+在CSS3中，背景图片还设置了比如线性、放射性等渐变方式。但由于支持度的问题，比如IE9尚未支持。我们把这些新特性放到独立的课程中讲解。
+3、background-repeat
+repeat-x：水平方向平铺图像，CSS版本1。
+repeat-y：垂直方向平铺图像，CSS版本1。
+repeat：水平和垂直方向同时平铺图像，CSS版本1。
+no-repeat：禁止平铺图像。
+body {
+    background-image:url(loading.gif);
+    background-repeat:no-repeat;
+}
+解释：让背景图片只显示一个，不平铺。CSS3还提供了两个值，由于支持度不佳，这里忽略。
+4、background-position
+top：将背景图片定位到元素顶部，CSS版本1。
+left：将背景图片定位到元素左部，CSS版本1。
+right：将背景图片定位到元素右边，CSS版本1。
+bottom：将背景图片定位到元素底部，CSS版本1。
+center：将背景图片定位到元素中部，CSS版本1。
+长度值：使用长度值偏移图片的位置，CSS版本1。
+百分数：使用百分数偏移图片的位置，CSS版本1。
+body {
+    background-image:url(loading.gif);
+    background-repeat:no-repeat;
+    background-position:top;
+}
+解释：将背景图片置于页面上方，如果想置于左上方则值为：top left。
+body {
+    background-image:url(loading.gif);
+    background-repeat:no-repeat;
+    background-position:20px 20px;
+}
+解释：使用长度值或百分数，第一个值表示左边，第二个值表示上边。
+5、background-size
+auto：默认值，图像以实际尺寸显示，CSS版本3。
+cover：等比例缩放图像，使图像至少覆盖容器，但有可能超过容器，CSS版本3。
+contain：等比例缩放图像，使其宽度、高度中较大者与容器横向或纵向重合，CSS版本3。
+长度值：CSS长度值，比如px、em，CSS版本3。
+百分数：比如100%，CSS版本3。
+body {
+    background-image:url(loading.gif);
+    background-size:cover;
+}
+解释：使用cover相当于100%，全屏铺满一张大图，这个值非常实用。在等比例放大缩小的过程中，可能会有背景超出，当然这点也无伤大雅。
+
+div {
+    background-image:url(loading.gif);
+    background-size:contain;
+}
+解释：使用contain表示，尽可能让图片完整的显示在元素内。
+
+body {
+    background-image:url(loading.gif);
+    background-size:240px 240px;
+}
+解释：长度值的用法，分别表示长和高。
+6、background-attachment
+scroll：默认值，背景固定在元素上，不会随着内容一起滚动，CSS版本1。
+fixed：背景固定在视窗上，内容滚动时背景不动，CSS版本1。
+body {
+    background-image:url(loading.gif);
+    background-attachment:fixed;
+}
+解释：fixed属性会导致背景产生水印效果，拖动滚动条而背景不动。
+7、background-origin
+border-box：在元素盒子内部绘制背景，CSS版本3。
+padding-box：在内边距盒子内部绘制背景，CSS版本3。
+content-box：在内容盒子内部绘制背景，CSS版本3。
+div {
+    width:400px;
+    height:300px;
+    border:10px dashed red;
+    padding:50px;
+    background-image:uri(img.png);
+    background-repeat:no-repeat;
+    background-origin:border-box;
+}
+解释：设置背景起始位置。
+8、background-clip
+border-box：在元素盒子内部裁剪背景，CSS版本3。
+padding-box：在内边距盒子内部裁剪背景，CSS版本3。
+content-box：在内容盒子内部裁剪背景，CSS版本3。
+div {
+    width:400px;
+    height:300px;
+    border:10px dashed red;
+    padding:50px;
+    background-image:url(img.png);
+    background-repeat:no-repeat;
+    background-origin:border-box;
+    background-clip:padding-box;
+}
+解释：在内边距盒子内部裁剪背景。
+9、background
+div {
+    width:400px;
+    height:300px;
+    border:50px;
+    background:silver url(img.png) no-repeat scroll left top/100%
+}
+解释：完整的简写顺序如下：
+[background-color]
+[background-image]
+[background-repeat]
+[background-attachment]
+[background-position] / [background-size]
+[background-origin]
+[background-clip];
+
+-->

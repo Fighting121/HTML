@@ -7,7 +7,74 @@
     <link rel="stylesheet" type="text/css" href="demo2.css">
 </head>
 <body>
-
+    <div>我是HTML5</div>
+    <table border="1px" width="300px">
+        <caption>个人信息表</caption>
+        <thead>
+            <tr>
+                <th>姓名</th>
+                <th>性别</th>
+                <th>年龄</th>
+                <th>婚姻</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>张三</td>
+                <td>男</td>
+                <td>18</td>
+                <td>未婚</td>
+            </tr>
+            <tr>
+                <td>小芳</td>
+                <td>女</td>
+                <td>20</td>
+                <td>未婚</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="4">统计：两名</td>
+            </tr>
+        </tfoot>
+    </table>
+    <div id="a">
+        我是块级元素
+    </div>
+    我是块级元素
+    <hr>
+    <span>我是行内元素</span>
+    我是行内元素
+    <hr>
+    <img src="img.png" alt="">
+    我是行内-块元素
+    <hr>
+    <div id="b">
+        我是块级元素，将被转为行内元素
+    </div>
+    我是块级元素，将被转为行内元素
+    <hr>
+    <span id="c">我是行内元素，将被转为块级元素</span>
+    我是行内元素，将被转为块级元素
+    <hr>
+    <div id="d">我是块级元素，将被转为行内块元素</div>
+    我是块级元素，将被转为行内块元素
+    <hr>
+    <span id="e">我是行内元素，将被转为行内块元素</span>
+    我是行内元素，将被转为行内块元素
+    <hr>
+    <img id="f" src="img.png" alt="">
+    我是行内块元素，将被转为块元素
+   <hr>
+    <div id="g">
+        我是块级元素，将被转为隐藏元素
+    </div>
+    我是块级元素，将被转为隐藏元素
+    <hr>
+    <div id="h">这是1</div>
+    <div id="i">这是2</div>
+    <div id="j">这是3</div>
+    <div id="k"></div>
 </body>
 </html>
 <!--
@@ -22,7 +89,7 @@ div {
     visibility:hidden;
 }
 
-//隐藏表格的行或列，但不占位，Chrome和Opera不支持。
+//隐藏表格的行或列，但不占位
 table tr:first-child {
     visibility:collapse;
 }

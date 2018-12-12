@@ -1,1 +1,102 @@
 @charset "utf-8";
+body {
+    margin: 50px;
+}
+div {
+    background: blue;
+    width: auto;
+    height: 100px;
+    visibility: visible;
+}
+
+tbody tr:first-child {
+    visibility:collapse;
+}
+
+#a {
+    background: yellow;
+    width:auto;
+    height:50px;
+}
+
+span {
+    background: silver;
+    width:auto;
+    height:50px;
+}
+
+img {
+    background: dodgerblue;
+    width: 200px;
+    height: 200px;
+}
+
+#b {
+    background: green;
+    width: auto;
+    height: 80px;
+    display:inline;
+}
+
+#c {
+    background: orange;
+    width:auto;
+    height:100px;
+    display:block;
+}
+
+#d {
+    background: bisque;
+    width:300px;
+    height:50px;
+    display:inline-block;
+}
+
+#e {
+    background: dodgerblue;
+    width: 300px;
+    height:100px;
+    display:inline-block;
+}
+
+#f {
+    background: firebrick;
+    width: 300px;
+    height: 300px;
+    display: block;
+}
+
+#g {
+    background: bisque;
+    width: auto;
+    height: 50px;
+    display:none;
+}
+
+#h {
+    background: red;
+    width: 200px;
+    height: 200px;
+    float: left;
+}
+
+#i {
+    background: blue;
+    width: 200px;
+    height: 200px;
+    float: left;
+}
+
+#j {
+    background: yellow;
+    width: 200px;
+    height: 200px;
+    float: left;
+}
+
+#k {
+    background: aquamarine;
+    width: 200px;
+    height: 200px;
+    clear: both;
+}
