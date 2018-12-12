@@ -62,6 +62,84 @@ div {
 </div>
 解释：百分比就是相对于父元素长度来衡定的。
 二、元素内边距
+CSS盒模型中可以设置元素内部边缘填充空白的大小，我们称为内边距。样式表如下：
+padding-top：长度值或百分比，设置顶部内边距，CSS版本1。
+padding-bottom：长度值或百分比，设置底部内边距，CSS版本1。
+padding-left：长度值或百分比，设置左边内边距，CSS版本1。
+padding-right：长度值或百分比，设置右边内边距，CSS版本1。
+padding：1~4个长度值或百分比，简写属性，CSS版本1。
+//设置四个内边距
+div {
+    padding-top:10px;
+    padding-left:10px;
+    padding-bottom:10px;
+    padding-right:10px;
+}
+
+//简写形式，分别为上10px、右10px、下10px、左10px
+div {
+    padding:10px 10px 10px 10px;
+}
+
+//简写形式，分别为上10px、左右10px、下10px
+div {
+    padding:10px 10px 10px;
+}
+
+//简写形式，分别为上下10px、左右10px
+div {
+    padding:10px 10px;
+}
+
+//简写形式，上下左右均10px
+div {
+    padding:10px;
+}
 三、元素外边距
+CSS盒模型中可以设置元素外部边缘填充空白的大小，我们称为外边距。样式表如下：
+margin-top：长度值或百分比，设置顶部内边距，CSS版本1。
+margin-left：长度值或百分比，设置左边内边距，CSS版本1。
+margin-bottom：长度值或百分比，设置底部内边距，CSS版本1。
+margin-right：长度值或百分比，设置右边内边距，CSS版本1。
+//设置四个内边距
+div {
+    margin-top:10px;
+    margin-right:10px;
+    margin-bottom:10px;
+    margin-left:10px;
+}
+
+//简写形式，分别为上10px、右10px、下10px、左10px
+div {
+    margin:10px 10px 10px 10px;
+}
+
+//简写形式，分别为上10px、左右10px、下10px
+div {
+    margin:10px 10px 10px
+}
+
+//简写形式，分别为上下10px、左右10px
+div {
+    margin:10px 10px;
+}
+
+//简写形式，上下左右均10px
+div {
+    margin:10px;
+}
 四、处理溢出
+当设置了元素固定尺寸且内容过大时，就会出现溢出的问题。溢出主要朝两个方向：右侧和底部。我们可以通过overflow系列样式来控制它。
+overflow-x：溢出值，设置水平方向的溢出，CSS版本3。
+overflow-y：溢出值，设置垂直方向的溢出，CSS版本3。
+overflow：溢出值，简写属性，CSS版本2。
+溢出处理主要有四种处理值：
+auto：浏览器自行处理溢出内容。如果有溢出内容，就显示滚动条，否则就不显示滚动条。
+hidden：如果有溢出的内容，直接剪掉。
+scroll：不管是否溢出，都会出现滚动条。但不同平台和浏览器显示方式不同。
+visible：默认值，不管是否溢出，都显示内容。
+//设置溢出为auto值
+div {
+    overflow-x:auto;
+}
 -->
