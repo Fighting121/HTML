@@ -5,29 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5ce9e8a8-7e7a-4e90-a1dd-5f2792e55bbe" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/第十三章/demo1.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/第十三章/demo1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/第十三章/demo1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/第十三章/demo2.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/第十三章/demo2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/第十三章/demo2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/第十二章/demo.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/第十二章/demo.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/第十二章/demo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/第十二章/text.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/第十五章/demo1.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/第十五章/demo1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/第十五章/demo1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/第十五章/demo2.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/第十五章/demo2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/第十五章/demo2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/第十四章/demo.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/第十四章/demo.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/第十四章/demo.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/第八章/demo.html" beforeDir="false" afterPath="$PROJECT_DIR$/第八章/demo.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/第十一章/demo.html" beforeDir="false" afterPath="$PROJECT_DIR$/第十一章/demo.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/第四章/demo.html" beforeDir="false" afterPath="$PROJECT_DIR$/第四章/demo.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -42,11 +20,11 @@
     <favorites_list name="HTML" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/第十三章/demo2.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2613">
+            <state relative-caret-position="520">
               <caret line="20" column="14" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="14" />
             </state>
           </provider>
@@ -69,7 +47,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/第八章/demo.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="523">
+            <state relative-caret-position="1950">
               <caret line="75" column="64" selection-start-line="75" selection-start-column="64" selection-end-line="75" selection-end-column="64" />
             </state>
           </provider>
@@ -215,6 +193,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="ProjectPane" />
       <pane id="Scope">
         <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
           <expand>
@@ -226,7 +205,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -273,11 +251,14 @@
       <workItem from="1544449274977" duration="1858000" />
       <workItem from="1544497292374" duration="14697000" />
       <workItem from="1544520817343" duration="5553000" />
+      <workItem from="1544581717364" duration="45000" />
+      <workItem from="1544581822906" duration="2000" />
+      <workItem from="1544582170960" duration="6000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="128726000" />
+    <option name="totallyTimeSpent" value="128779000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="62" y="23" width="1218" height="733" extended-state="0" />
@@ -606,15 +587,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/第十三章/demo2.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/第十三章/demo2.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2613">
+        <state relative-caret-position="520">
           <caret line="20" column="14" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="14" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/第十三章/demo2.css">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/第十五章/demo2.css">
       <provider selected="true" editor-type-id="text-editor">
@@ -625,7 +606,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/第八章/demo.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="523">
+        <state relative-caret-position="1950">
           <caret line="75" column="64" selection-start-line="75" selection-start-column="64" selection-end-line="75" selection-end-column="64" />
         </state>
       </provider>
@@ -637,17 +618,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/第十六章/demo2.js">
+    <entry file="file://$PROJECT_DIR$/第十六章/demo1.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="16" selection-start-column="16" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/第十六章/demo2.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="15" selection-start-column="15" selection-end-column="15" />
+        <state relative-caret-position="52">
+          <caret line="2" column="20" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -658,10 +632,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/第十六章/demo1.css">
+    <entry file="file://$PROJECT_DIR$/第十六章/demo2.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="2" column="20" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="20" />
+        <state>
+          <caret column="15" selection-start-column="15" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/第十六章/demo2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="16" selection-start-column="16" selection-end-column="16" />
         </state>
       </provider>
     </entry>
