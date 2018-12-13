@@ -1,1 +1,37 @@
 @charset "utf-8";
+#a {
+    width:auto;
+    height:200px;
+    background-color: aquamarine;
+    border-width:5px;
+    border-style:solid;
+    border-color:red;
+}
+
+#b {
+    margin-top: 10px;
+    width:auto;
+    height:200px;
+    background-color:blue;
+    border-top-width: 5px;
+    border-top-style: dashed;
+    border-top-color: yellow;
+    border-bottom-right-radius: 20px;
+}
+
+#c {
+    margin-top: 10px;
+    width:auto;
+    height:200px;
+    background-color: green;
+    border-radius: 20px;
+}
+
+#d {
+    margin-top: 10px;
+    width:auto;
+    height:200px;
+    background-color: chartreuse;
+    border-top-left-radius: 20px;
+}
+

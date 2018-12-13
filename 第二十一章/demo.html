@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3文本效果</title>
+    <script type="text/javascript" src="demo.js"></script>
+    <link rel="stylesteet" type="text/css" href="demo.css">
+</head>
+<body>
+
+</body>
+</html>
+<!--
+本章主要探讨HTML5中CSS3中文本效果，其中包含一些之前讲过的CSS3文本属性。
+一、文本阴影
+CSS3提供了text-shadow文本阴影效果，这个属性在之前讲过，只是没有涉及到浏览器支持情况。
+Opera：9.5+；Firefox：3.5+；Chrome：4+；IE：10+；Safari：3.1+
+这里有几个注意点：
+1、text-shadow在CSS2的时候出现过，但各大浏览器碍于消耗大量的资源，迟迟未支持，然后在CSS2.1中国删除了。现在CSS3已经全面支持了
+2、最低支持版本上，不同手册和教程上都不太同，但版本年代久远，无伤大雅。最准确的可以查询这个网站：http://caniuse.com。最需要注意的
+只有IE10才支持，IE9不支持的
+3、目前的浏览器不需要给这个属性加任何前提，具体查询前缀版本可以访问刚才提供的地址。
+//正值阴影
+text-shadow:1px 1px 1px red;
+//负值阴影
+text-shadow:-1px -1px 1px red;
+//多重阴影叠加
+text-shadow:0px 0px 0 rgb(188,178,188),
+            1px 0px 0 rgb(173,163,173),
+            2px 0px 0 rgb(157,147,157),
+            3px 0px 0 rgb(142,132,142),
+            4px 0px 0 rgb(126,116,126),
+            5px 0px 0 rgb(111,101,111),
+            6px 0px 0 rgb(95,85,95),
+            7px 0px 0 rgb(79,69,79),
+            8px 0px 7px rgba(0,0,0,0.35),
+            8px 0px 1px rgba(0,0,0,0.5),
+            opx 0px 7px rgba(0,0,0,0.2);
+二、文本裁剪
+CSS3提供了text-overflow属性来控制文本的溢出部分，它的作用是对溢出的部分裁减掉，然后判定是否添加省略号。首先我们先看下样式表的属性，如下：
+clip：默认值，裁剪文本时不添加"..."省略号
+ellipsis：裁剪文本时添加"..."省略号
+//必须不换行和使用overflow控制溢出
+p {
+    width:160px;
+    white-space:nowrap;
+    background:silver;
+    text-overflow:ellipsis;
+    overflow:hidden;
+}
+对于text-overflow的支持度，是根据它的属性值来判定的，不同的属性值浏览器支持度不同。
+属性值clip的浏览器支持度如下：
+Opera：9.63+；Firefox：2.0+；Chrome：1.0+；IE：6.0+；Safari：3.1+；
+属性值ellipsis的浏览器支持度如下：
+Opera：10.5+；Firefox：6.0+；Chrome：1.0+；IE：6.0+；Safari：3.1+；
+//在Opera早期版本10.0~10.1中，需要使用带前缀的-o-。
+p {
+    -o-text-overflow:ellipsis;
+    text-overflow:ellipsis;
+}
+而在Opera主流版本中，引擎已经靠拢webkit，则不需要-o-了。目前来说，也不需要兼容-o-了。
+三、文本描边
+CSS3提供了描边属性，即text-stroke、text-stroke-width、text-stroke-color。
+目前只有webkit引擎的浏览器支持，并且必须加上-webkit-前缀才能有效。
+各大浏览器对text-stroke系列属性的支持度如下：
+Opera：15.0+；Firefox：不支持；Chrome：4.0+；IE：不支持；Safari：3.1；
+//实验阶段的产物，了解即可
+p {
+    font-size:50px;
+    -webkit-text-stroke:1px red;
+}
+
+//修改描边的颜色和厚度
+p {
+    font-size:50px;
+    -webkit-text-stroke-width:2px;
+    -webkit-text-stroke-color:orange;
+}
+四、文本填充
+CSS3提供了一个文本颜色填充功能：text-fill-color，感觉和color属性很像。其实在配合其他属性才能达到不一样的效果。
+各大浏览器对text-fill-color属性的支持度如下：
+Opera：15.0+；Firefox：不支持；Chrome：4.0+；IE：不支持；Safari：3.1+；
+//不配合背景样式时，和color属性没区别
+p {
+    font-size:150px;
+    -webkit-text-fill-color:red;
+}
+
+//和CSS3背景的新特性搭配产生渐变文字
+p {
+    font-size:150px;
+    font-family:黑体;
+    background:-webkit-linear-gradient(top,#eee,#aaa 50%, #333 51%, #000);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+-->

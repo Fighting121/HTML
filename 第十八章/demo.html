@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS表格与列表</title>
+    <script type="text/javascript" src="demo.js"></script>
+    <link rel="stylesheet" type="text/css" href="demo.css">
+</head>
+<body>
+
+</body>
+</html>
+<!--
+本章主要探讨HTML5中CSS表格和列表，通过表格和列表的样式设置，让表格和列表显示更加多元化。
+一、表格样式
+表格有五种独有样式，样式表如下：
+border-collapse：边框样式，相邻单元格的边框样式，CSS版本2。
+border-spacing：长度值，相邻单元格边框的间距，CSS版本2。
+caption-side：位置名称，表格标题的位置，CSS版本2。
+empty-cells：显示值，空单元格是否显示边框，CSS版本2。
+table-layout：布局样式，指定表格的布局样式，CSS版本2。
+1、border-collapse
+separate：默认值，单元格边框独立，CSS版本2。
+collapse：单元格相邻边框被合并，CSS版本2。
+table {
+    border-collapse:collapse;
+}
+解释：单元格相邻的边框被合并。
+2、border-spacing
+长度值：0表示间距，其他使用CSS长度值，CSS版本2。
+table {
+    border-spacing:10px;
+}
+解释：border-collapse:separate;的状态下才有效。因为要设置间距，不能合并。
+3、caption-side
+top：默认值，标题在上方，CSS版本2。
+bottom：标题在下方，CSS版本2。
+table {
+    caption-side:bottom;
+}
+解释：设置表格标题位置。
+4、empty-cells
+show：默认值，显示边框，CSS版本2。
+hidden：不显示边框，CSS版本2。
+table {
+    empty-cells:hidden;
+}
+解释：单元格内容为空时隐藏边框。
+5、table-layout
+auto：默认值，内容过长时，拉伸整个单元格，CSS版本2。
+fixed：内容过长时，不拉伸整个单元格，CSS版本2。
+table {
+    table-layout:fixed;
+}
+解释：内容过长时不拉伸整个单元格。
+二、列表样式
+列表有四种独有样式，样式表如下：
+list-style-type：类型值，列表中的标记类型，CSS版本1/2。
+list-style-image：none或url，图像作为列表标记，CSS版本1。
+list-style-position：位置值，排列的相对位置，CSS版本1。
+list-style：简写属性，列表的简写形式，CSS版本1。
+1、list-style-type
+none：没有标记，CSS版本1。
+disc：实心圆，CSS版本1。
+circle：空心圆，CSS版本1。
+square：实心方块，CSS版本1。
+decimal：阿拉伯数字，CSS版本1。
+lower-roman：小写罗马数字，CSS版本1。
+upper-roman：大写罗马数字，CSS版本1。
+lower-alpha：小写英文字母，CSS版本1。
+upper-alpha：大写英文字母，CSS版本1。
+ul {
+    list-style-type:square;
+}
+解释：列表前缀的标记类型，这里是CSS1版本的。CSS2版本还包含比如日文、亚美尼亚数字、希腊文等前缀。有兴趣的可以参考CSS版本。
+2、list-style-position
+outside：默认值，标记位于内容框外部，CSS版本1。
+inside：标记位于内容框内部，CSS版本1。
+ul {
+    width:120px;
+    list-style-position:inside;
+}
+解释：标记位于内容框的内部。
+3、list-type-image
+none：不能使用图像，CSS版本1。
+url：通过url使用图像，CSS版本1。
+ul {
+    list-style-image:url(bullet.png);
+}
+解释：使用图片作为前缀的标记。
+4、list-style
+ul {
+    list-style:lower-alpha inside url(bullet.png);
+}
+解释：简写形式。
+三、其他功能
+在<table>中<td>单元格，我们可以使用text-align属性水平对齐，但是垂直对齐就无法操作了。CSS提供了vertical-align属性用于垂直对齐。
+vertical-align属性值如下：
+baseline：内容对象与基线对齐，CSS版本1。
+top：内容对象与顶端对齐，CSS版本1。
+middle：内容对象与中部对齐，CSS版本1。
+bottom：内容对象与底部对齐，CSS版本1。
+
+table tr td {
+    vertical-align:bottom;
+}
+解释：将单元格内的内容对象实现底部对齐。
+
+sub：垂直对齐文本的下标，CSS版本1。
+super：垂直对齐文本的上标，CSS版本1。
+b {
+    vertical-align:super;
+}
+解释：文本上下标设置。
+
+长度值：设置上下的偏移量，可以是负值，CSS版本1。
+百分比：设置上下的偏移量，CSS版本1。
+div span {
+    vertical-align:-200px;
+}
+解释：负值往下，正值往上。如果默认基线在上面，用负值。如果默认基线在下面，用正值。
+-->
