@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3弹性伸缩布局(上)</title>
+    <script type="text/javascript" src="demo1.js"></script>
+    <link rel="stylesheet" type="text/css" href="demo1.css">
+</head>
+<body>
+
+</body>
+</html>
+<!--
+本章主要探讨HTML5中CSS3提供的用来实现未来响应式弹性伸缩布局方案，这里做一个初步的了解。
+一、布局简介
+CSS3提供一种崭新的布局方式:Flexbox布局，即弹性伸缩布局模型(Flexible Box)。用来提供一个更加有效的方式实现响应式布局。
+但是由于这个布局方式还处于W3C的草案阶段，并且它还分为旧版本、新版本以及混合过渡版本三种不同的编码方式。在发展中，可能还有
+各种改动，浏览器的兼容性还存在问题。所以，本节课作为初步了解即可。
+首先，我们来看下旧版本的浏览器兼容情况：
+IE:带前缀(无)、不带前缀(无)
+Firefox:带前缀(4~25)、不带前缀(无)
+Chrome::带前缀(4~31)、不带前缀(无)
+Opera:带前缀(15~18)、不带前缀(无)
+Safari:带前缀(5.17+)、不带前缀(无)
+以上的数据，我们摘自CSS3手册上的。当然，不同的教材和文章会略有不同。但误差率也就一到两个版本，影响不大。
+首先，第一步：先创建一段内容，分成三个区域。
+//HTML部分
+<div>
+    <p>第一段内容...</p>
+    <p>第二段内容...</p>
+    <p>第三段内容...</p>
+</div>
+
+//CSS版本
+p {
+    width:150px;
+    border:1px solid gray;
+    background-color:sliver;
+    margin:5px;
+    padding:5px;
+}
+
+div {
+    display:-moz-box;
+    display:-webkit-box;
+    display:box;
+}
+通过以上设置，在除了IE浏览器外，布局实现了水平布局。那么下面，我们就重点研究一下这些属性的含义。
+二、旧版本
+如果属性和属性值为：display:box，那么就是2009年7月份设定的工作草案，属于旧版本。它面向的是一些早期浏览器的弹性布局方案。
+首先，我们要将几个需要布局模块的父元素设置一下容器属性display。
+box：将容器盒模型作为块级弹性伸缩盒显示(旧版本)
+inline-box：将容器盒模型作为内联级弹性伸缩盒显示(旧版本)
+我们知道块级它是占用整行的，类似<div>元素；而内联级不占用整行，类似<span>元素。但是我们设置了整个盒子，他们都不占用，保持一致
+//设置弹性，以火狐为例
+div {
+    display:-moz-box;
+}
+1、box-orient属性
+box-orient主要实现盒子内部元素的流动方向。
+//设置垂直流动
+div {
+    -webkit-box-orient:vertical;
+}
+
+horizontal:伸缩项目从左到右水平排列
+vertical:伸缩项目从上到小垂直排列
+inline-axis:伸缩项目沿着内联轴排列显示
+block-axis:伸缩项目沿着块级轴排列显示
+
+2、box-direction
+box-direction属性主要是设置伸缩容器中的流动顺序。
+//设置逆序
+div {
+    -moz-box-direction:reverse;
+}
+
+normal:默认值，正常顺序
+reverse:逆序
+
+3、box-pack
+box-pack属性用于伸缩项目的分布方式
+//分布方式以结束位置靠齐
+div {
+    -moz-box-pack:end;
+}
+
+start:伸缩项目以起始点靠齐
+end:伸缩项目以结束点靠齐
+center:伸缩项目以中心点靠齐
+justify:伸缩项目平局分布，-webkit-支持，-moz-不支持
+
+4、box-align
+box-align属性用来处理伸缩容器的额外空间
+//居中对齐，清理上下额外空间
+div {
+    -moz-box-align:center;
+}
+
+start:伸缩项目以顶部为基准，清理下部额外空间
+end:伸缩项目以底部为基准，清理上部额外空间
+center:伸缩项目以中部为基准，平均清理上下部额外空间
+baseline:伸缩项目以基线为基准，清理额外的空间
+stretch:伸缩项目填充整个容器，默认
+
+5、box-flex
+box-flex属性可以使用浮点数分配伸缩项目的比例
+//设置每个伸缩项目占用的比例
+p:nth-child(1) {
+    -moz-box-flex:1;
+}
+
+p:nth-child(2) {
+    -moz-box-flex:2.5;
+}
+
+p:nth-child(3) {
+    -moz-box-flex:1;
+}
+
+6、box-ordinal-group
+box-ordinal-group属性可以设置伸缩项目的显示位置。
+//将第一个位置的元素，跳转到第三个位置
+p:nth-child(1) {
+    -moz-box-ordinal-group:3;
+}
+-->
