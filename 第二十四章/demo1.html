@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3变形效果(上)</title>
+    <script type="text/javascript" src="demo1.js"></script>
+    <link rel="stylesheet" type="text/css" href="demo1.css">
+</head>
+<body>
+
+</body>
+</html>
+<!--
+本章主要探讨HTML5中CSS3的变形效果，通过变形效果，可以平移、缩放和旋转元素的功能。
+一、transform
+CSS3提供了元素变形效果，也叫做变换。它可以将元素实现旋转、缩放和平移的功能。属性有两个：transform和transform-origin。
+transform：指定应用的变换功能。
+transform-origin：指定变换的起点
+对于transform的属性值，具体如下表:
+none：无变换
+translate(长度值或百分数值)、translateX(长度值或百分数值)、translateY(长度值或百分数值)：在水平方向、垂直方向或两个方向上平移元素
+scale(数值)、scaleX(数值)、scaleY(数值)：在水平方向、垂直方向或两个方向上缩放元素
+rotate(角度)：旋转元素
+skew(角度)、skewX(角度)、skewY(角度)：在水平方向、垂直方向或两个方向上使元素倾斜一定的角度
+matrix(4~6数值，逗号隔开)：指定自定义变换
+//向水平和垂直方向各移动200像素，也可以使用百分比
+transform:translate(200px,200px);
+//向水平方向平移200像素，不加后面的0也可以
+transform:translate(200px,0);
+transform:translateX(200px);
+//向垂直方向平移200px
+transform:translate(0,200px);
+transform:translateY(200px);
+//水平、垂直方向放大1.5倍
+transform:scale(1.5);
+transform:scale(1.5,1.5);
+//水平方向放大1.5倍
+transform:scaleX(1.5);
+//垂直方向放大1.5倍
+transform:scaleY(1.5);
+//旋转元素，0~360度之间，正负值均可
+transform:rotate(-45deg);
+//倾斜元素，0~360度之间，正负值均可
+transform:skew(45deg, 20deg);
+//水平倾斜元素，0~360度之间，正负值均可
+transform:skewX(45deg);
+//垂直倾斜元素，0~360度之间，正负值均可
+transform:skewY(45deg);
+//通过六个数值指定矩形，其内部公式计算较为复杂，请百度
+transform:matrix(1,0,0,1,30,30);
+//不同的数值可以累计，通过空格分割
+transform:rotate(-45deg) scale(1.5);
+二、transform-origin
+transform-origin属性可以设置变换的起点。默认情况下，使用元素的中心作为起点。具体设置方案参考如下表：
+百分数值：指定元素x轴或y轴的起点
+left、center、right：指定x轴的位置
+top、center、bottom：指定y轴的位置
+这个属性是用来改变变形的基准点的，默认是在元素的中心位置，如果你改变了基准点。它就会按照这个基准点进行变形。
+//默认值，以中心点变形
+transform-origin:center center;
+transform-origin:50% 50%;
+//以左上角为基准点变形
+transform-origin:left top;
+transform-origin:0px 0px;
+三、浏览器版本
+CSS3中的变形效果最低版本和需要前缀版本如下：
+Opera:支持需带前缀(11.5~22)、支持不带前缀(23+)
+Firefox:支持需带前缀(3.5~15)、支持不带前缀(16+)
+Chrome:支持需带前缀(4~35)、支持不带前缀(26+)
+Safari:支持需带前缀(3.1~8)、支持不带前缀(无)
+IE:支持需带前缀(9.0+)、支持不带前缀(10.0+)
+//兼容完整版
+-webkit-transform:rotate(45deg);
+-moz-transform:rotate(45deg);
+-o-transform:rotate(45deg);
+-ms-transform:rotate(45deg);
+transform:rotate(45deg);
+
+-webkit-transform-origin:left top;
+-moz-transform-origin:left top;
+-o-transform-origin:left top;
+-ms-transform-origin:left top;
+transform-origin:left top;
+-->

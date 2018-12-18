@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS传统布局(上)</title>
+    <script type="text/javascript" src="demo1.js"></script>
+    <link rel="stylesheet" type="text/css" href="demo1.css">
+</head>
+<body>
+    <table>
+        <tr>
+            <td class="header" colspan="2">Header</td>
+        </tr>
+        <tr>
+            <td class="aside">aside</td>
+            <td class="section">section</td>
+        </tr>
+        <tr>
+            <td class="footer" colspan="2">footer</td>
+        </tr>
+    </table>
+</body>
+</html>
+<!--
+本章主要探讨HTML5中CSS早期所使用的传统布局，很多情况下，这些布局方式还是非常有用的。
+一、布局模型
+在早期没有平板和智能手机等移动设备大行其道的时期，Web页面的设计主要是面向PC端电脑分辨率展开的。这种分辨率比例比较单一，基本上只要满足
+最低分表率设计即可。一般来说有4:3、16:10、16:9这样的主要分辨率。那么，从这种比例上来看，长度总是大于宽度的。从最低分辨率1024*768设计即可。
+为了使浏览器底部不出现滚动条，需要减去适当的宽度，比如减去28，最终固定长度设置为996即可。当然，也有一些网站在近两年将最低分辨率设置为1280减去
+滚动条宽度，因为大显示器逐步成为主流。
+除了刚才所说的固定长度的布局，还有一种是流体布局，就是布局的长度为百分比，比如100%。不管你是什么分表率，它都能全屏显示，当然，局限性也特别大，只适合
+一些单一页面，复杂的页面，会随着不同浏览器产生各种阅读障碍。
+我们创建一个三行两列模型。并采用表格布局和浮动布局，构建固定和流体布局的方式，模型图如demo.png
+二、表格布局
+表格布局，就是通过设定固定的单元格，去除表格边框和填充实现的布局。当然这个布局非常不建议使用，只是教学了解。表格应该用它最为语义的地方，就是二维表的数据显示。
+1、固定布局
+//HTML部分
+<table border="0">
+    <tr>
+        <td colspan="2" class="header">header</td>
+    </tr>
+    <tr>
+        <td class="aside">aside</td>
+        <td class="section">section</td>
+    </tr>
+    <tr>
+        <td colspan="2" class="footer">footer<td>
+    </tr>
+</table>
+
+//CSS部分
+body {
+    margin:0;
+}
+
+table {
+    margin:0 auto;
+    width:960px;
+    border-spacing:0;
+}
+
+.header {
+    height:120px;
+    background-color:olive;
+}
+
+.aside {
+    width:200px;
+    height:500px;
+    background-color:purple;
+}
+
+.section {
+    width:760px;
+    height:500px;
+    background-color:maroon;
+}
+
+.footer {
+    height:120px;
+    background-color:gray;
+}
+
+2、流体布局
+表格的固定布局改成流体布局非常简单，只需要设置table为100%即可。
+//修改table
+table {
+    width:100%;
+}
+三、浮动布局
+浮动布局主要采用float和clear两个属性来构建。
+1、固定布局
+//HTML部分
+<header>
+    header
+</header>
+
+<aside>
+    aside
+</aside>
+
+<section>
+    section
+</section>
+
+<footer>
+    footer
+</footer>
+
+//CSS部分
+body {
+    width:960px;
+    margin:0 auto;
+    color:white;
+}
+
+header {
+    height:120px;
+    background-color:olive;
+}
+
+aside {
+    width:200px;
+    height:500px;
+    background-color:purple;
+    float:left;
+}
+
+section {
+    width:760px;
+    height:500px;
+    background-color:maroon;
+    float:right;
+}
+
+footer {
+    height:120px;
+    background-color:gray;
+    clear:both;
+}
+
+2、流体布局
+流体布局只要更改body元素的限定长度为auto或100%。然后左右两列分别设置20%和80%即可。
+//CSS部分
+body {
+    width:auto;
+}
+
+aside {
+    width:20%;
+}
+
+section {
+    width:80%;
+}
+-->

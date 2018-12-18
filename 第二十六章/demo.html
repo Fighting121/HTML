@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3动画效果</title>
+    <script type="text/javascript" src="demo.js"></script>
+    <link rel="stylesheet" type="text/css" href="demo.css">
+</head>
+<body>
+
+</body>
+</html>
+<!--
+本章主要探讨HTML5中CSS3的动画效果，可以通过类似Flash那样的关键帧模式控制运行。
+一、动画简介
+CSS3提供了类似Flash关键帧控制的动画效果，通过animation属性实现。那么之前的transition属性只能通过指定属性的初始状态和结束状态
+来实现动画效果，有一定的局限性。
+animation实现动画效果主要由两个部分组成：
+1、通过类似Flash动画中的关键帧声明一个动画
+2、在animation属性中调用关键帧声明的动画
+CSS3提供的animation是一个复合属性，它包含了很多子属性。如下表所示：
+animation-name:用来指定一个关键帧动画的名称，这个动画名必须对应一个@keyframes规则。CSS加载时会应用animation-name指定的动画，从而执行动画。
+animation-duration:用来设置动画播放所需的时间。
+animation-timing-function:用来设置动画的播放方式。
+animation-delay:用来指定动画的延迟时间。
+animation-iteration-count:用来指定动画播放的循环次数。
+animation-direction:用来指定动画的播放方向。
+animation-play-state:用来控制动画的播放状态。
+animation-fill-mode:用来设置动画的时间外属性。
+animation:以上属性的简写形式
+除了这9个属性之外，动画效果还有一个重要的属性，就是关键帧属性：@keyframes。它的作用是声明一个动画，然后在animation
+调用关键帧声明的动画。
+//基本格式，"name"可自定义
+@keyframes name {
+    /*...*/
+}
+二、属性详解
+在讲解动画属性之前，先创建一个基本的样式。
+//一个div元素
+<div>我是HTML5</div>
+//设置CSS
+div {
+    width:200px;
+    height:200px;
+    background-color:white;
+    border:1px solid green;
+}
+
+1、@keyframes
+@keyframes myani {
+    0% {
+        background-color:white;
+        margin-left:0px;
+    }
+    50% {
+        background-color:black;
+        margin-left:100px;
+    }
+    100% {
+        background-color:white;
+        margin-left:0px;
+    }
+}
+
+//或者重复的，可以并列写在一起
+@keyframes myani {
+    0%, 100% {
+        background-color:white;
+        margin-left:0px;
+    }
+    50% {
+        background-color:black;
+        margin-left:100px;
+    }
+}
+2、animation-name
+//调用@keyframes动画
+animation-name:myani;
+none:默认值，没有指定任何动画
+INDEX:是由@keyframes指定创建的动画名称
+3、animation-duration
+//设置动画播放的时间
+animation-duration:1s;
+当然，以上通过关键帧的方式，这里插入了三个关键帧。0%设置了白色和左偏移为0，和初始状态一致，表明从这个地方开始动画。
+50%设置了黑色，左偏移100px。而100%则是最后一个设置，又回到了白色和左偏移为0.整个动画就一目了然了。
+而对于关键帧的用法，大部分用百分比比较容易控制，当然，还有其他一些控制方法。
+//从什么状态过渡到什么状态
+@keyframes myani {
+    from {
+        background-color:white;
+        margin-left:0px;
+    }
+    to {
+        background-color:black;
+        margin-left:100px;
+    }
+}
+4、animation-timing-function
+//设置缓动
+animation-timing-function:ease-in;
+ease:默认值，元素样式从初始状态过渡到终止状态时，速度由快到慢，逐渐变慢。等同于贝塞尔曲线(0.25,0.1,0.25,1.0)
+linear:元素样式从初始状态过渡到终止状态时，速度是恒速。等同于贝塞尔曲线(0.0,0.0,1.0,1.0)
+ease-in:元素样式从初始状态过渡到终止状态时，速度越来越快，呈一种加速状态。等同于贝塞尔曲线(0.42,0,1.0,1.0)
+ease-out:元素样式从初始状态过渡到终止状态时，速度越来越慢，呈一种减速状态。等同于贝塞尔曲线(0,0,0.58,1.0)
+ease-in-out:元素样式从初始状态过渡到终止状态时，先加速，再减速。等同于贝塞尔曲线(0.42,0,0.58,1.0)
+cubic-bezier:自定义三次贝塞尔曲线
+5、animation-delay
+//设置延迟时间
+animation-delay:1s;
+6、animation-iteration-count
+//设置循环次数
+animation-iteration-count:infinite;
+次数：默认值为1
+infinite：表示无限次循环
+7、animation-direction
+//设置缓动方向交替
+animation-direction:alternate;
+normal:默认值，每次播放向前
+alternate:一次向前，一次向后，一次向前，一次向后这样循环交替
+8、animation-play-state
+//设置停止播放动画
+animation-play-state:paused;
+9、animation-fill-mode
+//设置结束后不再返回
+animation-fill-mode:forwards;
+none:默认值，表示按预期进行和结束
+forwards:动画结束后继续应用最后关键帧位置，即不再返回
+backforwards:动画结束后迅速应用起始关键帧位置，即返回
+both:根据情况产生forwards或backforwards的效果
+//both需要结合，次数和播放方向
+animation-iteration-count:4;
+animation-direction:alternate;
+三、简写和版本
+//简写形式完整版
+animation:myani 1s ease 2 alternate 0s both;
+为了兼容旧版本，需要加上相应的浏览器前缀，版本信息如下表：
+Opera:支持需带前缀(15~29)、支持不带前缀(无)
+Firefox:支持需带前缀(5~15)、支持不带前缀(16+)
+Chrome:支持需带前缀(4~42)、支持不带前缀(43+)
+Safari:支持需带前缀(4~8)、支持不带前缀(无)
+IE:支持需带前缀(无)、支持不带前缀(10.0+)
+
+//兼容完整版，Opera在这个属性上加入webkit，所以没有-o-
+-webkit-animation:myani 1s ease 2 alternate 0s both;
+-moz-animation:myani 1s ease 2 alternate 0s both;
+-ms-animation:myani 1s ease 2 alternate 0s both;
+animation:myani 1s ease 2 alternate 0s both;
+
+//@keyframes也需要加上前缀
+@-webkit-keyframes myani{...}
+@-moz-keyframes myani{...}
+@-o-keyframes myani{...}
+@-ms-keyframes myani{...}
+keyframes   myani{...}
+-->

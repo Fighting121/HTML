@@ -16,4 +16,82 @@
 首先，设置伸缩盒的display有如下两个属性值：
 flexbox:将容器盒模型作为块级弹性伸缩盒显示(混合版本)
 inline-flexbox:将容器盒模型作为内联级弹性伸缩盒显示(混合版本)
+//需要IE前缀-ms-
+div {
+    display:-ms-flexbox;
+}
+1、flex-direction
+flex-direction属性和旧版本box-orient属性一样，都是设置伸缩项目的排列方式。
+//设置从上往下排列
+div {
+    -ms-flex-direction:column;
+}
+row:设置从左到右排列
+row-reverse:设置从右到左排列
+column:设置从上到下排列
+column-reverse:设置从下到上排列
+2、flex-wrap
+flex-wrap属性类似于旧版本中的box-lines，但是box-lines我们没有讲解，原因是没有浏览器支持它。
+//设置无法容纳时，自动换行
+div {
+    -ms-flex-wrap:wrap;
+}
+nowrap:默认值，都在一行或一列显示
+wrap:伸缩项目无法容纳时，自动换行
+wrap-reverse:伸缩项目无法换行时，自动换行，方向和wrap相反
+3、flex-flow
+flex-flow属性是集合了排列方向和控制换行的简写形式。
+//简写形式
+div {
+    -ms-flex-flow:row wrap;
+}
+4、flex-pack
+flex-pack属性和旧版本中的box-pack一样，设置伸缩项目的对齐方式。
+//按照中心点对齐
+div {
+    -ms-flex-pack:center;
+}
+start:伸缩项目以起始点靠齐
+end:伸缩项目以结束点靠齐
+center:伸缩项目以中心点靠齐
+Justify:伸缩项目平局分布
+5、flex-align
+flex-align属性和旧版本中的box-align一样，处理伸缩项目容器的额外空间。
+//处理额外空间
+div {
+    -ms-flex-align:center;
+}
+start:伸缩项目以顶部为基准，清理下部额外空间
+end:伸缩项目以底部为基准，清理上部额外空间
+center:伸缩项目以中部为基准，平均清理上下部额外空间
+baseline:伸缩项目以基线为基准，清理额外空间
+stretch:伸缩项目填充整个容器，默认
+6、flex
+flex属性和旧版本中的box-flex类似，用来控制伸缩器的比例分配。
+//设置比例分配
+p:nth-child(1) {
+    -ms-flex:1;
+}
+
+p:nth-child(2) {
+    -ms-flex:3;
+}
+
+p:nth-child(3) {
+    -ms-flex:1;
+}
+7、flex-order
+flex-order属性和box-ordinal-group属性一样控制伸缩项目出现的顺序。
+//设置伸缩项目顺序
+p:nth-child(1) {
+    -ms-flex-order:2;
+}
+
+p:nth-child(2) {
+    -ms-flex-order:3;
+}
+
+p:nth-child(3) {
+    -ms-flex-order:1;
+}
 -->

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>使用Emmet插件</title>
+    <script type="text/javascript" src="demo.js"></script>
+    <link rel="stylesheet" type="text/css" href="demo.css">
+</head>
+<body>
+
+</body>
+</html>
+<!--
+本章主要探讨了解一下Sublime Text3的一个HTML5代码提示插件：Emmet，这个插件比自带原生的要强大许多。
+一、安装方式
+Emmet插件安装一般采用两种方式，1、通过命令安装；2、下载离线安装。我这里直接采用的是下载离线安装方式。具体步骤：
+(1)、从https://github.com/sergeche/emmet-sublime.git下载Emmet插件，解压下载好的Emmet插件包
+(2)、将解压好的文件复制到Sublime Text3的程序包Packages中
+(3)、左下角会显示自动安装，安装好后，重启Sublime Text3;
+(4)、在编辑器输入英文状态下的"!"，然后ctrl+e，出现了HTML5的代码库，则安装成功。
+注：如果安装失败或出现其它错误，请自行百度选用其他方式安装，或解决安装出错的问题。
+二、自定义！生成
+我们输入!，然后ctrl+e，默认情况下会出现以下代码：
+//默认代码
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+</body>
+</html>
+如果在WebStorm中使用Emmet插件，会发现这里有两个个地方和我们之前生成的代码不一样，第一处是：doctype没有大写；第二处：lang是en的。其实这两处处
+不修改也没有太大关系，但有强迫症的看了可能会难受。具体修改方法如下：
+1、首先，进入程序包Packages
+2、其次，进入Emmet文件夹，再进入Emmet文件夹，找到snippets.json文件
+3、最后，打开这个文件，找到相应处修改即可
+三、快速生成
+Emmet提供了丰富的HTML和CSS代码的快速生成功能，通过使用快速生成代码，极大地增加了开发速度。只不过，Emmet提供的生成方式需要二次学习，
+起初可能还不如手工敲击的快。所以，需要一定时间的学习磨合。
+//快速生成HTML5代码结构
+！+ (ctrl + e 或 tab键) 或 html:5 + tab键
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+</html>
+
+所有代码生成，都需要通过tab键来生成代码，后面不再赘述。
+
+//快速生成标签代码
+<a href=""></a>
+//快速生成标签相应的属性值
+a:link、a:mail
+
+<a href="http://"></a>
+<a href="mailto:"></a>
+
+//生成标签内的值
+<a href="">超链接</a>
+
+//生成CSS链接link
+<link rel="stylesheet" href="">
+
+//生成表单控价
+input、input:hidden
+<input type="text">
+<input type="hidden" name="">
+
+//生成带子标签的一组标签
+ul+、ol+、dl+、table+
+
+<ul>
+    <li></li>
+</ul>
+
+<ol>
+    <li></li>
+</ol>
+
+<dl>
+    <dt></dt>
+    <dd></dd>
+</dl>
+
+<table>
+    <tr>
+        <td></td>
+    </tr>
+</table>
+
+//生成嵌套子标签
+nav>ul>li
+<nav>
+    <ul>
+        <li></li>
+    </ul>
+</nav>
+
+//生成相邻兄弟标签
+div+p+h1
+<div></div>
+<p></p>
+<h1></h1>
+
+//生成乘积数量的标签
+ul>li*5
+<ul>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+
+//创建具有id的标签
+div#header
+<div id="header"></div>
+
+//创建具有class属性的标签
+div.header、div.header.sidebar
+<div class="header"></div>
+<div class="header sidebar"></div>
+以上是HTML部分的代码生成功能，下面来看下CSS的快速生成功能：
+//生成position:relative;
+pos
+输入pos即可出现position:relative这组CSS样式，并且relative是选定状态，有助于你更换属性值。
+但是我们发现使用sublime结合Emmet插件的CSS提示非常的灵活，不会死板的必须要输入pos。下面的输入都可以得到相应的值：
+po = position:relative;
+
+只要输入po或者大于po字母量的值，都可以得到position:relative。当然，如果你只是输入p，那么由于优先级的考虑，出现的是padding: |;
+
+如果你输入有误，它也会自动纠错，比如下面这个：
+pod = position:relative;
+如果你想一开始得到的是absolute这个属性值，那么直接输入：
+poa = position:absolute;
+当然，上面的标准写法是这样的：
+pos:a = position:absolute;
+
+如果你想输入背景的属性，直接使用bg即可：
+bg = background: |;
+使用bg+可以展开背景属性的完整形式：
+bg+ = background:#fff url() 0 0 no-repeat;
+使用bg:n可以设置背景属性值为none：
+bg:n = background:none;
+
+备注：HTML和CSS其他大部分代码生成方案，可以参考如下网址：
+http://docs.emmet.io/cheat-sheet/
+-->

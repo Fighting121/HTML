@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3变形效果(下)</title>
+    <script type="text/javascript" src="demo2.js"></script>
+    <link rel="stylesheet" type="text/css" href="demo2.css">
+</head>
+<body>
+
+</body>
+</html>
+<!--
+本章主要探讨HTML5中CSS3的变形效果，主要接着上节课的2D平面变形转换到3D立体变形。
+一、3D变形简介
+之前我们学习了元素的平移、旋转、缩放和倾斜等功能。这些效果只是单纯在二维平面图上的，我们称之为2D。那么其实CSS3也提供了三维立体的
+一些功能效果，并且目前较新的主流浏览器都比较支持，只不过比2D晚一些，对浏览器的版本要求也高一些。
+由于3D是立体三维，在x、y轴的基础上一般会多出一个z轴，深入跃出轴。以下是3D变形的属性值表，如下：
+translate3d(x,y,z)：3D方式平移元素，设置x、y和z轴
+translateZ(z)：设置3D方式平移元素的z轴
+scale3d(x,y,z)：3D方式缩放一个元素
+scaleZ(z)：设置3D方式缩放元素的z轴
+rotate3d(x,y,z,a)：3d方式旋转元素
+rotateX(a)、rotateY(a)、rotateZ(a)：分别设置3D方式的旋转元素的x、y和z轴
+perspective(长度值)：设置一个透视投影矩阵
+matrix3d(多个值)：定义一个矩阵
+3D变形比2D变形出来的要晚一些，所以如果需要兼容旧版本浏览器，可以对照这个表。具体如下：
+Opera：支持需带前缀(15~22)、支持不带前缀(23+)
+Firefox：支持需带前缀(10~15)、支持不带前缀(16+)
+Chrome：支持需带前缀(12~35)、支持不带前缀(26+)
+Safari：支持需带前缀(4~8)、支持不带前缀(无)
+IE:支持需带前缀(无)、支持不带前缀(10.0+)
+//兼容版本完整形式
+-webkit-transform:translateZ(200px);
+-moz-transform:translateZ(200px);
+-o-transform:translateZ(200px);
+-ms-transform:translateZ(200px);
+transform:translateZ(200px);
+二、transform-style
+transform-style属性是指定嵌套元素如何在3D空间中呈现。
+flat:默认值，表示所有子元素在2D平面呈现。
+preserve-3d:表示子元素在3D空间中呈现。
+//一般设置到当前元素的父元素
+transform-style:preserve-3d;
+需要再配合后面的功能属性和变形配置，才能看到效果。同样，这个属性也需要加上各种厂商前缀。
+三、perspective
+perspective是3D变形的重要属性，该属性会设置查看者的位置，并将可视内容映射到一个视锥上，继而投放到一个2D平面上。
+none:默认值，表示无限的角度来看3D物体，但看上去是平的。
+长度值:接受一个长度单位大于0的值，其单位不能为百分比。值越大，角度出现的越远，就好比你人离远一点看物体。值越小，正相反。
+//设置查看者的距离位置，一般设置在元素的父元素上
+perspective:1000px;
+需要再配合后面的功能属性和变形配置，才能看到效果。同样，这个属性也需要加上各种厂商前缀。
+四、3D变形属性
+我们运用前面3D功能属性transform-style和perspective来构建3D变形效果。
+1、translate3d(x,y,z)
+//需要3D位移的HTML结构，必须有父元素包含
+<div id="a">
+    <img src="img.png" alt="">
+</div>
+//CSS部分，父元素设置3D呈现且设置透传距离
+#a {
+    perspective:1000px;
+    transform-style:preserve-3d;
+}
+
+img {
+    //Z轴可以是负值
+    transform:translate3d(300px,100px,240px);
+}
+2、translateZ(z)
+//可以单独设置z轴，z轴可以是负值
+img {
+    transform:translateZ(240px);
+}
+3、scale3d(x,y,z)
+//3D缩放，单独设置无效，需要配合角度
+img {
+    transform:scale3d(1,1,1.5) rotateX(45deg);
+}
+4、scaleZ(z)
+//单独设置z轴，x和y轴默认为1
+img {
+    transform:scaleZ(1.5) rotateX(45deg);
+}
+5、rotate3d(x,y,z,a)
+//设置3D旋转，a表示角度，xyz是0或1之间的数值
+transform:rotate3d(1,0,0,45deg);
+6、rotateX(a)、rotateY(a)、rotateZ(a)
+//单独设置3D旋转
+transform:rotateX(45deg);
+transform:rotateY(45deg);
+transform:rotateZ(45deg);
+transform:rotateX(45deg) rotateY(45deg) rotateZ(45deg);
+最后一个matrix3d就不多说了，忽略。
+CSS3还提供了perspective-origin属性来设置3D变形中的源点角度。该属性默认值为50% 50%也就是center center。
+百分数值：指定元素x轴或y轴的起点
+长度值：指定距离
+left、center、right：指定x轴的位置
+top、center、bottom：指定y轴的位置
+//源点设置为右上方变形
+perspective-origin:top right;
+CSS3还提供了一个在元素中设置透视的值perspective(长度值)，但它还是和在父元素设置有一定不同。因为父元素整个作为透视，而元素自己作为透视，导致不同。
+//具体测试看透视的距离
+img {
+    transform:perspective(1000px) rotateY(45deg);
+}
+-->

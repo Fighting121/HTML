@@ -8,3 +8,99 @@
 
 </body>
 </html>
+<!--
+本章主要探讨HTML5中CSS3提供的用来实现未来响应式弹性伸缩布局方案，这里做一个初步的了解。
+一、新版本
+新版本的Flexbox模型是2012年9月提出的工作草案，这个草案是由W3C推出的最新语法。这个版本立志于指定标准，让新式的浏览器全面兼容，
+在未来浏览器的更新换代中实现了统一。
+首先，设置伸缩盒的display有如下两个属性值：
+flex:将容器盒模型作为块级弹性伸缩盒显示(新版本)
+inline-flex:将容器盒模型作为内联级弹性伸缩盒显示(新版本)
+//大部分不需要前缀
+div {
+    display:flex;
+}
+IE:带前缀(无)、不带前缀(11+)
+Firefox:带前缀(无)、不带前缀(20+)
+Chrome:21~28、不带前缀(29+)
+Opera:带前缀(无)、不带前缀(12.1)
+Safari:带前缀(7.0)、不带前缀(无)
+从这张表可以看出，只有webkit引擎的浏览器Chrome和Safari的版本需要添加-webkit-，而Chrome浏览器29版本以后可以省略了。
+1、flex-direction
+flex-direction属性和旧版本box-orient属性一样，都是设置伸缩项目的排列方式。
+//设置从上往下排列
+div {
+    flex-direction:column;
+}
+row:设置从左到右排列
+row-reverse:设置从右到左排列
+column:设置从上到下排列
+column-reverse:设置从下到上排列
+2、flex-wrap
+flex-wrap属性类似与旧版本中的box-lines，但是box-lines我们没有讲解，原因是没有浏览器支持它。
+//设置无法容纳时，自动换行
+div {
+    -ms-flex-wrap:wrap;
+}
+nowrap:默认值，都在一行或一列显示
+wrap:伸缩项目无法容纳时，自动换行
+wrap-reverse:伸缩项目无法容纳时，自动换行，方向和wrap相反
+3、flex-flow
+flex-flow属性是集合了排列方向和控制换行的简写形式。
+//简写形式
+div {
+    flex-flow:row wrap;
+}
+4、justify-content
+justify-content属性和旧版本中的box-pack一样，设置伸缩项目的对齐方式。
+//按照中心点对齐
+div {
+    justify-content:space-around;
+}
+flex-start:伸缩项目以起始点靠齐
+flex-end:伸缩项目以结束点靠齐
+center:伸缩项目以中心点靠齐
+space-between:伸缩项目以平局分布
+space-round:伸缩项目以平局分布，但保留一半的空间
+5、align-items
+align-items属性和旧版本中的box-align一样，处理伸缩项目容器的额外空间。
+//处理额外空间
+div {
+    align-items:center;
+}
+flex-start:伸缩项目以顶部为基准，清理下部额外空间
+flex-end:伸缩项目以底部为基准，清理上部额外空间
+center:伸缩项目以中部为基准，平均清理上下部额外空间
+baseline:伸缩项目以基线为基准，清理额外的空间。
+stretch:伸缩项目填充整个容器，默认。
+6、align-self
+align-self和align-items一样，都是清理额外空间，但它是单独设置某一个伸缩项目的。所有的值和align-items一致。
+//单独设置清理额外空间
+p:nth-child(2) {
+    align-self:center;
+}
+7、flex
+flex属性和旧版本中的box-flex类似，用来控制伸缩容器的比例分配。
+//设置比例分配
+p:nth-child(1) {
+    flex:1;
+}
+p:nth-child(2) {
+    flex:3;
+}
+p:nt-child(3) {
+    flex:1;
+}
+8、order
+order属性和box-ordinal-group属性一样控制伸缩项目出现的顺序。
+//设置伸缩项目顺序
+p:nth-child(1) {
+    order:2;
+}
+p:nth-child(2) {
+    order:3;
+}
+p:nth-child(3) {
+    order:1;
+}
+-->

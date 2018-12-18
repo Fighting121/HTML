@@ -1,0 +1,1 @@
+alert("使用Emmet插件");
