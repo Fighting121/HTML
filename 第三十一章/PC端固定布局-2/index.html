@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>项目实战-PC端固定布局(2)</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+</body>
+</html>
+<!--
+本章主要开始学习使用HTML5和CSS3来构建Web页面，第一个项目采用PC端固定布局来实现。
+一、大纲算法
+在HTML5中有一个很重要的概念，叫做HTML5大纲算法(HTML5 Outliner)，它的用途是为用户提供一份页面的信息结构目录。比如我们经常使用的手册就是一个
+非常好的大纲结构：如图struct.png所示
+合理的使用HTML5元素标签，可以生成一个非常清晰的文档大纲，我们可以通过各种工具去查看当前页面，比如谷歌和火狐的插件可以查看当前的HTML5大纲。这里
+我们推荐一个服务器端的测试工具：HTML5 Outliner，网址如下：
+测试工具：https://gsnedders.html5.org/outliner/
+这个工具可以上传本地html文件，也可以填写URL，或者直接在多行文本框上编写HTML5代码均可了解大纲。
+通过我们将上一节课的代码编写，发现这个页面的大纲非常的难看，出现三个Untitled Section，这个意思表示页面此处缺失大纲标题，不规范。如果你的页面在
+这里测试，大纲都比较清晰，那么HTML5页面是比较规范的。
+//大纲目录结构
+1.Untitled Section
+  1.Untitled Section
+    1.飘城旅行社
+  2.Untitled Section
+二、section和div
+首先，我们暂不探讨怎么让html5页面大纲合乎规范。先探讨一下section和div的区别。
+div元素在html5之前就是非常常用的标签，它本身没有任何语义，用来页面布局和CSS样式以及JS调用。那么，div的用途已经说的很清楚了：
+1、如果是页面布局，且不是header、footer之类的专属区域，都应该使用div
+2、如果只是单纯的对一个段内容进行CSS样式定义，那么也应该使用div
+3、如果想对一段内容进行JS控制，那么也应该使用div
+
+html5中，section并不是用来取代div的。在基础课程中已经简单的了解过，它是具有语义的文档标签。表示一段文档中的章节，比如包含一个标题和段落，
+而大纲规范中，至少要包含一个标题。
+//section至少需要一个h1~h6标题
+<section>
+    <h2>Bootstrap</h2>
+    <p>Bootstrap是一款html5开源框架</p>
+</section>
+
+通过上述说明，我们对于下方的section标签，增加一个h2即可实现大纲要求。最终大纲变成如下结构：
+//大纲目录结构
+1.Untitled Section
+  1.Untitled Section
+    1.飘城旅行社
+  2.Bootstrap
+
+那么发现最后一个Untitled Section已经拥有了标题，已经符合规范。对于前面还有两个，待会儿再说。现在再探讨一个问题，既然div用于没有任何语义的
+布局和样式定义，那么我们需要探讨一下如下代码是用div还是使用section。
+//这里改用section还是div呢？
+<section class="center">
+    <h1 class="logo">飘城旅行社</h1>
+    <ul class="link">
+        <li class="active"><a href="###">首页</a></li>
+        <li><a href="###">旅游资讯</a></li>
+        <li><a href="###">机票订购</a></li>
+        <li><a href="###">风景欣赏</a></li>
+        <li><a href="###">公司简介</a></li>
+    </ul>
+</section>
+从结构上来看，section需要包含至少一个h1~h6，这里是符合的。但容易混淆的部分是，section是某个区域章节的标题，h1其实是整个网站的标题。而ul部分
+是导航超链接，严格来讲，也不算章节的内容。最重要的是这块的section用于布局样式定义，所以我个人认为这里使用div更加妥当一些。注：section本身使用
+频率并不是很高，而section并不是代替div的元素。
+//比较合理的做法
+<div class="center">
+    <h1 class="logo">飘城旅行社</h1>
+    <ul class="link">
+        <li class="active"><a href="###">首页</a></li>
+        <li><a href="###">旅游咨讯</a></li>
+        <li><a href="###">机票订购</a></li>
+        <li><a href="###">风景欣赏</a></li>
+        <li><a href="###">公司简介</a></li>
+    </ul>
+</div>
+
+这里大纲进行了一个很有趣的变化，如下：
+1.Untitled Section
+  1.飘城旅行社
+  2.Bootstrap
+
+通过目前的大纲，我们可以了解到，还剩下一个标题就可以实现完美大纲。这个剩下的标题是哪个元素下的呢？答案是：body元素。
+我们只要在body元素下创建一个h1，写上标题名称，即可。
+//增加body标题，解决大纲问题
+<body>
+    <h1>Body 大标题<h1>
+    ...
+</body>
+
+虽然在body增加标题解决了大纲问题，但问题是我们本身页面设计根本不需要在body创建一个h1啊。难道创建后，再隐藏这种多此一举的方法吗？
+这个问题，稍后再看，先再探讨一下头部的结构问题。
+三、结构分析
+首先，探讨一下nav元素。这个元素本质上是用来存放一组作为导航的链接，比如ul。我们第一节课，把整个头部全部存放进去，显得不是特别合理，所以，
+最好在ul的外围。而logo和导航，我们可以理解为header头部，所以，最终改写成如下结构：
+//头部元素换成了header，nav元素只包含ul
+<header id="header">
+    <div class="center">
+        <h1 class="logo">飘城旅行社</h1>
+        <nav class="link">
+            <ul>
+                <li class="active"><a href="###">首页</a></li>
+                <li><a href="###">旅游咨讯</a></li>
+                <li><a href="###">机票订购</a></li>
+                <li><a href="###">风景欣赏</a></li>
+                <li><a href="###">公司简介</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+在去掉<body><h1>...</h1></body>的情况下，我们发现，这种结构的主标题大纲居然是：飘城旅行社。而<nav>下则又出现了一个Untitled Section，
+由此可得到几个结论：
+1、header元素不需要强制标题h1~h6，如果有标题，算body的。这样主大纲标题就有了
+2、section和nav元素大纲要求有标题h1~h6，但section必须有才规范，而nav如果没有标题，也是合理的。当然，添加上标题会让大纲更加好看，页面中可以隐藏。
+//最终格式如下：
+<header id="nav">
+    <div class="center">
+        <h1 class="logo">飘城旅行社</h1>
+        <nav class="link">
+            <h2 class="none">网站导航</h2>
+            <ul>
+                <li class="active"><a href="###">首页</a></li>
+                <li><a href="###">旅游咨讯</a></li>
+                <li><a href="###">机票订购</a></li>
+                <li><a href="###">风景欣赏</a></li>
+                <li><a href="###">公司简介</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+根据改变的元素内容，适当更改一下CSS即可。
+-->

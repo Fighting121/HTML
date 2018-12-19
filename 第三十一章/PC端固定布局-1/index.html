@@ -6,7 +6,21 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-
+    <nav id="nav">
+        <section class="center">
+            <h1 class="logo">飘城旅行社</h1>
+            <ul class="link">
+                <li class="active"><a href="###">首页</a></li>
+                <li><a href="###">旅游咨讯</a></li>
+                <li><a href="###">机票订购</a></li>
+                <li><a href="###">风景欣赏</a></li>
+                <li><a href="###">公司简介</a></li>
+            </ul>
+        </section>
+    </nav>
+    <header>header</header>
+    <section>section</section>
+    <footer>footer</footer>
 </body>
 </html>
 <!--
@@ -15,7 +29,7 @@
 1、为了达到最低效果，第一个项目将采用1440*900的分辨率录制；因为1024根本无法容纳最低宽度的页面；页面采用1280的最低宽度设计，去掉滚动条为1263像素。
 2、第一个项目是PC端的固定布局，会采用像素(px)单位。
 3、项目素材图片，是课外独立设计好的，课程不会去设计，至于怎么设计的，我会简单的说明一下，让不懂美工的程序员，能设计出还能看的格调。
-4、目前互联网大部分还是PC端页面为主，后面两个项目，会根据这个PC端改成流体移动端和响应式兼容模式。1
+4、目前互联网大部分还是PC端页面为主，后面两个项目，会根据这个PC端改成流体移动端和响应式兼容模式。
 二、创建项目
 1、创建index.html文件，添加html5基本格式
 2、创建img和css两个目录
@@ -46,5 +60,82 @@ class定义型的特点，就是可以定义多个实现相同的效果。而实
 通过上面的简单分析：我们这个旅行社的网站属于中小型网站，通用样式采用元素定义型；顶层的布局元素可以使用id定义型，其他标签一律使用class定义型。
 五、完成导航
 项目的第一节课，我们先完成如plan.png所示的导航，LOGO已经提供。
+//最终完成版的html，期间可能会有几次转换过程
+<nav id="nav">
+    <section class="center">
+    <h1 class="logo">飘城旅行社</h1>
+    <ul class="link">
+        <li class="active"><a href="###">首页</a></li>
+        <li><a href="###">旅游资讯</a></li>
+        <li><a href="###">机票订购</a></li>
+        <li><a href="###">风景欣赏</a></li>
+        <li><a href="###">公司简介</a></li>
+    </ul>
+    </section>
+</nav>
 
+//最终版本的CSS部分，期间可能会有几次转换过程
+body,h1,ul {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #fff;
+}
+
+ul {
+    list-style: outside none none;
+}
+
+a {
+    text-decoration: none;
+}
+
+#nav {
+    width: 100%;
+    height: 70px;
+    background: #333;
+}
+
+#nav .center {
+    width: 1263px;
+    margin: 0 auto;
+}
+
+#nav .logo {
+    width: 240px;
+    height: 70px;
+    background-image: url(../img/logo.png);
+    text-indent: -9999px;
+    float: left;
+}
+
+#nav .link {
+    width: 650px;
+    height: 70px;
+    line-height: 70px;
+    font-size: 18px;
+    float: right;
+}
+
+#nav .link li {
+    width: 120px;
+    height: 70px;
+    text-align: center;
+    float: left;
+}
+
+#nav .link a {
+    display: block;
+    color: #eee;
+}
+
+#nav .active a,
+#nav .link a:hover {
+    background-color: #000;
+}
+备注：LOGO采用的是h1标签，一般为了让搜索引擎更好的抓取关键字，我们建议一个页面只有一个h1，而且是最重要的关键词放在里面。
+在首页上，最重要的关键词就是旅行社的名称。当然，如果在其他页面，比如新闻网站的单个新闻，最重要的应该是新闻标题，网站的名称
+就其次了。
 -->

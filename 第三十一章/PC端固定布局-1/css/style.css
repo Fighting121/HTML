@@ -1,4 +1,58 @@
 @charset "utf-8";
-body {
-    background: red;
+body,h1,ul {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: outside none none;
+}
+
+a {
+    text-decoration: none;
+}
+
+#nav {
+    width: auto;
+    height: 70px;
+    background-color: #333;
+}
+
+#nav .center {
+    width: 1263px;
+    height: 70px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#nav .logo {
+    width: 240px;
+    height: 70px;
+    background-image: url(../img/logo.png);
+    text-indent: -9999px;
+    float: left;
+}
+
+#nav .link {
+    width: 650px;
+    height: 70px;
+    line-height: 70px;
+    float: right;
+}
+
+#nav .link li {
+    width: 120px;
+    text-align: center;
+    color: #eee;
+    float: left;
+}
+
+#nav .link a {
+    color: #eee;
+    display: block;
+}
+
+#nav .active a,
+#nav .link a:hover {
+    background-color: #000;
 }
