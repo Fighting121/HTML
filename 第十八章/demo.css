@@ -1,1 +1,33 @@
 @charset "utf-8";
+table {
+    width: 500px;
+    height: 250px;
+    margin: 0 auto;
+    border: 1px dotted blue;
+    border-spacing: 5px;
+}
+
+table tr th {
+    text-align: left;
+}
+
+table tbody tr td {
+    vertical-align: middle;
+}
+
+table tr th,
+table tr td {
+    border: 1px dashed blue;
+}
+
+ul {
+    width: 200px;
+    margin: 10px auto;
+    list-style-position: outside;
+    list-style-image: url("bullet.png");
+    border: 1px dotted red;
+}
+
+ul li > b {
+    vertical-align: super;
+}

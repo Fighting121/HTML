@@ -6,6 +6,130 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
+    <header id="header">
+        <div class="center">
+            <h1 class="logo">飘城旅行社</h1>
+            <nav class="link">
+                <h2 class="none">网站导航</h2>
+                <ul>
+                    <li class="active"><a href="###">首页</a></li>
+                    <li><a href="###">旅游咨讯</a></li>
+                    <li><a href="###">机票订购</a></li>
+                    <li><a href="###">风景欣赏</a></li>
+                    <li><a href="###">公司简介</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
+    <div id="search">
+        <div class="search-bg"></div>
+        <input type="text" class="search-input" placeholder="请输入旅游景点或城市">
+        <button class="search-btn">搜索</button>
+    </div>
 </body>
 </html>
+<!--
+本章主要开始学习使用HTML5和CSS3来构建Web页面，第一个项目采用PC端固定布局来实现。
+一、搜索区
+本节课，我们接着header头部往下，来设计一块搜索区域。这个区域，可以是广告大图，也可以是用户注册，也可以是一个搜索条，都是一个
+大幅背景，内嵌一个表单。具体造型如plan.png所示。
+从表面上来分析，就是插入一张背景大图，然后居中一个搜索条。但是，我们要求最小在1280分辨率、最大在1920分辨率能保持最佳的观看效果。
+而对于超过1920分辨率还要保持大图的位置合理。
+二、插入大图
+首先，为了满足最小的1280分辨率，大图本身的宽度必须大于1280。而主流分辨率一般小于1920，所以图片宽度设置为1920即可满足几乎所有用户。
+注：超过1920分辨率，即2K+以上的分辨率一般不适合浏览网页了，会眼瞎。
+我们从网上搜索一张风景图，原图的分辨率为：1920*1200。我们截取了中间一段变成：1920*600。那么被插入的背景区块应该怎么设置长度呢？
+//创建一个搜索区域
+<div id="search"></div>
+
+//可以直接设置宽度为1920吗？
+#search {
+    width: 1920px;
+    height: 600px;
+}
+
+如果使用1920的宽度，势必在底部产生滚动条，非常的难看。那不采用1920的宽度，整张大图无法全面显示。那么我们的设计理念是，1280分辨率
+显示大图中部区域的图片内容，而浏览器不断增大，就显示的内容越多。超过1920分辨率，让图片居中，两边空白即可。
+//使用100%，并插入背景图片
+#search {
+    width: 100%;
+    height: 600px;
+    background: url(../img/search.jpg);
+}
+当我们故意缩小分辨率时，小于1280时，底部会出现滚动条。当我们拉动滚动条时，发现右侧出现大量的空白。这是由于之前采用了100%自适应导致的，
+那我们强行设置这里，虽然是100%，但如果小于1280分辨率，就必须固定在1280即可。
+//不能小于1280分辨率
+#header {
+    min-width: 1263px;
+}
+
+#search {
+    min-width: 1263px;
+}
+
+对于大于1920的分辨率，我们将背景图片居中显示即可，两边留白。当然，还有一种方式，是专门设计这张大图的过渡渐变，两边快要接近纯色时，添加背景过渡。
+//大于1920分辨率时
+#search {
+    background: url(../img/search.jpg) no-repeat center;
+}
+三、搜索框
+我们希望在大图中间安插一个搜索框，先安插一个半透明的区块。
+//创建一个区块
+<div id="search">
+    <div class="center"></div>
+    <input type="text" class="search" placeholder="请输入旅游景点或城市">
+    <button class="button">搜索</button>
+</div>
+
+//将区块半透明且居中
+#search .center {
+    width: 600px;
+    height: 60px;
+    background-color: #000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -30px 0 0 -300px;
+    border-radius: 10px;
+    opacity: 0.6;
+}
+
+//父元素设置相对点
+#search {
+    position: relative;
+}
+
+//搜索框和按钮样式
+#search .search {
+    width: 446px;
+    height: 54px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -27px 0 0 -296px;
+    border-radius: 10px;
+    border: 1px solid #666;
+    font-size: 24px;
+    color: #666;
+    outline: none;
+    padding: 0 10px;
+}
+
+#search .button {
+    width: 120px;
+    height: 54px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    cursor: pointer;
+    margin: -27px 0 0 175px;
+    font-size: 22px;
+    border-radius: 10px;
+    border: none;
+    color: #666;
+    font-weight: bold;
+    outline: none;
+    background-color: #eee;
+}
+-->

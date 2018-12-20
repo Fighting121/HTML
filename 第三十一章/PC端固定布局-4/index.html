@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>项目实战-PC端固定布局(4)</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+</body>
+</html>
+<!--
+本章主要开始学习使用HTML5和CSS3来构建Web页面，第一个项目采用PC端固定布局来实现。
+一、热门旅游区
+本节课，我们将探讨一下首页最核心的部分，旅游区。这块内容由两个部分组成，一个是大标题，表示热门旅游区。这块内容由两个部分组成，一个是大标题，
+表示热门旅游区域。其次就是旅游项目的图片展示区域。具体如plan.png所示。
+//热门旅游区父元素
+<div id="tour">
+    ...
+</div>
+
+//旅游父元素
+#tour {
+    width: 1263px;
+    height: 1200px;
+    margin: 30px auto;
+    text-align: center;
+}
+二、标题介绍区
+标题区可以分为大标题和内容，那么<section>就比较合适了。
+//标题
+<div id="tour">
+    <section class="center">
+        <h2>热门标题</h2>
+        <p>国内旅游、国外旅游、自助旅游、自驾旅游、游轮签证、主题旅游等各种最新热门旅游推荐</p>
+    </section>
+</div>
+
+//标题CSS
+#tour center {
+    text-align: center;
+}
+
+#tour .center h2 {
+    margin: 10px 0;
+    font-size: 45px;
+    letter-spacing: 2px;
+    color: #666;
+}
+
+#tour .center p {
+    color: #666;
+    margin: 10px 0;
+}
+三、旅游项目区
+项目区是一张图片和一段文本的阐述，共实现9个，3*3排列。
+//旅游项目区
+<div id="tour">
+    ...
+    <figure>
+        <img src="img/tour1.jpg" alt="热门旅游">
+        <figcaption>
+            <strong class="title">&lt;曼谷-芭提雅6日游&gt;</strong>
+            包团特惠，超丰富景点，升级1晚国五，无自费，更赠送600元/成人自费券
+        </figcaption>
+        <div>
+            <em class="sat">满意度 77%</em>
+            <span class="price">¥ <strong>2864</strong> 起</span>
+         </div>
+         <div class="type">国内长线</div>
+    </figure>
+    <figure>
+        <img src="img/tour2.jpg" alt="热门旅游">
+        <figcaption>
+            <strong class="title">&lt;马尔代夫双鱼岛 Olhuveli4晚6日自助游&gt;</strong>
+            上海出发，机+酒 包含：早晚餐+快艇
+        </figcaption>
+        <div>
+            <em class="sat">满意度 97%</em>
+            <span class="price">¥ <strong>8039</strong> 起</span>
+         </div>
+         <div class="type">出境长线</div>
+    </figure>
+    <figure>
+        <img src="img/tour3.jpg" alt="热门旅游">
+        <figcaption>
+            <strong class="title">&lt;海南双飞5日游&gt;</strong>
+            含盐城接送，全程挂牌四星酒店，一价全含，零自费“自费项目”免费送
+        </figcaption>
+        <div>
+            <em class="sat">满意度 90%</em>
+            <span class="price">¥ <strong>2709</strong> 起</span>
+        </div>
+        <div class="type">自助旅游</div>
+    </figure>
+    <figure>
+        <img src="img/tour4.jpg" alt="热门旅游">
+        <figcaption>
+            <strong class="title">&lt;富山-大阪-东京8日游&gt;</strong>
+            暑期亲子，2 天自由，无导游安排自费项目，全程不强迫购物
+        </figcaption>
+        <div>
+            <em class="sat">满意度 97%</em>
+            <span class="price">¥ <strong>9499</strong> 起</span>
+        </div>
+        <div class="type">自助旅游</div>
+    </figure>
+    <figure>
+        <img src="img/tour5.jpg" alt="热门旅游">
+        <figcaption>
+            <strong class="title">&lt;法瑞意德12日游&gt;</strong>
+            4至5星，金色列车，少女峰，部分 THE MALL
+        </figcaption>
+        <div>
+            <em class="sat">满意度 97%</em>
+            <span class="price">¥ <strong>9199</strong> 起</span>
+        </div>
+        <div class="type">国内短线</div>
+    </figure>
+    <figure>
+        <img src="img/tour6.jpg" alt="热门旅游">
+        <figcaption>
+            <strong class="title">&lt;巴厘岛6日半自助游&gt;</strong>
+            蓝梦出海，独栋别墅，悦榕庄下午茶，纯玩
+        </figcaption>
+        <div>
+            <em class="sat">满意度 95%</em>
+            <span class="price">¥ <strong>6488</strong> 起</span>
+        </div>
+        <div class="type">出境长线</div>
+    </figure>
+    <figure>
+        <img src="img/tour7.jpg" alt="热门旅游">
+        <figcaption>
+            <strong class="title">&lt;塞舌尔迪拜9日自助游&gt;</strong>
+            一游两国，4晚塞舌尔，2晚迪拜，香港 EK往返
+        </figcaption>
+        <div>
+            <em class="sat">满意度 100%</em>
+            <span class="price">¥ <strong>9699</strong> 起</span>
+        </div>
+        <div class="type">游轮观光</div>
+    </figure>
+    <figure>
+        <img src="img/tour8.jpg" alt="热门旅游">
+        <figcaption>
+            <strong class="title">&lt;花样姐姐土耳其9日或10日游&gt;</strong>
+            最高立减3000!中餐六菜一汤+土耳其当地美食满足您挑剔味蕾
+        </figcaption>
+        <div>
+            <em class="sat">满意度 93%</em>
+            <span class="price">¥ <strong>9999</strong> 起</span>
+        </div>
+        <div class="type">出境长线</div>
+    </figure>
+    <figure>
+        <img src="img/tour9.jpg" alt="热门旅游">
+        <figcaption>
+            <strong class="title">&lt;大阪-京都-箱根双飞6日游&gt;</strong>
+            盐城直飞，不走回头路，境外无自费，超值之旅
+        </figcaption>
+        <div>
+            <em class="sat">满意度 100%</em>
+            <span class="price">¥ <strong>5284</strong> 起</span>
+        </div>
+        <div class="type">国内短线</div>
+    </figure>
+</div>
+
+//旅游项目区CSS
+#tour figure {
+    border: 1px solid #ddd;
+    display: inline-block;
+    padding: 4px;
+    border-radius: 4px;
+    width: 380px;
+    margin: 15px 12px;
+    text-align: left;
+    position: relative;
+}
+
+#tour figure img {
+    vertical-align: middle;
+}
+
+#tour figure figcaption {
+    color: #777;
+    font-size: 14px;
+    padding: 7px 0 5px 0;
+    letter-spacing: 1px;
+    line-height: 1.5;
+}
+
+#tour .title {
+    color: #333;
+    font-weight: normal;
+}
+
+#tour .price {
+    color: #f60;
+    font-size: 14px;
+}
+
+#tour .price strong {
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+#tour .sat {
+    color: #999;
+    font-size: 13px;
+    font-style: normal;
+    float: right;
+    position: relative;
+    right: 5px;
+    top: 5px;
+}
+
+#tour .type {
+    width: 90px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    border-bottom-radius: 4px;
+    background-color: #59b200;
+    font-size: 14px;
+    color: #fff;
+    letter-spacing: 1px;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+}
+-->
