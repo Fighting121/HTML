@@ -7,7 +7,46 @@
     <link rel="stylesheet" type="text/css" href="demo.css">
 </head>
 <body>
+    <table border="1px">
+        <caption>基本信息统计表</caption>
+        <thead>
+            <tr>
+                <th>姓名</th>
+                <th>性别</th>
+                <th>年龄</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>张三</td>
+                <td>男</td>
+                <td>18</td>
+            </tr>
+            <tr>
+                <td>李四</td>
+                <td>男</td>
+                 <td>20</td>
+            </tr>
+            <tr>
+                <td>小花</td>
+                <td>女</td>
+                <td>16</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3">共计：三名</td>
+            </tr>
+        </tfoot>
+    </table>
 
+    <ul>
+        <li>张三，是一个非常好的青年</li>
+        <li>李四</li>
+        <li>王五<b>4</b></li>
+        <li>刘麻子</li>
+        <li>王府井</li>
+    </ul>
 </body>
 </html>
 <!--
@@ -20,7 +59,7 @@ caption-side：位置名称，表格标题的位置，CSS版本2。
 empty-cells：显示值，空单元格是否显示边框，CSS版本2。
 table-layout：布局样式，指定表格的布局样式，CSS版本2。
 1、border-collapse
-separate：默认值，单元格边框独立，CSS版本2。
+separate：默认值，单元格相邻边框独立，CSS版本2。
 collapse：单元格相邻边框被合并，CSS版本2。
 table {
     border-collapse:collapse;
@@ -57,7 +96,7 @@ table {
 列表有四种独有样式，样式表如下：
 list-style-type：类型值，列表中的标记类型，CSS版本1/2。
 list-style-image：none或url，图像作为列表标记，CSS版本1。
-list-style-position：位置值，排列的相对位置，CSS版本1。
+list-style-position：位置值，标记的相对位置，CSS版本1。
 list-style：简写属性，列表的简写形式，CSS版本1。
 1、list-style-type
 none：没有标记，CSS版本1。

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>项目实战-PC端固定布局(5)</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+</body>
+</html>
+<!--
+本章主要开始学习使用HTML5和CSS3来构建Web页面，第一个项目采用PC端固定布局来实现。
+一、底部区域
+本节课，我们将探讨一下首页中最底部的区域。这部分区域由两个部分组成，一个是说明内容，有：合作伙伴、旅游FAQ和联系方式，还有一个就是
+版权声明及各种手续证件编号。如图plan.png所示
+//底部区域父元素
+<footer id="footer">
+    ...
+</footer>
+
+//底部父元素CSS
+#tour {
+    height: 1150px;
+}
+
+#footer {
+    height: 360px;
+    background-color: #222;
+}
+二、说明区域
+<footer id="footer">
+    <div class="top">
+        <div class="block left">
+            <h2>合作伙伴</h2>
+            <hr>
+            <ul>
+                <li>途牛旅游网</li>
+                <li>驴妈妈旅游网</li>
+                <li>携程旅游</li>
+                <li>中国青年旅行社</li>
+            </ul>
+        </div>
+        <div class="block center">
+            <h2>旅游FAQ</h2>
+            <hr>
+            <ul>
+                <li>旅游合同签订方式？</li>
+                <li>儿童价是基于什么定制的？</li>
+                <li>旅游的路线品质是怎么界定的？</li>
+                <li>单房差是什么？</li>
+                <li>旅游保险有哪些种类？</li>
+            </ul>
+        </div>
+        <div class="block right">
+            <h2>联系方式</h2>
+            <ul>
+                <li>微博：weibo.com/ycku</li>
+                <li>邮件：ycku@ycku.com/li>
+                <li>地址：江苏盐城无名路123号</li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+注：这里block表示三个区块通用的CSS，而left、center、right是每个区块独有的CSS，虽然CSS没有编写，但这里声明了，将在以后可以设置微调。
+
+//说明部分的CSS
+#footer .top {
+    width: 1263px;
+    height: 280px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#footer .block {
+    width: 410px;
+    height: 320px;
+    display: inline-block;
+    color: #ccc;
+    text-align: left;
+    vertical-align: top;
+}
+
+#footer h2 {
+    font-weight: normal;
+    padding: 20px 0 0 20px;
+    font-size: 24px;
+}
+
+#footer hr {
+    width: 90%;
+    border: 1px dashed #333;
+}
+
+#footer ul {
+    color: #666;
+    font-size: 18px;
+    text-indent: 20px;
+    line-height: 2;
+}
+三、版权及证件区
+//版权区
+<div class="bottom">
+    Copyright ©️ YCKU 飘城旅行社 | 苏ICP备 120110119号 | 旅行社经营许可证：L-YC-BK12345
+</div>
+
+//版权区CSS
+#footer .bottom {
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+    color: #777;
+    background-color: #000;
+    border-top: 1px solid #444;
+}
+-->
