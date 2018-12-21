@@ -24,13 +24,14 @@ a {
 }
 
 #header .center {
+    width: 1263px;
+    height: 70px;
     margin: 0 auto;
 }
 
 #header .logo {
     width: 240px;
     height: 70px;
-    color: red;
     text-indent: -999px;
     background-image: url("../img/logo.png");
     float: left;

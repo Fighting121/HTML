@@ -1,4 +1,202 @@
 @charset "utf-8";
-body {
-    background-color: chartreuse;
+body,h1,h2,ul,p,figure {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: outside none none;
+}
+
+a {
+    text-decoration: none;
+}
+
+#header {
+    width: auto;
+    min-width: 1263px;
+    height: 70px;
+    background-color: #333;
+    position: relative;
+    box-shadow: 0 1px 10px rgb(0,0,0,0.3);
+    z-index: 999;
+}
+
+#header .center {
+    width: 1263px;
+    height: 70px;
+    margin: 0 auto;
+}
+
+#header .logo {
+    width: 240px;
+    height: 70px;
+    background-image: url("../img/logo.png");
+    text-indent: -999px;
+    float: left;
+}
+
+#header .link {
+    width: 650px;
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+    float: right;
+}
+
+#header .none {
+    display: none;
+}
+
+#header .link li {
+    width: 120px;
+    height: 70px;
+    float: left;
+}
+
+#header .link a {
+    color: #eee;
+    display: block;
+}
+
+#header .active a,
+#header .link a:hover {
+    background-color: #000;
+}
+
+#search {
+    width: auto;
+    min-width: 1263px;
+    height: 600px;
+    background: url("../img/search.jpg") no-repeat center;
+    position: relative;
+}
+
+#search .search-bg {
+    width: 600px;
+    height: 60px;
+    border-radius: 10px;
+    background-color: #000;
+    opacity: 0.6;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -30px 0 0 -300px;
+}
+
+#search .search-input {
+    width: 446px;
+    height: 52px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -27px 0 0 -296px;
+    padding: 0 10px;
+    border: 1px solid #666;
+    border-radius: 10px;
+    color: #666;
+    font-size: 24px;
+    float: left;
+    outline: none;
+    background-color: #eee;
+}
+
+#search .search-btn {
+    width: 120px;
+    height: 52px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -26px 0 0 175px;
+    border: 1px solid #666;
+    border-radius: 10px;
+    color: #666;
+    font-size: 24px;
+    font-weight: bold;
+    float: right;
+    outline: none;
+    cursor: pointer;
+    background-color: #eee;
+}
+
+#tour {
+    width: 1263px;
+    height: 1150px;
+    margin: 30px auto;
+    text-align: center;
+}
+
+#tour .center h2 {
+    margin: 10px 0;
+    font-size: 45px;
+    color: #666;
+    letter-spacing: 2px;
+}
+
+#tour .center p {
+    margin: 10px 0;
+    color: #666;
+}
+
+#tour figure {
+    width: 380px;
+    border: 1px solid #ddd;
+    padding: 4px;
+    display: inline-block;
+    border-radius: 4px;
+    margin: 15px 12px;
+    text-align: left;
+    position: relative;
+}
+
+#tour figure img {
+    vertical-align: middle;
+}
+
+#tour figure figcaption {
+    color: #777;
+    font-size: 14px;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    padding: 7px 0 5px 0;
+}
+
+#tour .title {
+    color: #333;
+    font-weight: normal;
+}
+
+#tour .sat {
+    color: #999;
+    font-size: 13px;
+    font-style: normal;
+    float: right;
+    position: relative;
+    top: 5px;
+    right: 5px;
+}
+
+#tour .price {
+    color: #f60;
+    font-size: 14px;
+}
+
+#tour .price strong {
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+#tour .type {
+    width: 90px;
+    height: 25px;
+    line-height: 25px;
+    background-color: #59b200;
+    font-size: 14px;
+    text-align: center;
+    letter-spacing: 1px;
+    color: #fff;
+    border-bottom-right-radius: 4px;
+    position: absolute;
+    top: 4px;
+    left: 4px;
 }
