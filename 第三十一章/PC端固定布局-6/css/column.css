@@ -1,0 +1,50 @@
+@charset "utf-8";
+#headline {
+    width: auto;
+    min-width: 1263px;
+    height: 300px;
+    margin: 0 auto;
+    background: linear-gradient(to right bottom, rgba(0,0,0, 0.7), rgba(255,255,255,0)), url("../img/headline.jpg") no-repeat center;
+}
+
+#headline .center {
+    width: 1263px;
+    height: 300px;
+    margin: 0 auto;
+}
+
+#headline hgroup {
+    padding: 100px 0 0 50px;
+}
+
+#headline h2 {
+    color: #eee;
+    letter-spacing: 1px;
+    font-size: 36px;
+}
+
+#headline h3 {
+    color: #eee;
+    letter-spacing: 1px;
+    font-size: 20px;
+}
+
+#container {
+    width: 1263px;
+    height: 1200px;
+    margin: 30px auto;
+}
+
+#container .sidebar {
+    width: 320px;
+    height: 1200px;
+    background-color: #eee;
+    float: left;
+}
+
+#container .list {
+    width: 920px;
+    height: 1200px;
+    background-color: #ccc;
+    float: right;
+}

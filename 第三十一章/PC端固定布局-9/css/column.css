@@ -1,0 +1,337 @@
+@charset "utf-8";
+#headline {
+    width: auto;
+    min-width: 1263px;
+    height: 300px;
+    margin: 0 auto;
+    background: linear-gradient(to right bottom, rgba(0,0,0, 0.7), rgba(255,255,255,0)), url("../img/headline.jpg") no-repeat center;
+}
+
+#headline .center {
+    width: 1263px;
+    height: 300px;
+    margin: 0 auto;
+}
+
+#headline hgroup {
+    padding: 100px 0 0 50px;
+}
+
+#headline h2 {
+    color: #eee;
+    letter-spacing: 1px;
+    font-size: 36px;
+}
+
+#headline h3 {
+    color: #eee;
+    letter-spacing: 1px;
+    font-size: 20px;
+}
+
+#container {
+    width: 1263px;
+    margin: 30px auto;
+}
+
+#container .sidebar {
+    width: 340px;
+    float: right;
+}
+
+#container .sidebox {
+    border: 1px solid #eee;
+    margin: 0 0 10px 0;
+    text-align: center;
+}
+
+#container .sidebox h2 {
+    font-size: 20px;
+    font-weight: normal;
+    letter-spacing: 1px;
+    text-indent: 8px;
+    text-align: left;
+    height: 40px;
+    line-height: 40px;
+    background-color: #fafafa;
+    color: #666;
+}
+
+#container .tag {
+    padding: 10px 0;
+}
+
+#container .tag li {
+    display: inline-block;
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    margin: 2px 0;
+    text-align: left;
+    text-indent: 8px;
+    background-color: #eee;
+}
+
+#container .tag a {
+    display: block;
+    color: #999;
+}
+
+#container .tag a:hover {
+    background-color: #458b00;
+    color: #fff;
+}
+
+#container .figure {
+    padding: 10px 0;
+}
+
+#container figure {
+    display: inline-block;
+    color: #666;
+    padding: 4px;
+}
+
+#container .box {
+    padding: 10px 0;
+}
+
+#container .box a {
+    display: inline-block;
+    width: 150px;
+    height: 40px;
+    line-height: 40px;
+    margin: 2px 0;
+    text-align: left;
+    text-indent: 35px;
+    background-color: #eee;
+    color: #999;
+}
+
+#container .box a.trea1 {
+    background: #eee url("../img/trea1.png") no-repeat 10px center;
+}
+
+#container .box a.trea2 {
+    background: #eee url("../img/trea2.png") no-repeat 10px center;
+}
+
+#container .box a.trea3 {
+    background: #eee url("../img/trea3.png") no-repeat 10px center;
+}
+
+#container .box a.trea4 {
+    background: #eee url("../img/trea4.png") no-repeat 10px center;
+}
+
+#container .list {
+    width: 910px;
+    float: left;
+}
+
+#container .infor {
+    width: auto;
+    height: 43px;
+    line-height: 43px;
+    background-color: #eee;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#container .left {
+    float: left;
+}
+
+#container .left li {
+    display: inline-block;
+    width: 150px;
+    height: 43px;
+    line-height: 43px;
+}
+
+#container .left .selected {
+    background-color: #fff;
+    border-top: 2px solid #458b00;
+    position: relative;
+    left: 1px;
+}
+
+#container .left li a {
+    display: block;
+    color: #666;
+}
+
+#container .right {
+    float: right;
+    padding: 0 20px 0 0;
+}
+
+#container .right li {
+    display: inline-block;
+    width: 60px;
+    height: 45px;
+    line-height: 45px;
+}
+
+#container .right li a {
+    padding: 3px 8px;
+    color: #666;
+}
+
+#container .right .selected,
+#container .right a:hover
+{
+    background-color: #458b00;
+    color: #fff;
+}
+
+#container .tour {
+    width: 908px;
+    padding: 0;
+    margin-bottom: 20px;
+    border: 1px solid #eee;
+    position: relative;
+}
+
+#container .tour img {
+    float: left;
+}
+
+#container .tour figcaption {
+    float: right;
+    width: 528px;
+    height: 230px;
+}
+
+#container .tour hgroup {
+    width: 300px;
+    letter-spacing: 1px;
+}
+
+#container .tour h2 {
+    font-size: 24px;
+    font-weight: normal;
+    color: #333;
+    padding: 10px 0 10px 25px;
+}
+
+#container .tour h3 {
+    font-size: 16px;
+    font-weight: normal;
+    color: #666;
+    line-height: 1.5;
+    padding: 10px 0 10px 25px;
+}
+
+#container .tour ol {
+    padding: 0 0 0 25px;
+    color: #666;
+    line-height: 2;
+}
+
+#container .tour mark {
+    background-color: #fff;
+    border: 1px solid #458b00;
+    border-radius: 4px;
+    color: #458b00;
+    padding: 0 5px;
+}
+
+#container .tour .buy {
+    position: absolute;
+    top: 55px;
+    right: 30px;
+}
+
+#container .tour .price {
+    color: #f60;
+    font-size: 20px;
+}
+
+#container .tour .price strong {
+    font-size: 36px;
+}
+
+#container .tour .price s {
+    font-size: 16px;
+    color: #999;
+}
+
+#container .tour .reserve {
+    margin-top: 10px;
+}
+
+#container .tour .reserve a {
+    display: block;
+    width: 152px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 20px;
+    color: white;
+    background-color: #f60;
+    text-align: center;
+    border-radius: 4px;
+}
+
+#container .tour .type {
+    width: 90px;
+    height: 25px;
+    line-height: 25px;
+    color: #fff;
+    text-align: center;
+    border-bottom-right-radius: 4px;
+    letter-spacing: 1px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #59b200;
+}
+
+#container .tour .disc {
+    width: 52px;
+    height: 52px;
+    background: url("../img/disc.png") no-repeat center;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#container .tour .disc span {
+    display: block;
+    width: 52px;
+    height: 52px;
+    font-size: 14px;
+    color: #ff7a4d;
+    transform: rotate(45deg);
+    padding: 5px 0 0 0;
+    text-indent: 7px;
+}
+
+#container .tour footer {
+    width: 528px;
+    height: 35px;
+    line-height: 35px;
+    text-indent: 25px;
+    color: #666;
+    background-color: #fafafa;
+    letter-spacing: 1px;
+    position: absolute;
+    bottom: 0;
+}
+
+#container .tour time {
+    color: #458b00;
+}
+
+#container .list .more {
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 18px;
+    text-align: center;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #fafafa;
+}

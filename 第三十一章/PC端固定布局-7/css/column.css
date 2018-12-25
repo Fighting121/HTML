@@ -1,0 +1,126 @@
+@charset "utf-8";
+#headline {
+    width: auto;
+    min-width: 1263px;
+    height: 300px;
+    margin: 0 auto;
+    background: linear-gradient(to right bottom, rgba(0,0,0, 0.7), rgba(255,255,255,0)), url("../img/headline.jpg") no-repeat center;
+}
+
+#headline .center {
+    width: 1263px;
+    height: 300px;
+    margin: 0 auto;
+}
+
+#headline hgroup {
+    padding: 100px 0 0 50px;
+}
+
+#headline h2 {
+    color: #eee;
+    letter-spacing: 1px;
+    font-size: 36px;
+}
+
+#headline h3 {
+    color: #eee;
+    letter-spacing: 1px;
+    font-size: 20px;
+}
+
+#container {
+    width: 1263px;
+    margin: 30px auto;
+}
+
+#container .sidebar {
+    width: 340px;
+    float: right;
+}
+
+#container .sidebox {
+    border: 1px solid #eee;
+    margin: 0 0 10px 0;
+    text-align: center;
+}
+
+#container .sidebox h2 {
+    font-size: 20px;
+    font-weight: normal;
+    letter-spacing: 1px;
+    text-indent: 8px;
+    text-align: left;
+    height: 40px;
+    line-height: 40px;
+    background-color: #fafafa;
+    color: #666;
+}
+
+#container .tag {
+    padding: 10px 0;
+}
+
+#container .tag a {
+    display: inline-block;
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    margin: 2px 0;
+    text-align: left;
+    text-indent: 8px;
+    background-color: #eee;
+    color: #999;
+}
+
+#container .tag a:hover {
+    background-color: #458b00;
+    color: #fff;
+}
+
+#container .figure {
+    padding: 10px 0;
+}
+
+#container figure {
+    display: inline-block;
+    color: #666;
+    padding: 4px;
+}
+
+#container .box {
+    padding: 10px 0;
+}
+
+#container .box a {
+    display: inline-block;
+    width: 150px;
+    height: 40px;
+    line-height: 40px;
+    margin: 2px 0;
+    text-align: left;
+    text-indent: 35px;
+    background-color: #eee;
+    color: #999;
+}
+
+#container .box a.trea1 {
+    background: #eee url("../img/trea1.png") no-repeat 10px center;
+}
+
+#container .box a.trea2 {
+    background: #eee url("../img/trea2.png") no-repeat 10px center;
+}
+
+#container .box a.trea3 {
+    background: #eee url("../img/trea3.png") no-repeat 10px center;
+}
+
+#container .box a.trea4 {
+    background: #eee url("../img/trea4.png") no-repeat 10px center;
+}
+
+#container .list {
+    width: 900px;
+    float: left;
+}

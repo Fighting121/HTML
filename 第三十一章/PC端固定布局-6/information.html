@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>项目实战-PC端固定布局(6)</title>
+    <link rel="stylesheet" type="text/css" href="css/basic.css">
+    <link rel="stylesheet" type="text/css" href="css/column.css">
+</head>
+<body>
+    <header id="header">
+        <div class="center">
+            <h1 class="logo">飘城旅行社</h1>
+            <nav class="link">
+                <ul>
+                    <li><a href="index.html">首页</a></li>
+                    <li class="active"><a href="information.html">旅游资讯</a></li>
+                    <li><a href="###">机票订购</a></li>
+                    <li><a href="###">风景欣赏</a></li>
+                    <li><a href="###">公司简介</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div id="headline">
+        <div class="center">
+            <hgroup>
+                <h2>旅游资讯</h2>
+                <h3>介绍各种最新旅游信息、资讯要闻、景点攻略等</h3>
+            </hgroup>
+        </div>
+    </div>
+
+    <div id="container">
+        <aside class="sidebar">
+            sidebar
+        </aside>
+        <div class="list">
+            list
+        </div>
+    </div>
+
+    <footer id="footer">
+        <div class="top">
+            <div class="block left">
+                <h2>合作伙伴</h2>
+                <hr>
+                <ul>
+                    <li>途牛旅游网</li>
+                    <li>驴妈妈旅游网</li>
+                    <li>携程旅游网</li>
+                    <li>中国青年旅行社</li>
+                </ul>
+            </div>
+            <div class="block center">
+                <h2>旅游 FAQ</h2>
+                <hr>
+                <ul>
+                    <li>旅游合同签订方式？</li>
+                    <li>儿童价是基于什么指定的？</li>
+                    <li>旅游的线路品质怎么界定的？</li>
+                    <li>单房差是是什么？</li>
+                    <li>旅游保险有哪些种类？</li>
+                </ul>
+            </div>
+            <div class="block right">
+                <h2>联系方式</h2>
+                <hr>
+                <ul>
+                    <li>微博：weibo.com/ycku</li>
+                    <li>邮件：ycku@ycku.com/li>
+                    <li>地址：江苏盐城无名路123号</li>
+                </ul>
+            </div>
+        </div>
+        <div class="bottom">
+            Copyright ©️ YCKU 飘城旅行社 | 苏ICP备 120110119号 | 旅行社经营许可证：L-YC-BK12345
+        </div>
+    </footer>
+</body>
+</html>
+<!--
+本章主要开始学习使用HTML5和CSS3来构建Web页面，第一个项目采用PC端固定布局来实现。
+一、分离CSS
+本节课，我们将要创建一个新的页面：旅游资讯。那么，现在需要解决的问题是，如果把首页重复的部分移植到新的页面而减少冗余。最恰当的方法就是：将CSS部分
+中重复的部分分离出来，单独创建一个CSS，以便后续的页面重复调用。而首页的HTML重复的部分，一般是通过动态网页，比如PHP等解决重复问题，这里暂时不用
+解决。
+分离CSS，引入到新的页面后，还要为子栏目创建一个标头，不能使用首页的search那么大的了。只能，重新做一个小的，放在标头部分，如plan.png所示。
+//将重复的header和footer的CSS分离到basic.css中
+<link rel="stylesheet" type="text/css" href="css/basic.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+二、头部区域
+//子栏目头部区域
+<div id="headline">
+    <div class="center">
+        <hgroup>
+            <h2>旅游资讯</h2>
+            <h3>介绍各种最新旅游信息、资讯要闻、景点攻略等</h3>
+        </hgroup>
+    </div>
+</div>
+
+//CSS部分
+#headline {
+    width: 100%;
+    min-width: 1263px;
+    height: 300px;
+    background: linear-gradient(to bottom right, rgba(0,0,0,0.7), rgba(0,0,0,0)), url(../img/headline.jpg) no-repeat center;
+}
+
+#headline .center {
+    width: 1263px;
+    height: 300px;
+    margin: 0 auto;
+}
+
+#headline hgroup {
+    padding: 100px 0 0 50px;
+}
+
+#headlline h2 {
+    color: #eee;
+    letter-spacing: 1px;
+    font-size: 36px;
+}
+
+#headline h3 {
+    color: #eee;
+    letter-spacing: 1px;
+    font-size: 20px;
+}
+三、内容区域
+首先，分为侧栏和主栏
+//侧栏和主栏
+<div id="container">
+    <aside class="sidebar">
+        sidebar
+    </aside>
+    <div class="list">
+        list
+    </div>
+</div>
+-->
