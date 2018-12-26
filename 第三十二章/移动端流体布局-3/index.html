@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0,
+    maximum-scale=1.0, user-scalable=no">
+    <title>项目实战-移动端流体布局(3)</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <header id="header">
+        <nav class="link">
+            <h2 class="none">网站导航</h2>
+            <ul>
+                <li class="active"><a href="index.html">首页</a></li>
+                <li><a href="#">资讯</a></li>
+                <li><a href="#">票务</a></li>
+                <li><a href="#">关于</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="advert">
+        <img src="img/advert.png" alt="">
+    </div>
+
+    <div id="search">
+        <input type="text" class="search-input" placeholder="请输入旅游景点或城市">
+        <button class="search-btn">搜索</button>
+    </div>
+
+    <div id="tour">
+        <hgroup>
+            <h2>热门旅游</h2>
+            <h3>最新的各种热门旅游资讯的推荐！</h3>
+        </hgroup>
+    </div>
+
+    <footer id="footer">
+        <div class="top">
+            客户端 | 触屏版 | 电脑版
+        </div>
+        <div class="bottom">
+            Copyright ©️ YCKU 瓢城旅行社 | 苏 ICP 备120110119号
+        </div>
+    </footer>
+</body>
+</html>
+<!--
+本章主要开始对第一个PC端项目进行重构，设计成移动端可访问的页面，这个项目采用的是流体布局。
+一、搜索部分
+搜索部分包含三个内容，背景区块、文本框和按钮
+//HTML部分
+<div id="search">
+    <input type="text" class="search" placeholder="请输入旅游景点或城市">
+    <button class="button">搜索</button>
+</div>
+
+//CSS部分
+#search {
+    max-width: 6.4rem;
+    height: 0.33rem;
+    background-color: #ddd;
+    margin: 0 auto;
+    position: relative;
+    padding: 0.03rem 0 0 0;
+}
+
+#search .search {
+    display: block;
+    outline: none;
+    width: 95%;
+    font-size: 0.14rem;
+    border-radius: 0.04rem;
+    background-color: #fff;
+    border: none;
+    height: 0.27rem;
+    padding: 0 0.05rem;
+    margin: 0 auto;
+}
+
+#search .button {
+    display: block;
+    background-color: #eee;
+    outline: none;
+    cursor: pointer;
+    color: #666;
+    width: 0.5rem;
+    height: 0.27rem;
+    border: none;
+    border-top-right-radius: 0.04rem;
+    border-bottom-right-radius: 0.04rem;
+    position: absolute;
+    font-size: 0.12rem;
+    top: 0.03rem;
+    right: 1%;
+}
+
+//布局忽略边框计算
+div {
+    box-sizing: border-box;
+}
+二、旅游部分
+这里，我们首先设计一个标题，具体图片部分放到后面一节课。
+//HTML部分
+<div id="tour">
+    <hgroup>
+        <h2>热门旅游</h2>
+        <h3>最新的各种热门旅游资讯的推荐！</h3>
+    </hgroup?
+</div>
+
+//CSS部分
+#tour {
+    max-width: 6.4rem;
+    margin: .1rem auto 0 auto;
+}
+
+#tour h2 {
+    text-align: center;
+    color: #666;
+    font-size: .26rem;
+}
+
+#tour h3 {
+    text-align: center;
+    font-weight: normal;
+    color: #666;
+    margin: 0.05rem 0 0.1rem 0;
+    font-size: .16rem;
+}
+三、媒体查询
+媒体查询，这里我们不去详细讲解，这个放到后面响应式章节讲解，这里简单实用即可。
+//媒体查询，大于480小于640
+@media (min-width: 480px) and (max--width: 640px) {
+    #tour h2 {
+        font-size: .26rem;
+    }
+    #tour h3 {
+        font-size: .16rem;
+    }
+    #footer {
+        font-size: .14rem;
+    }
+}
+//媒体查询，小于480
+@media (max-width: 480px) {
+    #tour h2 {
+        font-size: .18rem;
+    }
+    #tour h3 {
+        font-size: .14rem;
+    }
+    #footer {
+        font-size: .12rem;
+    }
+}
+-->

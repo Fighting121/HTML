@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0,
+    maximum-scale=1.0, user-scalable=no">
+    <title>项目实战-移动端流体布局(2)</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <header id="header">
+        <nav class="link">
+            <h2 class="none">网站导航</h2>
+            <ul>
+                <li class="active"><a href="index.html">首页</a></li>
+                <li><a href="#">资讯</a></li>
+                <li><a href="#">票务</a></li>
+                <li><a href="#">关于</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="advert">
+        <img src="img/advert.png" alt="">
+    </div>
+    <footer id="footer">
+        <div class="top">
+            客户端 | 触屏版 | 电脑版
+        </div>
+        <div class="bottom">
+            Copyright ©️ YCKU 瓢城旅行社 | 苏 ICP 备120110119号
+        </div>
+    </footer>
+</body>
+</html>
+<!--
+本章主要开始对第一个PC端项目进行重构，设计成移动端可访问的页面，这个项目采用的是流体布局。
+一、基础CSS
+在PC端项目中，有很多常用的固定CSS，在移动端同样适用，我们直接复制过来即可。
+//通用CSS
+body,h1,h2,h3,p,ul,ol,form,fieldset,figure {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f5f5f5;
+    font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei UI", "Microsoft YaHei",
+    SimHei, "\5B8B\4F53", simsun, sans-serif;
+}
+
+ul,ol {
+    list-style: outside none none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.none {
+    display: none;
+}
+二、头部设计
+头部设计用的是全屏流体100%，高度为45px，分为四栏，每栏两个中文字，再多就容易溢出。
+//HTML部分
+<header id="header">
+    <nav class="link">
+        <h2 class="none">网站导航</h2>
+        <ul>
+            <li class="active"><a href="index.html">首页</a></li>
+            <li><a href="information.html">资讯</a><</li>
+            <li><a href="ticket.html">票务</a><</li>
+            <li><a href="about.html">关于</a><</li>
+        </ul>
+    </nav>
+</header>
+我们决定尝试一下新单位：rem。可是发现一个问题，如果按照基础课程中讲解的，在html{}的CSS中设置62.5%相当于10px，在Chrome
+浏览器中却出现偏差。那么统一解决的办法就是设置625%，默认是100px，这样达到完全兼容。
+//默认100px
+html {
+    font-size: 625%;
+}
+
+//头部CSS如下
+#header {
+    width: 100%;
+    height: 0.45rem;
+    font-size: 0.16rem;
+    margin: 0 auto;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+}
+
+#header .link {
+    height: 0.45rem;
+    line-height: 0.45rem;
+}
+
+#header .link li {
+    width: 25%;
+    text-align: center;
+    float: left;
+}
+
+#header .link a {
+    color: #eee;
+    display: block;
+}
+
+#header .link a:hover,
+#header .active a {
+    background-color: #000;
+}
+三、轮播设计
+轮播图片设计比较简单，只不过我们并没有真正的做图片轮播，是一个假的。因为这个涉及到JS或JQ部分知识，并且，还要涉及到移动端触摸以及
+滑动知识，暂时略过。
+//HTML部分
+<div id="advert">
+    <img src="img/search.png" alt="search">
+</div>
+//CSS部分，设置总区域为640px
+#advert {
+    max-width: 6.4rem;
+    margin: 0 auto;
+    padding: 0.45rem 0 0 0;
+}
+备注：如果你不适应rem，用px也没什么问题。现在很多响应式都还是使用的px，em计算太麻烦。
+四、底部设计
+底部参考PC端项目，适当缩减即可，长度限制为640px。
+//HTML部分
+<footer id="footer">
+    <div class="top">
+        客户端 | 触屏版 | 电脑版
+    </div>
+    <div class="bottom">
+        Copyright ©️ YCKU 飘城旅行社 | 苏ICP备120110119号
+    </div>
+</footer>
+
+//CSS部分
+#footer {
+    max-width: 6.4rem;
+    background-color: #222;
+    margin: 0 auto;
+    color: #777;
+    text-align: center;
+    padding: 0.1rem 0;
+}
+
+#footer .top {
+    padding: 0 0 0.05rem 0;
+}
+-->

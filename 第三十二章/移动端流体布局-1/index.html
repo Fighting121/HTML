@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>项目实战-移动端流体布局(1)</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <img src="img/tour1.jpg" alt="">
+</body>
+</html>
+<!--
+本章主要开始对第一个PC端项目进行重构，设计成移动端可访问的页面，这个项目采用的是流体布局。
+一、整体设计
+首先，我们要了解一下测试工具，一种是Chrome自带的移动端测试工具，另一种是Opera Mobile移动端测试工具。这里主要以Chrome为准，
+它模拟了主流的手机，并且引擎是webkit。
+首先，我们介绍一下分辨率，通过Chrome移动端测试工具可以得知，一般分辨率最小的不会小于320了，最大的不超过640。这时有人会疑问，
+我的手机分辨率是一千多呢，为什么设计的时候还是640像素？比如iPhone6 plus的分辨率为1080*1920(有一些设计者称实际分辨率：1242*2208)，
+而它的逻辑分辨率为:414*736。没有超过640，通过页面缩放技术进行缩小而不会失真。而如果是iPad，分辨率为：1563*2408，而它的逻辑
+分辨率为：768*1024，所以，如果设置640的页面，会在整屏出现白边。
+其次，我们看下典型的设计，一种是全屏流体设计，另一种是固屏流体设计。下面有几个代表网站：
+全屏类：
+    1、腾讯新闻：http://xw.qq.com/
+    2、途牛旅游：http://m.tuniu.com/
+固屏类：
+    1、京东商城：http://m.jd.com/
+    2、淘宝网：http://m.taobao.com/
+如果只是兼容移动端，那么不管是固屏还是全屏都是一样。从设计难度上来说，固屏貌似更容易一点点，因为全屏设计，在电脑上设计，完全放大又失真，
+设计起来比较难受。我们这里推荐使用固屏。
+当然，全屏设计，在PC端和PAD平板也可以无缝浏览，但图片却会失真。固屏虽然会留有白边，但图片不会失真。再当然，用了PAD或PC端，为什么却访问
+手机网页呢？除了设计师，还有谁会去这么做？所以，没必要。
+我们的案例还是飘城旅行社，只不过在头部导航部分使用了全屏，其他部位使用固屏幕。
+二、必要知识
+做移动网站有一个必要的知识，就是关于屏幕宽度以及缩放问题。我们习惯的在<head>标签之间增加一个<meta>标签：
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+//窗口设定
+name="viewport"
+//页面大小屏幕等宽
+width=device-width
+//初始缩放比例，1.0表示原始比例大小
+initial-scale=1.0
+//允许缩放的最小比例
+minimum-scale=1.0
+//允许缩放的最大比例
+maximum-scale=1.0
+//用户是否可以缩放，这里no表示不可以
+user-scalable=no
+上面最大最小比例其实已经限制了无法缩放了，和最后一个是否可以缩放有同样的功能。
+因为不同的手机，分辨率都不同，图片一定要能够自适应等比例缩放，才能保证布局的正确性。
+//设置max-width后，图片开始自适应
+img {
+    display: block;
+    max-width: 100%;
+}
+-->
