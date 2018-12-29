@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0,
+    maximum-scale=1.0, user-scalable=no">
+    <title>项目实战-兼容响应式布局(1)</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <header id="header">
+        <div class="center">
+            <h1 class="logo">瓢城旅行社</h1>
+            <nav class="link">
+                <h2 class="none">网站导航</h2>
+                <ul>
+                    <li class="active"><a href="index.html">首页</a></li>
+                    <li><a href="###"><span class="xs-hidden">旅游</span>资讯</a></li>
+                    <li><a href="###">机票<span class="xs-hidden">订购</span></a></li>
+                    <li class="xs-hidden"><a href="###">风景欣赏</a></li>
+                    <li><a href="###"><span class="xs-hidden">关于</span>公司</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div id="advert">
+        <img src="img/advert.jpg" alt="">
+    </div>
+</body>
+</html>
+<!--
+本章主要开始将前两个项目再进行重构，设计成既可以在PC端正常显示，又可以在PAD上浏览，还可以在移动端有良好的体验。
+这些都必须兼容，那只有使用响应式设计了。
+一、响应式初探
+在前面两个项目中，我们分别设计了PC端固定布局和移动端流体布局的案例。其实，通过上面两个案例，已经可以做出兼容PC端、
+PAD和移动端的响应式页面了。而本节课，我们就是将上面两个案例给成三个终端都可以正常显示的响应式布局。
+我们这节课并不去过多的探讨响应式的种种方案、技巧、实战等等，那个是另外一门专门的响应式开发课程，我们会在以后专门探讨，
+而HTML5第一季布局课，只是作为最基础的入门来了解一下响应式的设计。
+响应式设计最重要的环节就是媒体查询，我们仿造一个最为流行的Bootstrap框架中的媒体查询代码，具体如下：
+/*媒体查询，参考部分Bootstrap框架*/
+/*当页面大于1200px时，大屏幕，主要是PC端*/
+@media (min-width: 1200px) {
+
+}
+
+/*在992和1199像素之间的屏幕里，中等屏幕，分辨率低的PC*/
+@media (min-width: 992) and (max-width: 1199) {
+
+}
+
+/*在768和991像素之间的屏幕里，小屏幕，主要是PAD*/
+@media (min-width: 768px) and (max-width: 991) {
+
+}
+
+/*在480和767像素之家的屏幕里，超小屏幕，主要是手机*/
+@media (min-width: 480px) and (max-width: 767) {
+
+}
+
+/*在小于480像素的屏幕，微小屏幕，更低分辨率的手机*/
+@media (max-width: 479px) {
+
+}
+二、起始部分
+项目起始部分，首先构建出HTML5的基本格式以及CSS的基本样式。
+//移动或响应式Web页面缩放设置
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0,
+maximum-scale=1.0, user-scalable=no">
+
+//PC端拷贝过来，增加了一些class响应式隐藏
+<header id="header">
+    <div class="center">
+        <h1 class="logo">瓢城旅行社</h1>
+        <nav class="link">
+            <h2 class="none">网站导航</h2>
+            <ul>
+                <li><a href="index.html">首页</a></li>
+                <li><a href="information.html"><span class="xs-hidden">旅游</span>资讯</a></li>
+                <li><a href="ticket.html">机票<span class="xs-hidden">订购</span></a></li>
+                <li class="xs-hidden"><a href="scenery.html">风景欣赏</a></li>
+                <li><a href="about.html">关于<span class="xs-hidden">公司</span></a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+//CSS部分
+#header {
+    width: 100%;
+    height: 70px;
+    background-color: #333;
+    box-shadow: 0 1px 10px rgba(0,0,0,0.3);
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+}
+
+#header .center {
+    max-width: 1263px;
+    height: 70px;
+    margin: 0 auto;
+}
+
+#header .logo {
+    width: 30%;
+    height: 70px;
+    background: url(../img/logo.png) no-repeat center;
+    text-indent: -9999px;
+    float: left;
+}
+
+#header .link {
+    width: 70%;
+    height: 70px;
+    line-height: 70px;
+    color: #eee;
+    float: right;
+}
+
+#header .link li {
+    width: 20%;
+    text-align: center;
+    float: left;
+}
+
+#header .link a {
+    color: #eee;
+    display: block;
+}
+
+#header .link a:hover,
+#header .active a {
+    background-color: #000;
+}
+
+#advert {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 70px 0 0 0;
+}
+
+//媒体查询部分
+/*在480和767像素之间的屏幕里，这里的样式才生效*/
+@media (min-width: 480px) and (max-width: 767px) {
+    #header, #header .center, #header .logo, #header .link {
+        height: 45px;
+    }
+
+    #header .link {
+        line-height: 45px;
+    }
+
+    #header .logo {
+        display: none;
+    }
+
+    #header .link {
+        width: 100%;
+    }
+
+    #advert {
+        padding: 45px 0 0 0;
+    }
+}
+
+/*在小于480像素的屏幕，这里的样式才生效*/
+@media (max-width: 479px) {
+    #header, #header .center, #header .logo, #header .link {
+        height: 45px;
+    }
+
+    #header .link {
+        line-height: 45px;
+    }
+
+    #header .logo, .xs-hidden {
+        display: none;
+    }
+
+    #header .link {
+        width: 100%;
+    }
+
+    #advert {
+        padding: 45px 0 0 0;
+    }
+}
+-->

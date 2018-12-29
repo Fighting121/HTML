@@ -1,0 +1,399 @@
+@charset "utf-8";
+body,h1,h2,h3,p,ul,ol,form.fieldset,figure {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f5f5f5;
+    font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei UI", "Microsoft YaHei", SimHei, "\5B8B\4F53",
+    simsun, sans-serif;
+}
+
+div,figure,img,input,button {
+    box-sizing: border-box;
+}
+
+ul,ol {
+    list-style: outside none none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.clearfix:after {
+     content: '.';
+     height: 0;
+     display: block;
+     visibility: hidden;
+     clear: both;
+ }
+
+.none, .sm-visible {
+    display: none;
+}
+
+#header {
+    width: 100%;
+    height: 70px;
+    background-color: #333;
+    box-shadow: 0 1px 10px rgba(0,0,0,0.3);
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+}
+
+#header .center {
+    max-width: 1263px;
+    height: 70px;
+    margin: 0 auto;
+}
+
+#header .logo {
+    float: left;
+    width: 30%;
+    height: 70px;
+    text-indent: -9999px;
+    background: url(../img/logo.png) no-repeat left center;
+}
+
+#header .link {
+    float: right;
+    width: 55%;
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+}
+
+#header .link li {
+    float: left;
+    width: 20%;
+}
+
+#header .link a {
+    display: block;
+    color: #eee;
+}
+
+#header .active a,
+#header .link a:hover {
+    background-color: #000;
+}
+
+#advert {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 70px 0 0 0;
+    position: relative;
+}
+
+#advert .center {
+    width: 40%;
+    height: 60px;
+    background-color: #000;
+    border-radius: 10px;
+    margin: -10px 0 0 -20%;
+    opacity: 0.6;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+#advert .copy {
+    opacity: 1.0;
+    background-color: transparent;
+    padding: 3px 3px 0 3px;
+}
+
+#advert .search {
+    width: 70%;
+    height: 52px;
+    background-color: #eee;
+    color: #666;
+    border: 1px solid #666;
+    border-radius: 10px;
+    font-size: 24px;
+    padding: 0 10px;
+    outline: none;
+    display: block;
+    float: left;
+}
+
+#advert .button {
+    width: 30%;
+    height: 54px;
+    background-color: #eee;
+    color: #666;
+    border: 1px solid #333;
+    border-left-width: 3px;
+    border-radius: 10px;
+    font-size: 24px;
+    outline: none;
+    cursor: pointer;
+    font-weight: bold;
+    display: block;
+    float: right;
+}
+
+#tour {
+    max-width: 1263px;
+    height: 1150px;
+    margin: 30px auto;
+}
+
+#tour .center {
+    text-align: center;
+}
+
+#tour .center h2 {
+    margin: 10px 0;
+    font-size: 45px;
+    letter-spacing: 2px;
+    color: #666;
+}
+
+#tour .center p {
+    margin: 10px;
+    font-size: 16px;
+    color: #666;
+}
+
+#tour figure {
+    display: block;
+    width: 32.4%;
+    margin: 15px 0.4%;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 4px;
+    float: left;
+    text-align: left;
+    position: relative;
+}
+
+#tour figure img {
+    vertical-align: middle;
+}
+
+#tour figcaption {
+    color: #777;
+    font-size: 14px;
+    padding: 7px 0 0 0;
+    line-height: 1.5;
+    letter-spacing: 1px;
+}
+
+#tour .tour_title {
+    height: 40px;
+    overflow: hidden;
+}
+
+#tour .title {
+    color: #333;
+    font-weight: normal;
+}
+
+#tour .price {
+    color: #f60;
+    font-size: 14px;
+}
+
+#tour .price strong {
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+#tour .sat {
+    color: #999;
+    font-size: 13px;
+    font-style: normal;
+    float: right;
+    position: relative;
+    right: 5px;
+    top: 5px;
+}
+
+#tour .type {
+    width: 90px;
+    height: 25px;
+    line-height: 25px;
+    border-bottom-right-radius: 4px;
+    text-align: center;
+    font-size: 14px;
+    letter-spacing: 1px;
+    background-color: #59b200;
+    color: #fff;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+}
+
+#footer {
+    background-color: #222;
+    clear: both;
+    position: relative;
+    top: 20px;
+}
+
+#footer .top {
+    max-width: 1263px;
+    height: 280px;
+    margin: 0 auto;
+}
+
+#footer .version {
+    color: #777;
+    text-align: center;
+    padding: 10px 0;
+}
+
+#footer .block {
+    width: 33.33%;
+    height: 320px;
+    color: #ccc;
+    float: left;
+}
+
+#footer .bottom {
+    padding: 15px 0;
+    text-align: center;
+    background-color: #000;
+    color: #777;
+    border-top: 1px solid #444;
+}
+
+#footer h2 {
+    font-weight: normal;
+    padding: 20px 0 0 20px;
+    font-size: 24px;
+}
+
+#footer hr {
+    width: 90%;
+    border: 1px dashed #333;
+}
+
+#footer ul {
+    color: #666;
+    font-size: 18px;
+    text-indent: 20px;
+    line-height: 2;
+}
+
+/*媒体查询，参考部分Bootstrap框架*/
+/*当页面大于1200时，大屏幕，主要是PC端*/
+@media (max-width: 1200px) {
+
+}
+
+/*在992和1199像素之间的屏幕里，中等屏幕，分辨率低的PC*/
+@media (min-width: 992px) and (max-width: 1199px) {
+    #advert .center {
+        width: 50%;
+        margin: -10px 0 0 -25%;
+    }
+    #tour .center h2 {
+        font-size: 40px;
+    }
+}
+
+/*在768和991像素之间的屏幕里，小屏幕，主要是PAD*/
+@media (min-width: 768px) and (max-width: 991px) {
+    #advert .center {
+        width: 60%;
+        margin: -10px 0 0 -30%;
+    }
+    #advert .search, #advert .button {
+        font-size: 20px;
+    }
+    #tour .center h2 {
+        font-size: 35px;
+    }
+}
+
+/*在480和767像素之间的屏幕里，超小屏幕，主要是手机*/
+@media (min-width: 480px) and (max-width: 767px) {
+    #header, #header .center, #header .logo, #header .link {
+        height: 45px;
+    }
+    #header .logo, .sm-hidden {
+        display: none;
+    }
+    #header .link {
+        width: 100%;
+        line-height: 45px;
+    }
+    #advert {
+        padding: 45px 0 0 0;
+    }
+    #advert .center {
+        width: 70%;
+        height: 53px;
+        margin: -10px 0 0 -35%;
+    }
+    #advert .search, #advert .button {
+        height: 45px;
+        font-size: 18px;
+    }
+    .sm-visible {
+        display: block;
+    }
+    #tour .center h2 {
+        font-size: 30px;
+    }
+    #tour .center p {
+        font-size: 15px;
+    }
+    #tour figure {
+        width: 49.2%;
+    }
+}
+
+/*在小于480像素的屏幕，微小屏幕，更低分辨率的手机*/
+@media (max-width: 479px) {
+    #header, #header .center, #header .logo, #header .link  {
+        height: 45px;
+    }
+    #header .logo, .xs-hidden, .sm-hidden {
+        display: none;
+    }
+    #header .link {
+        width: 100%;
+        line-height: 45px;
+    }
+    #header .link li {
+        width: 25%;
+    }
+    #advert {
+        padding: 45px 0 0 0;
+    }
+    #advert .center {
+        width: 80%;
+        height: 48px;
+        margin: -10px 0 0 -40%;
+    }
+    #advert .search, #advert .button {
+        height: 40px;
+        font-size: 16px;
+    }
+    .sm-visible {
+        display: block;
+    }
+    #footer .bottom, #footer .version {
+        font-size: 13px;
+    }
+    #tour .center h2 {
+        font-size: 26px;
+    }
+    #tour .center p {
+        font-size: 14px;
+    }
+    #tour figure {
+        width: 99%;
+    }
+}

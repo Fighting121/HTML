@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0,
+    maximum-scale=1.0, user-scalable=no">
+    <title>项目实战-兼容响应式布局(2)</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <header id="header">
+        <div class="center">
+            <h1 class="logo">飘城旅行社</h1>
+            <nav class="link">
+                <h2 class="none">网站导航</h2>
+                <ul>
+                    <li class="active"><a href="index.html">首页</a></li>
+                    <li><a href="###"><span class="xs-hidden">旅游</span>资讯</a></li>
+                    <li><a href="###">机票<span class="xs-hidden">订购</span></a></li>
+                    <li class="xs-hidden"><a href="###">风景欣赏</a></li>
+                    <li><a href="###"><span class="xs-hidden">关于</span>公司</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div id="advert">
+        <img src="img/advert.jpg" alt="">
+        <div class="center"></div>
+        <div class="center copy">
+            <input type="text" class="search" placeholder="请输入旅游景点或城市">
+            <button class="button">搜索</button>
+        </div>
+    </div>
+
+    <footer id="footer">
+        <div class="top sm-hidden">
+            <div class="block left">
+                <h2>合作伙伴</h2>
+                <hr>
+                <ul>
+                    <li>途牛旅游网</li>
+                    <li>驴妈妈旅游网</li>
+                    <li>携程旅游</li>
+                    <li>中国青年旅行社</li>
+                </ul>
+            </div>
+            <div class="block center">
+                <h2>旅游FAQ</h2>
+                <hr>
+                <ul>
+                    <li>旅游合同签订方式？</li>
+                    <li>儿童价是基于什么制定的？</li>
+                    <li>旅游的线路品质怎么界定的？</li>
+                    <li>单房差是什么？</li>
+                    <li>旅游保险有那些种类？</li>
+                </ul>
+            </div>
+            <div class="block right">
+                <h2>联系方式</h2>
+                <hr>
+                <ul>
+                    <li>微博：weibo.com/ycku</li>
+                    <li>邮件：ycku@ycku.com</li>
+                    <li>地址：江苏盐城无名路123号</li>
+                </ul>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="version sm-visible">
+            客户端 | 触屏版 | 电脑版
+        </div>
+        <div class="bottom">
+            Copyright © YCKU 瓢城旅行社 | 苏ICP备120110119号 <span class="sm-hidden">| 旅行社经营许可证:L-YC-BK12345</span>
+        </div>
+    </footer>
+</body>
+</html>
+<!--
+本章主要开始将前两个项目再进行重构，设计成既可以在PC端正常显示，又可以在PAD上浏览，还可以在移动端有良好的体验。
+这些都必须兼容，那只有使用响应式设计了。
+一、搜索响应式
+在PC端，我们将搜索的文本框和按钮置于大背景前，移动端我们直接放在了大图片的下方。那么在响应式这里，我们还是遵循PC端，
+只不过采用流体缩放外加响应式控制来兼容显示。
+//PC端移植，并稍作修改
+<div id="advert">
+    <img src="img/advert.jpg" alt="">
+    <div class="center"></div>
+    <div class="center copy">
+        <input type="text" class="search" placeholder="请输入旅游景点或城市">
+        <button class="button">搜索</button>
+    </div>
+</div>
+
+//CSS部分，基本上是PC端移植，并改为流体百分比
+#advert {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 70px 0 0 0;
+    position: relative;
+}
+
+#advert .center {
+    width: 40%;
+    height: 60px;
+    background-color: #000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -10px 0 0 -20%;
+    opacity: 0.6;
+    border-radius: 10px;
+}
+
+#advert .copy {
+    opacity: 1;
+    background-color: transparent;
+    padding: 3px 3px 0 3px;
+}
+
+#advert .search {
+    width: 70%;
+    height: 52px;
+    background-color: #eee;
+    color: #666;
+    border: 1px solid #666;
+    border-radius: 10px;
+    font-size: 24px;
+    padding: 0 10px;
+    outline: none;
+    display: block;
+    float: left;
+}
+
+#advert .button {
+    width: 30%;
+    height: 54px;
+    background-color: #eee;
+    color: #666;
+    border: 1px solid #333;
+    border-left-width: 3px;
+    border-radius: 10px;
+    font-size: 24px;
+    outline: none;
+    cursor: pointer;
+    font-weight: bold;
+    display: block;
+    float: right;
+}
+
+//媒体查询部分
+/*在992和1199像素之间的屏幕里，这里的样式才生效*/
+@media (min-width: 992) and (max-width: 1199) {
+    #advert .center {
+        width: 50%;
+        margin: -10px 0 0 -25%;
+    }
+}
+
+/*在768和991像素之间的屏幕里，这里的样式才生效*/
+@media (min-width: 768px) and (max-width: 991px) {
+    #advert .center {
+        width: 60%;
+        margin: -10px 0 0 -30%;
+    }
+    #advert .search, #advert .button {
+        font-size: 20px;
+    }
+}
+
+/*在480和767像素之间的屏幕里，这里的样式才生效*/
+@media (min-width: 480px) and (max-width: 767px) {
+    #header, #header .center, #header .logo, #header .link {
+        height: 45px;
+    }
+    #header .link {
+        width: 100%;
+        line-height: 45px;
+    }
+    #header .logo, .sm-hidden {
+        display:none;
+    }
+    #advert {
+        padding: 45px 0 0 0;
+    }
+    #advert .center {
+        width: 70%;
+        height: 53px;
+        margin: -10px 0 0 -35%;
+    }
+    #advert .search, #advert .button {
+        height: 45px;
+        font-size: 18px;
+    }
+    .sm-visible {
+        display: block;
+    }
+    #footer .bottom {
+        height: 40px;
+        line-height: 40px;
+    }
+}
+
+/*在小于480像素的屏幕，这里的样式才生效*/
+@media (max-width: 479px) {
+    #header, #header .center, #header .logo, #header .link {
+        height: 45px;
+    }
+    #header .link {
+        width: 100%;
+        line-height: 45px;
+    }
+    #header .logo, .xs-hidden, .sm-hidden {
+        display:none;
+    }
+    #header .link li {
+        width: 25%;
+    }
+    #advert {
+        padding: 45px 0 0 0;
+    }
+    #advert .center {
+        width: 80%;
+        height: 48px;
+        margin: -10px 0 0 -40%;
+    }
+    #advert .search, #advert .button {
+        height: 40px;
+        font-size: 16px;
+    }
+    .sm-visible {
+        display: block;
+    }
+    #footer .bottom, #footer .version {
+        font-size: 13px;
+    }
+}
+
+二、底部响应式
+底部的响应式很好理解，就是大屏幕采用PC端，小屏幕采用移动端，进行响应式隐藏即可。
+//PC端复制过来，进行部分修改
+<footer id="footer">
+    <div class="top sm-hidden">
+        <div class="block left">
+            <h2>合作伙伴</h2>
+            <hr>
+            <ul>
+                <li>途牛旅游网</li>
+                <li>驴妈妈旅游网</li>
+                <li>携程旅游</li>
+                <li>中国青年旅行社</li>
+            </ul>
+        </div>
+        <div class="block center">
+            <h2>旅游FAQ</h2>
+            <hr>
+            <ul>
+                <li>旅游合同签订方式?</li>
+                <li>儿童价是基于什么制定的?</li>
+                <li>旅游的线路品质怎么界定的?</li>
+                <li>单房差是什么?</li>
+                <li>旅游保险有那些种类?</li>
+            </ul>
+        </div>
+        <div class="block right">
+            <h2>联系方式</h2>
+            <hr>
+            <ul>
+                <li>微博:weibo.com/ycku</li>
+                <li>邮件:ycku@ycku.com</li>
+                <li>地址:江苏盐城无名路 123 号</li>
+            </ul>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="version sm-visible">
+        客户端 | 触屏版 | 电脑版
+    </div>
+    <div class="bottom">
+        Copyright © YCKU 瓢城旅行社 | 苏ICP 备120110119号 <span class="sm-hidden">| 旅行社经营许可证:L-YC-BK12345</span>
+    </div>
+</footer>
+-->

@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0,
+    maximum-scale=1.0, user-scalable=no">
+    <title>项目实战-移动端流体布局(6)</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <header id="header">
+        <nav class="link">
+            <h1 class="none">网站导航</h1>
+            <ul>
+                <li><a href="index.html">首页</a></li>
+                <li><a href="information.html">资讯</a></li>
+                <li class="active"><a href="ticket.html">票务</a></li>
+                <li><a href="about.html">关于</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="headline">
+        <img src="img/headline.png" alt="">
+        <hgroup>
+            <h2>票务订购</h2>
+            <h3>各种飞机票、火车票、汽车票和轮渡票的订购服务</h3>
+        </hgroup>
+    </div>
+
+    <div class="list ticket">
+        <form action="###">
+            <h2>机票预订</h2>
+            <fieldset class="type">
+                <p>航程类型 <mark>单程</mark> 往返</p>
+            </fieldset>
+            <fieldset class="form">
+                <p>
+                    <label for="from_city">出发城市</label>
+                    <input type="text" name="from_city" id="from_city" placeholder="城市名">
+                </p>
+                <p>
+                    <label for="to_city">返回城市</label>
+                    <input type="text" name="to_city" id="to_city" placeholder="城市名">
+                </p>
+            </fieldset>
+            <fieldset class="form">
+                <p>
+                    <label for="from_date">出发时间</label>
+                    <input type="text" name="from_date" id="from_date" placeholder="时间/日期">
+                </p>
+                <p>
+                    <label for="to_date">返回时间</label>
+                    <input type="text" name="to_date" id="to_date" placeholder="时间/日期">
+                </p>
+            </fieldset>
+            <fieldset class="form">
+                <button type="submit" class="submit">订票</button>
+            </fieldset>
+        </form>
+        <div class="new">
+            <h2>最新机票</h2>
+            <ul>
+                <li>热门城市：</li>
+                <li>北京</li>
+                <li>上海</li>
+                <li>广州</li>
+                <li>深圳</li>
+                <li>重庆</li>
+                <li>成都</li>
+                <li>杭州</li>
+                <li>南京</li>
+            </ul>
+            <table>
+                <thead>
+                    <tr>
+                        <th>路线</th>
+                        <th>日期</th>
+                        <th>价格</th>
+                        <th class="min">税费</th>
+                        <th class="min">餐食</th>
+                        <th>航班</th>
+                        <th>预定</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>北京-成都</td>
+                        <td>10-15</td>
+                        <td class="price">¥745</td>
+                        <td class="min">¥50</td>
+                        <td class="min">有</td>
+                        <td>春秋航空</td>
+                        <td><a href="###" class="reserve">预定</a></td>
+                    </tr>
+                    <tr>
+                        <td>北京-上海</td>
+                        <td>10-15</td>
+                        <td class="price">¥479</td>
+                        <td class="min">¥45</td>
+                        <td class="min">无</td>
+                        <td>南方航空</td>
+                        <td><a href="###" class="reserve">预定</a></td>
+                    </tr>
+                    <tr>
+                        <td>北京-深圳</td>
+                        <td>10-15</td>
+                        <td class="price">¥561</td>
+                        <td class="min">¥52</td>
+                        <td class="min">有</td>
+                        <td>西部航空</td>
+                        <td><a href="###" class="reserve">预定</a></td>
+                    </tr>
+                    <tr>
+                        <td>北京-杭州</td>
+                        <td>10-15</td>
+                        <td class="price">¥378</td>
+                        <td class="min">¥36</td>
+                        <td class="min">无</td>
+                        <td>天津航空</td>
+                        <td><a href="###" class="reserve">预定</a></td>
+                    </tr>
+                    <tr>
+                        <td>北京-广州</td>
+                        <td>10-15</td>
+                        <td class="price">¥612</td>
+                        <td class="min">¥44</td>
+                        <td class="min">有</td>
+                        <td>首都航空</td>
+                        <td><a href="###" class="reserve">预定</a></td>
+                    </tr>
+                    <tr>
+                        <td>北京-重庆</td>
+                        <td>10-15</td>
+                        <td class="price">¥428</td>
+                        <td class="min">¥62</td>
+                        <td class="min">有</td>
+                        <td>东方航空</td>
+                        <td><a href="###" class="reserve">预定</a></td>
+                    </tr>
+                    <tr>
+                        <td>北京-昆明</td>
+                        <td>10-15</td>
+                        <td class="price">¥509</td>
+                        <td class="min">¥35</td>
+                        <td class="min">无</td>
+                        <td>厦门航空</td>
+                        <td><a href="###" class="reserve">预定</a></td>
+                    </tr>
+                    <tr>
+                        <td>北京-长沙</td>
+                        <td>10-15</td>
+                        <td class="price">¥663</td>
+                        <td class="min">¥46</td>
+                        <td class="min">无</td>
+                        <td>四川航空</td>
+                        <td><a href="###" class="reserve">预定</a></td>
+                    </tr>
+                    <tr>
+                        <td>北京-上海</td>
+                        <td>10-15</td>
+                        <td class="price">¥479</td>
+                        <td class="min">¥45</td>
+                        <td class="min">无</td>
+                        <td>南方航空</td>
+                        <td><a href="###" class="reserve">预定</a></td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="7"><a href="###" class="more">加载更多航班...</a></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+
+    <footer id="footer">
+        <div class="top">
+            客户端 | 触屏版 | 电脑版
+        </div>
+        <div class="bottom">
+            Copyright ©️ YCKU 瓢城旅行社 | 苏 ICP 备120110119号
+        </div>
+    </footer>
+</body>
+</html>
+<!--
+本章主要开始对第一个PC端项目进行重构，设计成移动端可访问的页面，这个项目采用的是流体布局。
+一、旅游资讯
+这个如果做成移动端，那么一切从简，否则缩小时就无法容纳太多的文字。
+//html，布局和PC端差不多
+<figure>
+    <img src="img/tour1.png" alt="">
+    <figcaption>
+        <hgroup>
+            <h2 class="title">曼谷-芭提雅6日游</h2>
+            <h3 class="small_title">包团特惠，超丰富景点，升级1晚国五，无自费，赠送600元...</h3>
+        </hgroup>
+        <div class="price">¥<strong>2864</strong></div>
+    </figcaption>
+</figure>
+
+注意：两边各占50%的浮动后，需要清理浮动，这里直接通过figure本身清理即可。
+//CSS部分
+.information figure:after {
+    content: ".";
+    height: 0;
+    visibility: hidden;
+    display: block;
+    clear: both;
+}
+
+.information figure {
+    position: relative;
+    margin: .15rem 0 0 0;
+}
+
+.information figure img {
+    width: 50%;
+    float: left;
+}
+
+.information figcaption {
+    width: 48%;
+    float: right;
+}
+
+.information .title {
+    border: none;
+    padding: 0 0 0.05rem 0;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+.information .small_title {
+    font-weight: normal;
+    padding: 0;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.information .price {
+    position: absolute;
+    bottom: 0;
+}
+
+.information .price strong {
+    color: #f60;
+    font-size: .26rem;
+}
+二、机票预订
+这个栏目和PC端的html一致，不需要变化，直接复制过来即可。重点在CSS配置上。在表格和列表上基本和PC端类似，主要用百分比即可。
+//CSS
+.ticket .type {
+    margin: .2rem 0 .1rem 0;
+    border: none;
+}
+
+.ticket .type mark {
+    color: #fff;
+    background-color: #458b00;
+    padding: 0.05rem 0.08rem;
+    border-radius: 0.04rem;
+    margin: 0 0.1rem 0 0.16rem;
+}
+
+,ticket .form {
+    font-size: 0.2rem;
+    border: none;
+}
+
+.ticket .form p {
+    margin: 0.1rem 0
+}
+
+.ticket .form label {
+    display: block;
+    margin: 0 0 0.05rem 0;
+    font-size: .16rem;
+}
+
+.ticket .form input {
+    width: 97%;
+    border: 0.01rem solid #ccc;
+    background-color: #fff;
+    border-radius: 0.04rem;
+    padding: 0.05rem;
+    color: #666;
+}
+
+.ticket .form .submit {
+    width: 30%;
+    border-radius: 0.04rem;
+    background-color: #f60;
+    color: #fff;
+    text-align: center;
+    border: none;
+    padding: 0.1rem;
+    margin: 0 auto;
+    display: block;
+}
+
+.ticket .new {
+    margin: 0.2rem 0 0 0;
+}
+
+.ticket .new ul {
+    margin: 0.2rem 0 0 0;
+}
+
+.ticket .new li {
+    display: inline-block;
+    padding: 0.05rem 0.1rem;
+}
+
+.ticket .new li:first-child {
+    padding-left: 0;
+}
+
+.ticket .new li:nth-child(2) {
+    background-color: #458b00;
+    border-radius: 0.04rem;
+    color: #fff;
+}
+
+.ticket table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0.2rem 0 0 0;
+    border: 0.01rem solid #ddd;
+}
+
+.ticket table th {
+    padding: 0.1rem 0;
+    border-bottom: 0.01rem solid #ddd;
+    font-weight: normal;
+}
+
+.ticket table td {
+    padding: 0.1rem 0;
+    text-align: center;
+    border-bottom: 0.01rem solid #ddd;
+}
+
+.ticket table tr:nth-child(2n) {
+    background-color: #fafafa;
+}
+
+.ticket table tr:hover {
+    background-color: #eee;
+}
+
+.ticket .price {
+    color: #f60;
+}
+
+.ticket .more {
+    text-align: center;
+    margin: 0 auto;
+    cursor: pointer;
+    display: block;
+    color: #666;
+}
+
+.ticket .reserve {
+    padding: 0.05rem 0.1rem;
+    display: inline-block;
+    border-radius: 0.04rem;
+    background-color: #f60;
+    color: #fff;
+    text-align: center;
+}
+
+//媒体查询
+/*媒体查询，大于480px小于640px*/
+@media (min-width: 480px) and (max-width: 640px) {
+    #tour h2, .information .price strong {
+        font-size: .26rem;
+    }
+
+    #tour h3, #footer, #tour figcaption, #tour .info, .list, .ticket .form label {
+        font-size: .16rem;
+    }
+
+    #headline h2 {
+        font-size: .22rem;
+    }
+
+    #headline h3 {
+        font-size: .14rem;
+    }
+
+    .list h2 {
+        font-size: .2rem;
+    }
+}
+
+/*媒体查询，小于480px*/
+@media (max-width: 480px) {
+    #tour h2, .information .price strong {
+        font-size: .20rem;
+    }
+
+    #tour h3, #tour figcaption, #tour .info, .list, .ticket .form label {
+        font-size: .14rem;
+    }
+
+    #footer {
+        font-size: .12rem;
+    }
+
+    #headline h2 {
+        font-size: .18rem;
+    }
+
+    #headline h3 {
+        font-size: .12rem;
+    }
+
+    .list h2 {
+        font-size: .17rem;
+    }
+
+    .min {
+        display: none;
+    }
+}
+-->

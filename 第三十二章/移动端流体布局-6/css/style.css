@@ -1,0 +1,473 @@
+@charset "utf-8";
+html {
+    font-size: 625%;
+}
+
+body,h1,h2,h3,h4,p,ul,ol,form,fieldset,figure {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #fff;
+    font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei UI", "Microsoft YaHei", SimHei, "\5B8B\4F53",
+    simsun, sans-serif;
+    font-size: 0.16rem;
+}
+
+ul,ol {
+    list-style: outside none none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+div,figure,figcaption {
+    box-sizing: border-box;
+}
+
+.none {
+    display: none;
+}
+
+#header {
+    width: 100%;
+    height: 0.45rem;
+    line-height: 0.45rem;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+}
+
+#header .link li {
+    float: left;
+    width: 25%;
+    text-align: center;
+}
+
+#header .link a {
+    display: block;
+    color: #eee;
+}
+
+#header .active,
+#header .link a:hover {
+    background-color: #000;
+}
+
+.clearfix:after {
+    display: block;
+    content: '.';
+    clear: both;
+    height: 0;
+    visibility: hidden;
+}
+
+#advert {
+    max-width: 6.4rem;
+    margin: 0 auto;
+    padding-top: 0.45rem;
+}
+
+#search {
+    max-width: 6.4rem;
+    height: 0.33rem;
+    margin: 0 auto;
+    padding: 0.03rem 0;
+    background-color: #ddd;
+    position: relative;
+}
+
+#search .search-input {
+    display: block;
+    width: 95%;
+    height: 0.27rem;
+    margin: 0 auto;
+    padding: 0 0.05rem;
+    outline: none;
+    font-size: 0.14rem;
+    border: none;
+    border-radius: 0.04rem;
+    background-color: #fff;
+}
+
+#search .search-btn {
+    display: block;
+    width: .5rem;
+    height: 0.27rem;
+    font-size: 0.12rem;
+    background-color: #eee;
+    outline: none;
+    border: none;
+    border-top-right-radius: 0.04rem;
+    border-bottom-right-radius: 0.04rem;
+    cursor: pointer;
+    position: absolute;
+    top: 0.03rem;
+    right: 1%;
+}
+
+#tour {
+    max-width: 6.4rem;
+    margin: 0.1rem auto 0 auto;
+}
+
+#tour h2 {
+    text-align: center;
+    font-size: 0.26rem;
+    color: #666;
+}
+
+#tour h3 {
+    text-align: center;
+    font-size: 0.16rem;
+    font-weight: normal;
+    color: #666;
+    margin: 0.05rem 0 0.1rem 0;
+}
+
+#tour figure {
+    width: 50%;
+    background-color: #eee;
+    float: left;
+    padding: 0 0 .05rem 0;
+    font-size: .16rem;
+}
+
+#tour figure img {
+    padding: 0.02rem;
+    vertical-align: middle;
+    border-radius: 0.04rem;
+}
+
+#tour figcaption {
+    color: #666;
+    font-size: 0.16rem;
+    padding: 0.02rem 0.05rem;
+}
+
+#tour figcaption h4 {
+    font-weight: normal;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#tour figcaption p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#tour .info {
+    padding: .1rem 0 0 0;
+    font-size: .16rem;
+}
+
+#tour .price {
+    color: #f60;
+}
+
+#tour .price strong {
+    letter-spacing: 0.01rem;
+}
+
+#tour .sat {
+    float: right;
+    font-style: normal;
+    position: relative;
+    right: .05rem;
+}
+
+#footer {
+    max-width: 6.4rem;
+    color: #777;
+    background-color: #222;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0.1rem 0;
+    font-size: 0.16rem;
+}
+
+#footer .top {
+    margin: 0 0 0.05rem 0;
+}
+
+#headline {
+    max-width: 6.4rem;
+    margin: 0 auto;
+    padding-top: 0.45rem;
+    position: relative;
+}
+
+#headline hgroup {
+    color: #eee;
+    letter-spacing: 0.01rem;
+    position: absolute;
+    top: 48%;
+    left: 10%;
+}
+
+#headline h2 {
+    font-size: 0.22rem;
+}
+
+#headline h3{
+    font-size: 0.14rem;
+}
+
+.list {
+    color: #666;
+    padding: 0 .1rem;
+    max-width: 6.4rem;
+    margin: .15rem auto;
+    font-size: .16rem;
+}
+
+.list h2 {
+    font-size: .2rem;
+    border-bottom: 0.01rem dashed #999;
+    padding: 0 0 0.15rem 0;
+}
+
+.information figure:after {
+    content: '.';
+    height: 0;
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+
+.information figure {
+    margin: 0.15rem 0;
+    position: relative;
+}
+
+.information figure img {
+    float: left;
+    width: 50%;
+}
+
+.information figure figcaption {
+    float: right;
+    width: 48%;
+}
+
+.information .title {
+    border: none;
+    padding: 0 0 0.05rem 0;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+.information .small_title {
+    font-weight: normal;
+    padding: 0;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.information .price {
+    color: #f60;
+    position: absolute;
+    bottom: 0;
+}
+
+.information .price strong {
+    font-size: .26rem;
+}
+
+.ticket .type {
+    margin: 0.2rem 0 0.2rem 0;
+    border: none;
+}
+
+.ticket .type mark {
+    color: #fff;
+    background-color: #458b00;
+    border-radius: 0.04rem;
+    padding: 0.05rem 0.08rem;
+    margin: 0 0.10rem 0 0.16rem;
+}
+
+.ticket .form {
+    border: none;
+}
+
+.ticket .form p {
+    margin: .1rem 0;
+}
+
+.ticket .form label {
+    display: block;
+    margin: 0 0 .05rem 0;
+}
+
+.ticket .form input {
+    width: 95%;
+    height: .2rem;
+    padding: .05rem;
+    outline: none;
+    border: .01rem solid #ccc;
+    border-radius: .04rem;
+    background-color: #fff;
+    color: #666;
+}
+
+.ticket .form .submit {
+    display: block;
+    width: 30%;
+    margin: 0 auto;
+    padding: .1rem;
+    border: none;
+    border-radius: .04rem;
+    outline: none;
+    background-color: #f60;
+    color: #fff;
+    cursor: pointer;
+}
+
+.ticket .new {
+    margin: .2rem 0 0 0;
+}
+
+.ticket .new ul {
+    width: 100%;
+    margin: 0.2rem 0 0 0;
+}
+
+.ticket .new li {
+    display: inline-block;
+    padding: .05rem .1rem;
+}
+
+.ticket .new li:first-child {
+    padding-left: 0;
+}
+
+.ticket .new li:nth-child(2) {
+    background: #458b00;
+    border-radius: .04rem;
+    color: #fff;
+}
+
+.ticket .new table {
+    width: 100%;
+    border: .01rem solid #ddd;
+    border-collapse: collapse;
+    margin: 0.2rem 0 0 0;
+    text-align: center;
+}
+
+.ticket .new th {
+    padding: .15rem 0;
+    font-weight: normal;
+    border-bottom: .01rem solid #ddd;
+}
+
+.ticket .new td {
+    padding: .15rem 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.ticket .new tr:nth-child(2n) {
+    background-color: #fafafa;
+}
+
+.ticket .new tr:hover {
+    background-color: #eee;
+}
+
+.ticket .new .price {
+    color: #f60;
+}
+
+.ticket .new .more {
+    display: block;
+    margin: 0 auto;
+    color: #666;
+    cursor: pointer;
+}
+
+.ticket .new .reserve {
+    background-color: #f60;
+    border-radius: .04rem;
+    color: #fff;
+    padding: .05rem .08rem;
+}
+
+.about p {
+    line-height: 2;
+    margin: .2rem 0;
+}
+
+.about address {
+    font-style: normal;
+    line-height: 1.6;
+    margin: .2rem 0;
+}
+
+/*媒体查询，大于480px小于640px*/
+@media (min-width: 480px) and (max-width: 640px) {
+    #tour h2，.information .price strong {
+        font-size: .26rem;
+    }
+
+    #tour h3, #footer, #tour figcaption, #tour .info, .list {
+        font-size: .16rem;
+    }
+
+    #headline h2 {
+        font-size: .22rem;
+    }
+
+    #headline h3 {
+        font-size: .14rem;
+    }
+
+    .list h2 {
+        font-size: .2rem;
+    }
+}
+
+/*媒体查询，小于640px*/
+@media (max-width: 480px) {
+    #tour h2, .information .price strong {
+        font-size: .20rem;
+    }
+
+    #tour h3, #tour figcaption, #tour .info, .list {
+        font-size: .14rem;
+    }
+
+    #footer {
+        font-size: .12rem;
+    }
+
+    #headline h2 {
+        font-size: .18rem;
+    }
+
+    #headline h3 {
+        font-size: .12rem;
+    }
+
+    .list h2 {
+        font-size: .17rem;
+    }
+
+    .min {
+        display: none;
+    }
+}

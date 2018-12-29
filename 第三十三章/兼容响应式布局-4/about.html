@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0,
+    maximum-scale=1.0, user-scalable=no">
+    <title>项目实战-兼容响应式布局(4)</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <header id="header">
+        <div class="center">
+            <h1 class="logo">飘城旅行社</h1>
+            <nav class="link">
+                <h2 class="none">网站导航</h2>
+                <ul>
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="###"><span class="xs-hidden">旅游</span>资讯</a></li>
+                    <li><a href="###">机票<span class="xs-hidden">订购</span></a></li>
+                    <li class="xs-hidden"><a href="###">风景欣赏</a></li>
+                    <li class="active"><a href="about.html"><span class="xs-hidden">关于</span>公司</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div id="headline">
+        <img src="img/headline.jpg" alt="">
+        <hgroup>
+            <h2>公司简介</h2>
+            <h3>公司的发展历程、获得荣誉以及联系方式</h3>
+        </hgroup>
+    </div>
+
+    <div id="container">
+        <aside class="sidebar">
+            <div class="recommend">
+                <h2>景点推荐</h2>
+                <div class="tag">
+                    <ul>
+                        <li><a href="###">曼谷(12)</a></li>
+                        <li><a href="###">东京(5)</a></li>
+                        <li><a href="###">西双版纳(8)</a></li>
+                        <li><a href="###">漓江(16)</a></li>
+                        <li><a href="###">呼伦贝尔(4)</a></li>
+                        <li><a href="###">首尔(9)</a></li>
+                        <li><a href="###">巴厘岛(15)</a></li>
+                        <li><a href="###">土耳其(22)</a></li>
+                        <li><a href="###">夏威夷(5)</a></li>
+                        <li><a href="###">巴厘岛(11)</a></li>
+                        <li><a href="###">毛里求斯(7)</a></li>
+                        <li><a href="###">吉普岛(4)</a></li>
+                        <li><a href="###">希腊(18)</a></li>
+                        <li><a href="###">法瑞意(8)</a></li>
+                        <li><a href="###">马尔代夫(9)</a></li>
+                        <li><a href="###">新西兰(16)</a></li>
+                        <li><a href="###">埃及(11)</a></li>
+                        <li><a href="###">迪拜(14)</a></li>
+                        <li><a href="###">斯里兰卡(7)</a></li>
+                        <li><a href="###">麦哈顿(3)</a></li>
+                        <li><a href="###">大阪(15)</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="hot">
+                <h2>热卖旅游</h2>
+                <div class="figure">
+                    <figure>
+                        <img src="img/hot1.jpg" alt="曼谷-芭提雅6日游">
+                        <figcaption>曼谷-芭提雅6日游</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="img/hot2.jpg" alt="马尔代夫双鱼6日游">
+                        <figcaption>马尔代夫双鱼6日游</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="img/hot3.jpg" alt="海南双飞5日游">
+                        <figcaption>海南双飞5日游</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="img/hot4.jpg" alt="富山大阪东京8日游">
+                        <figcaption>富山大阪东京8日游</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="img/hot5.jpg" alt="法瑞意德12日游">
+                        <figcaption>法瑞意德12日游</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="img/hot6.jpg" alt="巴厘岛6日半游">
+                        <figcaption>巴厘岛6日半游</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="img/hot7.jpg" alt="塞舌尔迪拜9日游">
+                        <figcaption>塞舌尔迪拜9日游</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="img/hot8.jpg" alt="花样土耳其10日游">
+                        <figcaption>花样土耳其10日游</figcaption>
+                    </figure>
+                </div>
+            </div>
+            <div class="treasure">
+                <h2>旅游百宝箱</h2>
+                <div class="box">
+                    <ul>
+                        <li><a href="###" class="trea1">天气预报</a></li>
+                        <li><a href="###" class="trea2">火车票查询</a></li>
+                        <li><a href="###" class="trea3">航空查询</a></li>
+                        <li><a href="###" class="trea4">地铁线路查询</a></li>
+                    </ul>
+                </div>
+            </div>
+        </aside>
+        <div class="list about">
+            about
+        </div>
+    </div>
+
+    <footer id="footer">
+        <div class="top sm-hidden">
+            <div class="block left">
+                <h2>合作伙伴</h2>
+                <hr>
+                <ul>
+                    <li>途牛旅游网</li>
+                    <li>驴妈妈旅游网</li>
+                    <li>携程旅游</li>
+                    <li>中国青年旅行社</li>
+                </ul>
+            </div>
+            <div class="block center">
+                <h2>旅游FAQ</h2>
+                <hr>
+                <ul>
+                    <li>旅游合同签订方式？</li>
+                    <li>儿童价是基于什么制定的？</li>
+                    <li>旅游的线路品质怎么界定的？</li>
+                    <li>单房差是什么？</li>
+                    <li>旅游保险有那些种类？</li>
+                </ul>
+            </div>
+            <div class="block right">
+                <h2>联系方式</h2>
+                <hr>
+                <ul>
+                    <li>微博：weibo.com/ycku</li>
+                    <li>邮件：ycku@ycku.com</li>
+                    <li>地址：江苏盐城无名路123号</li>
+                </ul>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="version sm-visible">
+            客户端 | 触屏版 | 电脑版
+        </div>
+        <div class="bottom">
+            Copyright © YCKU 瓢城旅行社 | 苏ICP备120110119号 <span class="sm-hidden">| 旅行社经营许可证:L-YC-BK12345</span>
+        </div>
+    </footer>
+</body>
+</html>
+<!--
+本章主要开始将前两个项目再进行重构，设计成既可以在PC端正常显示，又可以在PAD上浏览，还可以在移动端有良好的体验。
+这些都必须兼容，那只有使用响应式设计了。
+一、栏目头部响应式
+在栏目中，头部我们重新设计了图片，并且加上了黑色的层来取代兼容性不好的CSS3渐变，高度适当的调整，以满足移动端的用户体验。
+//html
+<div id="headline">
+    <img src="img/headline.jpg" alt="">
+    <hgroup>
+        <h2>公司简介</h2>
+        <h3>公司的发展历程、获得荣誉以及联系方式</h3>
+    </hgroup>
+</div>
+
+//CSS部分，其他PC端移植
+#headline {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 70px 0 0 0;
+    position: relative;
+}
+
+#headline hgroup {
+    position: absolute;
+    top: 45%;
+    left: 18%;
+}
+
+//媒体查询
+@media (min-width: 992px) and (max-width: 1199px) {
+    #headline h2 {
+        font-size: 38px;
+    }
+    #headline h3 {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    #headline h2 {
+        font-size: 30px;
+    }
+    #headline h3 {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+    #headline {
+        padding: 45px 0 0 0;
+    }
+    #headline h2 {
+        font-size: 26px;
+    }
+    #headline h3 {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 479px) {
+    #headline {
+        padding: 45px 0 0 0;
+    }
+    #headline h2 {
+        font-size: 20px;
+    }
+    #headline h3 {
+        font-size: 12px;
+    }
+}
+二、公司简介响应式
+公司简介，我们直接PC端完全复制过来即可。改成流体响应式，并且在响应式时，根据分辨率隐藏掉侧栏即可。
+//html部分直接PC端移植，完全不需要动，代码忽略
+//css大部分不动，只改几个流体百分比
+#container {
+    max-width: 1263px;
+    margin: 30px auto;
+}
+
+#container .sidebar {
+    width: 28%;
+    float: right;
+}
+
+.list {
+    width: 71%;
+    float: left;
+}
+
+//媒体查询
+@media (min-width: 992px) and (max-width: 1199px) {
+    .sidebar {
+        display: none;
+    }
+    .list {
+        width: 100%;
+        padding: 0 20px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .sidebar {
+        display: none;
+    }
+    .list {
+        width: 100%;
+        padding: 0 20px;
+    }
+    .list h2 {
+        font-size: 28px;
+    }
+    .about p {
+        font-size: 18px;
+    }
+    .about address {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+    .sidebar {
+        display: none;
+    }
+    .list {
+        width: 100%;
+        padding: 0 20px;
+    }
+    .list h2 {
+        font-size: 25px;
+    }
+    .about p {
+        font-size: 15px;
+    }
+    .about address {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 479px) {
+    .sidebar {
+        display: none;
+    }
+    .list {
+        width: 100%;
+        padding: 0 20px;
+    }
+    .list h2 {
+        font-size: 22px;
+    }
+    .about p {
+        font-size: 14px;
+    }
+    .about address {
+        font-size: 14px;
+    }
+}
+-->
