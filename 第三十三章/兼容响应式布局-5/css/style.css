@@ -1,5 +1,5 @@
 @charset "utf-8";
-body,h1,h2,h3,p,ul,ol,form.fieldset,figure {
+body,h1,h2,h3,p,ul,ol,form,fieldset,figure {
     margin: 0;
     padding: 0;
 }
@@ -409,6 +409,188 @@ img {
     margin: 20px 0;
 }
 
+.scenery .more {
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #fafafa;
+}
+
+.scenery figure {
+    display: block;
+    width: 32.6%;
+    margin: 15px 5px 15px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 4px;
+    float: left;
+    text-align: left;
+    position: relative;
+}
+
+.scenery figcaption {
+    color: #666;
+    font-size: 20px;
+    padding: 7px 0 0 0;
+    line-height: 1.5;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.ticket {
+    color: #666;
+}
+
+.ticket .type {
+    font-size: 20px;
+    margin: 20px 0 10px 0;
+    border: none;
+}
+
+.ticket mark {
+    background-color: #458b00;
+    color: #fff;
+    border-radius: 4px;
+    padding: 5px 8px;
+    margin: 0 10px 0 16px;
+}
+
+.ticket .form {
+    font-size: 20px;
+    border: none;
+}
+
+.ticket .form p {
+    line-height: 3;
+}
+
+.ticket .form input {
+    width: 250px;
+    height: 30px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 5px;
+    font-size: 18px;
+    color: #666;
+    margin: 0 0 0 16px;
+    outline: none;
+}
+
+.ticket .left {
+    display: inline-block;
+    width: 43%;
+}
+
+.ticket .right {
+    display: inline-block;
+    width: 43%;
+}
+
+.ticket .button {
+    display: inline-block;
+    width: 9%;
+}
+
+.ticket .submit {
+    display: inline-block;
+    width: 90px;
+    height: 90px;
+    line-height: 90px;
+    border-radius: 4px;
+    background-color: #f60;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    top: -28px;
+}
+
+.ticket .new {
+    font-size: 20px;
+    margin: 20px 0 0 0;
+}
+
+.ticket .new ul {
+    margin: 20px 0 0 0;
+}
+
+.ticket .new li {
+    display: inline-block;
+    padding: 5px 10px;
+}
+
+.ticket .new li:first-child {
+    padding-left: 0;
+}
+
+.ticket .new li:nth-child(2) {
+    background-color: #458b00;
+    color: #fff;
+    border-radius: 4px;
+}
+
+.ticket .new table {
+    width: 100%;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-collapse: collapse;
+    margin: 20px 0 0 0;
+}
+
+.ticket .new table th {
+    height: 50px;
+    line-height: 50px;
+    border-bottom: 1px solid #ddd;
+    font-weight: normal;
+}
+
+.ticket .new table td {
+    height: 50px;
+    line-height: 50px;
+    border-bottom: 1px solid #ddd;
+}
+
+.ticket .new table tr:nth-child(2n) {
+    background-color: #fafafa;
+}
+
+.ticket .new table tr:hover {
+    background-color: #eee;
+}
+
+.ticket .new .price {
+    color: #f60;
+}
+
+.ticket .reserve {
+    display: inline-block;
+    color: #fff;
+    background-color: #f60;
+    width: 80px;
+    height: 35px;
+    line-height: 35px;
+    border-radius: 4px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.ticket .new .more {
+    display: block;
+    margin: 0 auto;
+    color: #666;
+    text-align: center;
+    font-size: 18px;
+}
+
 #footer {
     background-color: #222;
     clear: both;
@@ -528,6 +710,26 @@ img {
     .about p, .about address {
         font-size: 18px;
     }
+    .ticket .left, .ticket .right, .ticket .button {
+        width: 98%;
+        display: block;
+    }
+    .ticket .form input {
+        width: 98%;
+        height: 35px;
+        margin: 0;
+    }
+    .ticket .form p {
+        line-height: 2;
+    }
+    .ticket .submit {
+        display: block;
+        width: 30%;
+        height: auto;
+        line-height: 2;
+        position: static;
+        margin: 10px auto;
+    }
 }
 
 /*在480和767像素之间的屏幕里，超小屏幕，主要是手机*/
@@ -587,6 +789,35 @@ img {
     }
     .about p, .about address {
         font-size: 15px;
+    }
+    .scenery figure {
+        width: 48.2%;
+    }
+    .scenery figcaption {
+        font-size: 18px;
+    }
+    .ticket .left, .ticket .right, .ticket .button {
+        width: 98%;
+        display: block;
+    }
+    .ticket .form input {
+        width: 98%;
+        height: 35px;
+        margin: 0;
+    }
+    .ticket .form p {
+        line-height: 2;
+    }
+    .ticket .submit {
+        display: block;
+        width: 30%;
+        height: auto;
+        line-height: 2;
+        position: static;
+        margin: 10px auto;
+    }
+    .ticket .type, .ticket .form, .ticket .new, .ticket .form input, .ticket .submit, .ticket .reserve {
+        font-size: 16px;
     }
 }
 
@@ -653,5 +884,45 @@ img {
     }
     .about p, .about address {
         font-size: 14px;
+    }
+    .scenery figure {
+        width: 99%;
+    }
+    .scenery figcaption {
+        font-size: 16px;
+    }
+    .ticket .left, .ticket .right, .ticket .button {
+        width: 98%;
+        display: block;
+    }
+    .ticket .form input {
+        width: 98%;
+        height: 35px;
+        margin: 0;
+    }
+    .ticket .form p {
+        line-height: 2;
+    }
+    .ticket .submit {
+        display: block;
+        width: 30%;
+        height: auto;
+        line-height: 2;
+        position: static;
+        margin: 10px auto;
+    }
+    .ticket .type, .ticket .form, .ticket .new, .ticket .form input, .ticket .submit, .ticket .reserve {
+        font-size: 14px;
+    }
+    .ticket .reserve {
+        display: inline-block;
+        width: auto;
+        height: auto;
+        line-height: 1;
+        border-radius: 4px;
+        background-color: #f60;
+        color: #fff;
+        padding: 8px;
+        text-align: center;
     }
 }

@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0,
-    maximum-scale=1.0, user-scalable=no">
-    <title>项目实战-兼容响应式布局(4)</title>
+    maximum-sale=1.0, user-scalable=no">
+    <title>项目实战-兼容响应式布局(5)</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
@@ -16,9 +16,9 @@
                 <ul>
                     <li><a href="index.html">首页</a></li>
                     <li><a href="###"><span class="xs-hidden">旅游</span>资讯</a></li>
-                    <li><a href="###">机票<span class="xs-hidden">订购</span></a></li>
-                    <li class="xs-hidden"><a href="###">风景欣赏</a></li>
-                    <li class="active"><a href="about.html"><span class="xs-hidden">关于</span>公司</a></li>
+                    <li><a href="ticket.html">机票<span class="xs-hidden">订购</span></a></li>
+                    <li class="xs-hidden active"><a href="scenery.html">风景欣赏</a></li>
+                    <li><a href="about.html"><span class="xs-hidden">关于</span>公司</a></li>
                 </ul>
             </nav>
         </div>
@@ -27,8 +27,8 @@
     <div id="headline">
         <img src="img/headline.jpg" alt="">
         <hgroup>
-            <h2>公司简介</h2>
-            <h3>公司的发展历程、获得荣誉以及联系方式</h3>
+            <h2>风景欣赏</h2>
+            <h3>各种旅游图片的欣赏合集</h3>
         </hgroup>
     </div>
 
@@ -111,24 +111,43 @@
                 </div>
             </div>
         </aside>
-        <div class="list about">
+        <div class="list scenery">
             <section>
-                <h2>关于我们</h2>
-                <p>瓢城旅行社旅游网创立于2006年10月，以“让旅游更简单”为使命，为消费者提供由北京、上海、广州、深圳等64个城市出发的旅游产品预订服务，产品全面，价格透明，全年365天24小时400电话预订，并提供丰富的后续服务和保障。</p>
-                <p>目前，瓢城旅行社旅游网提供8万余种旅游产品供消费者选择，涵盖跟团、自助、自驾、邮轮、酒店、签证、景区门票以及公司旅游等，已成功服务累计超过400万人次出游。</p>
-                <p>同时基于瓢城旅行社旅游网全球中文景点目录以及中文旅游社区，可以更好地帮助游客了解目的地信息，妥善制定好出游计划，并方便地预订旅程中的服务项目。</p>
-            </section>
-            <section>
-                <h2>联系我们</h2>
-                <address>
-                    <ul>
-                        <li>瓢城旅行社股份有限公司</li>
-                        <li>地址：江苏省盐城市亭湖区大庆中路1234号</li>
-                        <li>邮编：1234567</li>
-                        <li>电话：010-88888888</li>
-                        <li>传值：010-88666666</li>
-                    </ul>
-                </address>
+                <h2>风景欣赏</h2>
+                <figure>
+                    <img src="img/s1.jpg" alt="曼谷-芭提雅">
+                    <figcaption>曼谷-芭提雅[共8张]</figcaption>
+                </figure>
+                <figure>
+                    <img src="img/s2.jpg" alt="马尔代夫双鱼岛">
+                    <figcaption>马尔代夫双鱼岛[共12张]</figcaption>
+                </figure>
+                <figure>
+                    <img src="img/s3.jpg" alt="海南">
+                    <figcaption>海南[共19张]</figcaption>
+                </figure>
+                <figure>
+                    <img src="img/s4.jpg" alt="富山-大阪-东京">
+                    <figcaption>富山-大阪-东京[共22张]</figcaption>
+                </figure>
+                <figure>
+                    <img src="img/s5.jpg" alt="法瑞意德">
+                    <figcaption>法瑞意德[共31张]</figcaption>
+                </figure>
+                <figure>
+                    <img src="img/s6.jpg" alt="巴厘岛">
+                    <figcaption>巴厘岛[共12张]</figcaption>
+                </figure>
+                <figure>
+                    <img src="img/s7.jpg" alt="塞舌尔迪拜">
+                    <figcaption>塞舌尔迪拜[共7张]</figcaption>
+                </figure>
+                <figure>
+                    <img src="img/s8.jpg" alt="花样姐姐土耳其">
+                    <figcaption>花样姐姐土耳其[共14张]</figcaption>
+                </figure>
+                <div class="clearfix"></div>
+                <div class="more">加载更多...</div>
             </section>
         </div>
     </div>
@@ -179,157 +198,30 @@
 <!--
 本章主要开始将前两个项目再进行重构，设计成既可以在PC端正常显示，又可以在PAD上浏览，还可以在移动端有良好的体验。
 这些都必须兼容，那只有使用响应式设计了。
-一、栏目头部响应式
-在栏目中，头部我们重新设计了图片，并且加上了黑色的层来取代兼容性不好的CSS3渐变，高度适当的调整，以满足移动端的用户体验。
-//html
-<div id="headline">
-    <img src="img/headline.jpg" alt="">
-    <hgroup>
-        <h2>公司简介</h2>
-        <h3>公司的发展历程、获得荣誉以及联系方式</h3>
-    </hgroup>
-</div>
-
-//CSS部分，其他PC端移植
-#headline {
-    max-width: 1920px;
-    margin: 0 auto;
-    padding: 70px 0 0 0;
-    position: relative;
-}
-
-#headline hgroup {
-    position: absolute;
-    top: 45%;
-    left: 18%;
-}
-
-//媒体查询
-@media (min-width: 992px) and (max-width: 1199px) {
-    #headline h2 {
-        font-size: 38px;
-    }
-    #headline h3 {
-        font-size: 20px;
-    }
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-    #headline h2 {
-        font-size: 30px;
-    }
-    #headline h3 {
-        font-size: 16px;
-    }
-}
-
-@media (min-width: 480px) and (max-width: 767px) {
-    #headline {
-        padding: 45px 0 0 0;
-    }
-    #headline h2 {
-        font-size: 26px;
-    }
-    #headline h3 {
-        font-size: 14px;
-    }
-}
-
-@media (max-width: 479px) {
-    #headline {
-        padding: 45px 0 0 0;
-    }
-    #headline h2 {
-        font-size: 20px;
-    }
-    #headline h3 {
-        font-size: 12px;
-    }
-}
-二、公司简介响应式
-公司简介，我们直接PC端完全复制过来即可。改成流体响应式，并且在响应式时，根据分辨率隐藏掉侧栏即可。
-//html部分直接PC端移植，完全不需要动，代码忽略
-//css大部分不动，只改几个流体百分比
-#container {
-    max-width: 1263px;
-    margin: 30px auto;
-}
-
-#container .sidebar {
-    width: 28%;
-    float: right;
-}
-
-.list {
-    width: 71%;
+一、风景欣赏响应式
+头部及右侧和公司简介一样，左边做成和首页图片流体一样即可。
+//CSS部分
+.scenery figure {
+    border: 1px solid #ddd;
+    display: block;
+    padding: 4px;
+    border-radius: 4px;
+    width: 32.6%;
+    margin: 15px 5px 15px 0;
+    text-align: left;
     float: left;
 }
 
 //媒体查询
-@media (min-width: 992px) and (max-width: 1199px) {
-    .sidebar {
-        display: none;
-    }
-    .list {
-        width: 100%;
-        padding: 0 20px;
-    }
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-    .sidebar {
-        display: none;
-    }
-    .list {
-        width: 100%;
-        padding: 0 20px;
-    }
-    .list h2 {
-        font-size: 28px;
-    }
-    .about p {
-        font-size: 18px;
-    }
-    .about address {
-        font-size: 18px;
-    }
-}
-
-@media (min-width: 480px) and (max-width: 767px) {
-    .sidebar {
-        display: none;
-    }
-    .list {
-        width: 100%;
-        padding: 0 20px;
-    }
-    .list h2 {
-        font-size: 25px;
-    }
-    .about p {
-        font-size: 15px;
-    }
-    .about address {
-        font-size: 15px;
+@media (min-width: 480px)  and (max-width: 767px) {
+    .scenery figure {
+        width: 48.8;
     }
 }
 
 @media (max-width: 479px) {
-    .sidebar {
-        display: none;
-    }
-    .list {
-        width: 100%;
-        padding: 0 20px;
-    }
-    .list h2 {
-        font-size: 22px;
-    }
-    .about p {
-        font-size: 14px;
-    }
-    .about address {
-        font-size: 14px;
+    .scenery figure {
+        width: 99%;
     }
 }
 -->
