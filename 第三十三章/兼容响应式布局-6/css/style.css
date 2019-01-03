@@ -591,6 +591,148 @@ img {
     font-size: 18px;
 }
 
+.information figure {
+    margin: 20px 0 0 0;
+    background-color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+.information figure:after {
+    display: block;
+    content: '.';
+    visibility: hidden;
+    height: 0;
+    clear: both;
+}
+
+.information img {
+    float: left;
+    width: 45%;
+}
+
+.information figcaption {
+    float: right;
+    width: 55%;
+}
+
+.information hgroup {
+    width: 300px;
+}
+
+.information hgroup h2 {
+    font-size: 24px;
+    font-weight: normal;
+    padding: 10px 0 10px 25px;
+    color: #333;
+    border: none;
+}
+
+.information hgroup h3 {
+    font-size: 16px;
+    font-weight: normal;
+    padding: 10px 0 10px 25px;
+    color: #666;
+    line-height: 1.5;
+}
+
+.information ol {
+    padding: 0 0 0 25px;
+    color: #666;
+    line-height: 2;
+}
+
+.information mark {
+    color: #458b00;
+    padding: 0 5px;
+    border: 1px solid #458b00;
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+.information .buy {
+    position: absolute;
+    top: 55px;
+    right: 30px;
+}
+
+.information .price {
+    font-size: 20px;
+    color: #f60;
+}
+
+.information strong {
+    font-size: 36px;
+}
+
+.information s {
+    font-size: 16px;
+    color: #999;
+}
+
+.information .reserve {
+    margin: 10px 0 0 0;
+}
+
+.information .reserve a {
+    display: block;
+    width: 152px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 4px;
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+    background-color: #f60;
+}
+
+.information .type {
+    width: 90px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    border-bottom-right-radius: 4px;
+    letter-spacing: 1px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #59b200;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.information .disc {
+    width: 52px;
+    height: 52px;
+    background: url("../img/disc.png");
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.information .disc span {
+    display: block;
+    width: 52px;
+    height: 52px;
+    font-size: 14px;
+    color: #ff7a4d;
+    text-indent: 7px;
+    padding: 5px 0 0 0;
+    transform: rotate(45deg);
+}
+
+.information footer {
+    width: 55%;
+    height: 35px;
+    line-height: 35px;
+    text-indent: 25px;
+    color: #666;
+    letter-spacing: 1px;
+    background-color: #fafafa;
+    position: absolute;
+    bottom: 0;
+}
+
 #footer {
     background-color: #222;
     clear: both;
@@ -730,6 +872,19 @@ img {
         position: static;
         margin: 10px auto;
     }
+    .md-hidden {
+        display: none;
+    }
+    .information hgroup h2 {
+        font-size: 22px;
+    }
+    .information .buy {
+        position: absolute;
+        top: auto;
+        right: auto;
+        bottom: 0;
+        padding: 0 0 0 25px;
+    }
 }
 
 /*在480和767像素之间的屏幕里，超小屏幕，主要是手机*/
@@ -737,7 +892,7 @@ img {
     #header, #header .center, #header .logo, #header .link {
         height: 45px;
     }
-    #header .logo, .sm-hidden, .sidebar {
+    #header .logo, .sm-hidden, .sidebar, .md-hidden {
         display: none;
     }
     #header .link {
@@ -819,6 +974,23 @@ img {
     .ticket .type, .ticket .form, .ticket .new, .ticket .form input, .ticket .submit, .ticket .reserve {
         font-size: 16px;
     }
+    .information hgroup h2 {
+        font-size: 22px;
+    }
+    .information hgroup h3 {
+        font-size: 14px;
+        padding: 0 0 0 15px;
+    }
+    .information .buy {
+        position: absolute;
+        top: auto;
+        right: auto;
+        bottom: 0;
+        padding: 0 0 0 15px;
+    }
+    .information strong {
+        font-size: 18px;
+    }
 }
 
 /*在小于480像素的屏幕，微小屏幕，更低分辨率的手机*/
@@ -826,7 +998,7 @@ img {
     #header, #header .center, #header .logo, #header .link  {
         height: 45px;
     }
-    #header .logo, .xs-hidden, .sm-hidden, .sidebar {
+    #header .logo, .xs-hidden, .sm-hidden, .sidebar, .md-hidden {
         display: none;
     }
     #header .link {
@@ -924,5 +1096,27 @@ img {
         color: #fff;
         padding: 8px;
         text-align: center;
+    }
+    .information hgroup h2 {
+        font-size: 16px;
+        height: 15px;
+        line-height: 15px;
+        padding: 5px 0 5px 15px;
+    }
+    .information hgroup h3 {
+        font-size: 14px;
+        padding: 5px 0 5px 15px;
+        height: 15px;
+        overflow: hidden;
+    }
+    .information .buy {
+        position: absolute;
+        top: auto;
+        right: auto;
+        bottom: 0;
+        padding: 0 0 0 15px;
+    }
+    .information strong, .information s, .information .price {
+        font-size: 15px;
     }
 }
